@@ -1,0 +1,5 @@
+.player_list li{
+    display: inline;
+    list-style: none;
+    padding-right: 3px;
+}
