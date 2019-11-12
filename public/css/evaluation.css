@@ -1,0 +1,21 @@
+.evaluation-content {
+    margin-top: 30px;
+}
+
+.evaluation-content label {
+    padding: 15px 10px 0px 10px;
+}
+
+.evaluation-content select {
+    height: 40px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.evaluation-form-button {
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

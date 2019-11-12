@@ -56,11 +56,11 @@
                             @endif
                         @else
 
-                                <button onclick="location.href='{{ route('home') }}'">Home</button>
+                                <button onclick="location.href='{{ route('home') }}'" class="mr-2">Home</button>
 
-                                <button v-on:click="showContent=true">選手登録</button>
+                                <button v-on:click="showContent=true" class="mr-2">選手登録</button>
 
-                                <button onclick="location.href='{{ route('players_lists') }}'">選手一覧</button>
+                                <button onclick="location.href='{{ route('players_lists') }}'" class="mr-2">選手一覧</button>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -120,7 +120,6 @@
     </div>
 
     <script src="https://unpkg.com/vue"></script>
-{{--    <script src="https://unpkg.com/vue-material"></script>--}}
     <script>
         var app2 = new Vue({
             el: '#app2',

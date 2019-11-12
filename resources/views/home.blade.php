@@ -4,7 +4,7 @@
     <script src="https://unpkg.com/vue"></script>
 
     <!-- Styles -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+{{--    <script type="text/javascript" src="app.js"></script>--}}
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 </head>
 
@@ -41,7 +41,7 @@
         </div>
 
         <div class="evaluation-button">
-            <button style="width:100%;padding:10px;font-size:25px;" onclick="location.href='{{ route('evaluation_form') }}'">+</button>
+            <button style="width:100%;padding:10px;font-size:15px;" onclick="location.href='{{ route('evaluation_form') }}'">Man of the match 投票</button>
         </div>
 
     </div>
