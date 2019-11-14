@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('home');
+//});
 
 Route::get('/test', function () {
     return view('test');
@@ -21,11 +21,13 @@ Route::get('/test', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/players', 'PlayerController@show')->name('players_lists');
 
 Route::get('/evaluation/form', 'EvaluationController@index')->name('evaluation_form');
+
+Route::get('/match/review/{id}', 'MatchReviewController@index')->name('match_review');
 
 Route::post('/create/team', 'TeamController@create')->name('create');
 

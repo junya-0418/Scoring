@@ -8,11 +8,11 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.min.css'
+// import VueMaterial from 'vue-material'
+// import 'vue-material/dist/vue-material.min.css'
 // import 'vue-material/dist/theme/default.css'  // これが無いと md-primary が効かなかった
 
-Vue.use(VueMaterial)
+// Vue.use(VueMaterial)
 
 /**
  * The following block of code may be used to automatically register your
@@ -38,38 +38,4 @@ const app = new Vue({
     el: '#app',
 });
 
-// var app2 = new Vue({
-//     el: '#app2',
-//     data: {
-//         showContent: false
-//     },
-//     methods: {
-//         openModal: function() {
-//             this.showContent = true
-//         },
-//         closeModal: function() {
-//             this.showContent = false
-//         },
-//         stopEvent: function(){
-//             event.stopPropagation()
-//         }
-//     }
-// });
-//
-// var app3 = new Vue({
-//     el: '#app3',
-//     data: {
-//         showEvaluationModal: false
-//     },
-//     methods: {
-//         openEvaluationModal: function() {
-//             this.showEvaluationModal = true
-//         },
-//         closeEvaluationModal: function() {
-//             this.showEvaluationModal = false
-//         },
-//         stopEvaluationEvent: function(){
-//             event.stopPropagation()
-//         }
-//     }
-// });
+
