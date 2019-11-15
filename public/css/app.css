@@ -289,7 +289,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  /*font-family: inherit;*/
   font-size: inherit;
   line-height: inherit;
 }
@@ -8865,7 +8865,7 @@ button.bg-dark:focus {
 
 .pt-4,
 .py-4 {
-  padding-top: 1.5rem !important;
+  padding-top: 0.5rem !important;
 }
 
 .pr-4,

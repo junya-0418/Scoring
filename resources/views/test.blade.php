@@ -14,7 +14,7 @@
 <body>
 <!-- コンポーネントの配置 -->
 <div id="app">
-    <example-component></example-component>
+    <evaluation-form></evaluation-form>
 </div>
 <script src=" {{ mix('js/app.js') }} "></script>
 </body>

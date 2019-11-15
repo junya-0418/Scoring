@@ -18,4 +18,21 @@ class EvaluationController extends Controller
         return view('evaluation_form',compact('teams', 'matches','players'));
 
     }
+
+    public function getTeams() {
+
+        $teams = Team::all();
+
+        return $teams;
+
+    }
+
+    public function getMatches(Request $request) {
+
+        $id = Team::where('name', $request->team)->first()->id;
+
+        $matches = Match::where('home_team_id', $id)->orWhere('away_team_id', $id)->get();
+
+        return $matches;
+    }
 }

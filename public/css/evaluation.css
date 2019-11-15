@@ -1,5 +1,5 @@
 .evaluation-content {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .evaluation-content label {
@@ -8,7 +8,7 @@
 
 .evaluation-content select {
     height: 40px;
-    padding: 5px;
+    padding: 15px;
     margin-left: 10px;
     margin-right: 10px;
 }
