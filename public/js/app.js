@@ -1878,6 +1878,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1890,6 +1893,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    fetchMatchandPlayer: function fetchMatchandPlayer() {
+      this.fetchMatch();
+      this.fetchPlayer();
+    },
     fetchTeams: function fetchTeams() {
       var _this = this;
 
@@ -1905,6 +1912,16 @@ __webpack_require__.r(__webpack_exports__);
       };
       axios.post('/api/get_matches', team).then(function (res) {
         _this2.matches = res.data;
+      });
+    },
+    fetchPlayer: function fetchPlayer() {
+      var _this3 = this;
+
+      var team = {
+        'team': this.selectedTeam
+      };
+      axios.post('/api/get_players', team).then(function (res) {
+        _this3.players = res.data;
       });
     }
   },
@@ -37287,16 +37304,16 @@ var render = function() {
                     ? $$selectedVal
                     : $$selectedVal[0]
                 },
-                _vm.fetchMatch
+                _vm.fetchMatchandPlayer
               ]
             }
           },
           _vm._l(_vm.teams, function(team) {
             return _c("option", [
               _vm._v(
-                "\n                               " +
+                "\n                       " +
                   _vm._s(team.name) +
-                  "\n                           "
+                  "\n                   "
               )
             ])
           }),
@@ -37323,7 +37340,7 @@ var render = function() {
               }
             ],
             staticStyle: { width: "400px" },
-            attrs: { name: "match" },
+            attrs: { id: "match", name: "match" },
             on: {
               change: function($event) {
                 var $$selectedVal = Array.prototype.filter
@@ -37343,13 +37360,64 @@ var render = function() {
           _vm._l(_vm.matches, function(match) {
             return _c("option", [
               _vm._v(
-                "\n                                " +
+                "\n                        " +
                   _vm._s(match.match_type) +
                   " " +
                   _vm._s(match.home_team_name) +
                   " vs " +
                   _vm._s(match.away_team_name) +
-                  "\n                            "
+                  "\n                    "
+              )
+            ])
+          }),
+          0
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "mb-3", staticStyle: { "margin-left": "9rem" } }, [
+      _c("label", { staticClass: "mr-3", attrs: { for: "player" } }, [
+        _vm._v("Man of the Match")
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.selectedPlayer,
+                expression: "selectedPlayer"
+              }
+            ],
+            staticStyle: { width: "400px" },
+            attrs: { id: "player", name: "player" },
+            on: {
+              change: function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.selectedPlayer = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              }
+            }
+          },
+          _vm._l(_vm.players, function(player) {
+            return _c("option", [
+              _vm._v(
+                "\n                        " +
+                  _vm._s(player.number) +
+                  " " +
+                  _vm._s(player.name) +
+                  "\n                    "
               )
             ])
           }),

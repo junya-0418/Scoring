@@ -24,3 +24,7 @@ Route::group(['middleware' => 'api'], function() {
 Route::group(['middleware' => 'api'], function() {
     Route::post('/get_matches',  'EvaluationController@getMatches');
 });
+
+Route::group(['middleware' => 'api'], function() {
+    Route::post('/get_players',  'EvaluationController@getPlayers');
+});

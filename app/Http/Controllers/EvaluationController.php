@@ -35,4 +35,14 @@ class EvaluationController extends Controller
 
         return $matches;
     }
+
+    public function getPlayers(Request $request) {
+
+        $id = Team::where('name', $request->team)->first()->id;
+
+        $players = Player::where('team_id', $id)->orderBy('number', 'asc')->get();
+
+        return $players;
+
+    }
 }
