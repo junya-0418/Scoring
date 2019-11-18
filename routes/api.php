@@ -18,13 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => 'api'], function() {
-    Route::get('/get_teams',  'EvaluationController@getTeams');
+    Route::get('/get_teams',  'EvaluationApiController@getTeams');
 });
 
 Route::group(['middleware' => 'api'], function() {
-    Route::post('/get_matches',  'EvaluationController@getMatches');
+    Route::post('/get_matches',  'EvaluationApiController@getMatches');
 });
 
 Route::group(['middleware' => 'api'], function() {
-    Route::post('/get_players',  'EvaluationController@getPlayers');
+    Route::post('/get_players',  'EvaluationApiController@getPlayers');
 });

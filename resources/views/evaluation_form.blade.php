@@ -14,7 +14,7 @@
 <div class="evaluation-content">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-8" style="margin-left: 15rem; margin-top: 4rem" >
 
                 <div class="card">
 
@@ -24,8 +24,10 @@
                         </div>
                     @endif
 
-                    <evaluation-form></evaluation-form>
-
+                    <form action="{{ route('mvp_create') }}" method="POST">
+                        {{ csrf_field() }}
+                        <evaluation-form></evaluation-form>
+                    </form>
 
                 </div>
             </div>

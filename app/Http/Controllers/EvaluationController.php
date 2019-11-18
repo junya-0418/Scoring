@@ -3,12 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Team;
 use App\Match;
 use App\Player;
+use App\User;
+use App\Mvp;
 
 class EvaluationController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index() {
 
         $teams = Team::orderBy('created_at', 'desc')->get();
@@ -19,30 +29,25 @@ class EvaluationController extends Controller
 
     }
 
-    public function getTeams() {
+    public function mvp_create(Request $request) {
 
-        $teams = Team::all();
+//        dd($request->team);
+//        dd($request->match);
+//        dd($request->player);
+//        dd($request->comment);
 
-        return $teams;
+        $match_id = Match::where('id',$request->match)->first()->id;
+        $player_id = Player::where('id',$request->player)->first()->id;
+        $user = Auth::user();
 
-    }
+        Mvp::create([
+            'match_id' => $match_id,
+            'player_id' => $player_id,
+            'user_id' => $user->id,
+            'comment' => $request->comment,
+        ]);
 
-    public function getMatches(Request $request) {
-
-        $id = Team::where('name', $request->team)->first()->id;
-
-        $matches = Match::where('home_team_id', $id)->orWhere('away_team_id', $id)->get();
-
-        return $matches;
-    }
-
-    public function getPlayers(Request $request) {
-
-        $id = Team::where('name', $request->team)->first()->id;
-
-        $players = Player::where('team_id', $id)->orderBy('number', 'asc')->get();
-
-        return $players;
+        return redirect('/home');
 
     }
 }

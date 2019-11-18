@@ -13,17 +13,14 @@ class CreateMvpTable extends Migration
      */
     public function up()
     {
-        Schema::create('mvp', function (Blueprint $table) {
+        Schema::create('mvps', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->biginteger('match_id')->unsigned();
-            $table->biginteger('player_id')->unsigned();
-            $table->biginteger('user_id')->unsigned();
-            $table->string('comment');
+            $table->bigInteger('posts_id')->unsigned();
+            $table->bigInteger('player_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('match_id')->references('id')->on('matches');
+            $table->foreign('posts_id')->references('id')->on('posts');
             $table->foreign('player_id')->references('id')->on('players');
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -34,6 +31,6 @@ class CreateMvpTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mvp');
+        Schema::dropIfExists('mvps');
     }
 }

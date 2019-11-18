@@ -9,6 +9,7 @@ use App\Match;
 
 class MatchReviewController extends Controller
 {
+
     public function index($id) {
 
         $teams = Team::all();

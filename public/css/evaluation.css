@@ -1,17 +1,17 @@
-.evaluation-content {
-    margin-top: 15px;
-}
+/*.evaluation-content {*/
+/*    margin-top: 15px;*/
+/*}*/
 
-.evaluation-content label {
-    padding: 15px 10px 0px 10px;
-}
+/*.evaluation-content label {*/
+/*    padding: 15px 10px 0px 10px;*/
+/*}*/
 
-.evaluation-content select {
-    height: 40px;
-    padding: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
+/*.evaluation-content select {*/
+/*    height: 40px;*/
+/*    padding: 15px;*/
+/*    margin-left: 10px;*/
+/*    margin-right: 10px;*/
+/*}*/
 
 .evaluation-form-button {
     margin-left: auto;
@@ -19,3 +19,102 @@
     margin-top: 15px;
     margin-bottom: 10px;
 }
+
+
+.button06 {
+    background: linear-gradient(0deg, #32a4ff 0%, #2196F3 49%, #3fa9fe 50%, #88caff 100%);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 5px 0 #047ad3;
+    color: #fff;
+    padding: 10px 0;
+    width: 80px;
+}
+
+.cp_ipselect {
+    position: relative;
+    width: 500px;
+    /*margin: 30px auto;*/
+    text-align: center;
+}
+.cp_sl06 {
+    position: relative;
+    font-family: inherit;
+    background-color: transparent;
+    width: 500px;
+    padding: 10px 10px 10px 0;
+    font-size: 18px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0, 0.3);
+}
+.cp_sl06:focus {
+    outline: none;
+    border-bottom: 1px solid rgba(0,0,0, 0);
+}
+.cp_ipselect .cp_sl06 {
+    appearance: none;
+    -webkit-appearance:none
+}
+.cp_ipselect select::-ms-expand {
+    display: none;
+}
+.cp_ipselect:after {
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+.cp_sl06_selectlabel {
+    color: rgba(0,0,0, 0.5);
+    font-size: 18px;
+    font-weight: normal;
+    pointer-events: none;
+    left: 80;
+    top: 40px;
+    transition: 0.2s ease all;
+}
+.cp_sl06:focus ~ .cp_sl06_selectlabel, .cp_sl06:valid ~ .cp_sl06_selectlabel {
+    color: #32a4ff;
+    top: -20px;
+    transition: 0.2s ease all;
+    font-size: 14px;
+}
+.cp_sl06_selectbar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.cp_sl06_selectbar:before, .cp_sl06_selectbar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #32a4ff;
+    transition: 0.2s ease all;
+}
+.cp_sl06_selectbar:before {
+    left: 50%;
+}
+.cp_sl06_selectbar:after {
+    right: 50%;
+}
+.cp_sl06:focus ~ .cp_sl06_selectbar:before, .cp_sl06:focus ~ .cp_sl06_selectbar:after {
+    width: 50%;
+}
+.cp_sl06_highlight {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+

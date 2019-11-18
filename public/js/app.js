@@ -1881,6 +1881,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37272,10 +37285,14 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "evaluation-content" }, [
-    _c("div", { staticClass: "mb-3", staticStyle: { "margin-left": "9rem" } }, [
-      _c("label", { attrs: { for: "team" } }, [_vm._v("チーム")]),
+    _c("div", { staticClass: "mb-3" }, [
+      _c(
+        "label",
+        { staticClass: "cp_sl06_selectlabel", attrs: { for: "team" } },
+        [_vm._v("チーム")]
+      ),
       _vm._v(" "),
-      _c("div", [
+      _c("div", { staticClass: "cp_ipselect" }, [
         _c(
           "select",
           {
@@ -37287,7 +37304,7 @@ var render = function() {
                 expression: "selectedTeam"
               }
             ],
-            staticStyle: { width: "400px" },
+            staticClass: "cp_sl06",
             attrs: { id: "team", name: "team" },
             on: {
               change: [
@@ -37311,23 +37328,29 @@ var render = function() {
           _vm._l(_vm.teams, function(team) {
             return _c("option", [
               _vm._v(
-                "\n                       " +
+                "\n                               " +
                   _vm._s(team.name) +
-                  "\n                   "
+                  "\n                           "
               )
             ])
           }),
           0
-        )
+        ),
+        _vm._v(" "),
+        _c("span", { staticClass: "cp_sl06_highlight" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "cp_sl06_selectbar" })
       ])
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "mb-3", staticStyle: { "margin-left": "9rem" } }, [
-      _c("label", { staticClass: "mr-3", attrs: { for: "match" } }, [
-        _vm._v("試合")
-      ]),
+    _c("div", { staticClass: "mb-3" }, [
+      _c(
+        "label",
+        { staticClass: "mr-3 cp_sl06_selectlabel", attrs: { for: "match" } },
+        [_vm._v("試合")]
+      ),
       _vm._v(" "),
-      _c("div", [
+      _c("div", { staticClass: "cp_ipselect" }, [
         _c(
           "select",
           {
@@ -37339,7 +37362,7 @@ var render = function() {
                 expression: "selectedMatch"
               }
             ],
-            staticStyle: { width: "400px" },
+            staticClass: "cp_sl06",
             attrs: { id: "match", name: "match" },
             on: {
               change: function($event) {
@@ -37358,29 +37381,35 @@ var render = function() {
             }
           },
           _vm._l(_vm.matches, function(match) {
-            return _c("option", [
+            return _c("option", { domProps: { value: match.id } }, [
               _vm._v(
-                "\n                        " +
+                "\n                                " +
                   _vm._s(match.match_type) +
                   " " +
                   _vm._s(match.home_team_name) +
                   " vs " +
                   _vm._s(match.away_team_name) +
-                  "\n                    "
+                  "\n                            "
               )
             ])
           }),
           0
-        )
+        ),
+        _vm._v(" "),
+        _c("span", { staticClass: "cp_sl06_highlight" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "cp_sl06_selectbar" })
       ])
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "mb-3", staticStyle: { "margin-left": "9rem" } }, [
-      _c("label", { staticClass: "mr-3", attrs: { for: "player" } }, [
-        _vm._v("Man of the Match")
-      ]),
+    _c("div", { staticClass: "mb-3" }, [
+      _c(
+        "label",
+        { staticClass: "mr-3 cp_sl06_selectlabel", attrs: { for: "player" } },
+        [_vm._v("Man of the Match")]
+      ),
       _vm._v(" "),
-      _c("div", [
+      _c("div", { staticClass: "cp_ipselect" }, [
         _c(
           "select",
           {
@@ -37392,7 +37421,7 @@ var render = function() {
                 expression: "selectedPlayer"
               }
             ],
-            staticStyle: { width: "400px" },
+            staticClass: "cp_sl06",
             attrs: { id: "player", name: "player" },
             on: {
               change: function($event) {
@@ -37411,18 +37440,22 @@ var render = function() {
             }
           },
           _vm._l(_vm.players, function(player) {
-            return _c("option", [
+            return _c("option", { domProps: { value: player.id } }, [
               _vm._v(
-                "\n                        " +
+                "\n                                " +
                   _vm._s(player.number) +
                   " " +
                   _vm._s(player.name) +
-                  "\n                    "
+                  "\n                            "
               )
             ])
           }),
           0
-        )
+        ),
+        _vm._v(" "),
+        _c("span", { staticClass: "cp_sl06_highlight" }),
+        _vm._v(" "),
+        _c("span", { staticClass: "cp_sl06_selectbar" })
       ])
     ]),
     _vm._v(" "),
@@ -37444,11 +37477,8 @@ var staticRenderFns = [
         _c(
           "button",
           {
-            staticStyle: {
-              width: "60px",
-              "margin-top": "20px",
-              height: "40px"
-            },
+            staticClass: "button06",
+            staticStyle: { "margin-right": "50px", "margin-top": "5px" },
             attrs: { type: "submit" }
           },
           [_vm._v("投稿")]

@@ -13,10 +13,8 @@
 @section('content')
 <div id="app3">
     <div class="container">
-{{--        <div class="row justify-content-center" style=" width: 600px;">--}}
-{{--            <div class="col-md-8">--}}
 
-                <div class="card" style="width: 550px;float: left;margin-left: 240px;">
+         <div class="card" style="width: 600px;margin-left: 240px; border: dashed 1px #ccc; background-color: #fff;">
 
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -26,14 +24,18 @@
 
 
                     @foreach($matches as $match)
-                    <div style="padding: 5px;">
-                        <div style="padding: 30px 30px; margin-bottom: 15px; border: dashed 1px #ccc; background-color: #fff" >
-                                <div>{{ $match->date }}</div>
-                                <div>{{ $match->match_type }}</div>
-                                <div><strong>{{ $match->hometeam->name }} vs {{ $match->awayteam->name }}</strong></div>
-                                <div>{{ $match->score }}</div>
-                                <button style="float: right"
+                    <div style="padding: 10px; border: dashed 1px #ccc;">
+                        <div style="width: 600px; padding: 15px 30px; margin-bottom: 15px;">
+                                <div style="float: left">
+                                    <div>{{ $match->date }}</div>
+                                    <div>{{ $match->match_type }}</div>
+                                    <div><strong>{{ $match->hometeam->name }} vs {{ $match->awayteam->name }}</strong></div>
+                                    <div>{{ $match->score }}</div>
+                                </div>
+                                 <div>
+                                    <button class="button05" style="float: right; margin-top: 50px;"
                                         onclick="location.href='{{ route('match_review', ['id' => $match->id]) }}'">詳細を見る</button>
+                                </div>
                         </div>
                     </div>
                     @endforeach
@@ -42,13 +44,11 @@
                 <div id="sidebar" style="float: right;">
                     <ul style= "list-style: none">
                         <li>
-                            <button style="width:100%;padding:10px;font-size:15px;"
-                                    onclick="location.href='{{ route('evaluation_form') }}'">Man of the match 投票</button>
+
                         </li>
                     </ul>
-                </div>
-{{--            </div>--}}
-{{--        </div>--}}
+            </div>
+
 
     </div>
 

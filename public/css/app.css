@@ -68,6 +68,21 @@ button.nav-item-sauna {
     background:#fff;
 }
 
+.button05 {
+    background: #fff;
+    border: 2px solid #00bcd4;
+    color: #00bcd4;
+    padding: 10px 0;
+    width: 80px;
+    margin-right: 10px;
+}
+.button05:hover {
+    background: #00bcd4;
+    border: 2px solid transparent;
+    color: #fff;
+}
+
+
 *,
 *::before,
 *::after {
@@ -4742,7 +4757,7 @@ input[type=button].btn-block {
             flex-flow: row nowrap;
     -webkit-box-pack: start;
             justify-content: flex-start;
-      margin-bottom: 30px
+      margin-bottom: 10px
   }
 
   .navbar-expand-md .navbar-nav {
@@ -4756,7 +4771,7 @@ input[type=button].btn-block {
   }
 
   .navbar-expand-md .navbar-nav .nav-link {
-    padding-right: 0.5rem;
+    padding-right: 1rem;
     padding-left: 0.5rem;
   }
 
@@ -4918,6 +4933,7 @@ input[type=button].btn-block {
 
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
+    font-family: "Nunito", sans-serif;
 }
 
 .navbar-light .navbar-brand:hover,
@@ -7182,7 +7198,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background-color: #afeeee !important;
+  background-color: #fff !important;
 }
 
 .bg-transparent {

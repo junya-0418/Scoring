@@ -47,20 +47,22 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+{{--                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
+                                    <button class="button05" style="padding:6px;font-size:14px;"
+                                            onclick="location.href='{{ route('register') }}'">新規登録</button>
                                 </li>
                             @endif
                         @else
 
-                                <button onclick="location.href='{{ route('home') }}'" class="mr-2">Home</button>
 
-                                <button v-on:click="showContent=true" class="mr-2">選手登録</button>
+                                <button class="button05" v-on:click="showContent=true" class="mr-2">選手登録</button>
 
-                                <button onclick="location.href='{{ route('players_lists') }}'" class="mr-2">選手一覧</button>
+                                <button class="button05" style="padding:10px;font-size:15px;"
+                                    onclick="location.href='{{ route('evaluation_form') }}'">投稿</button>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

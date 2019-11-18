@@ -1,41 +1,54 @@
 <template>
         <div class="evaluation-content">
-                <div class="mb-3" style="margin-left: 9rem">
-                    <label for="team">チーム</label>
-                    <div>
-                        <select id="team" name="team" v-model="selectedTeam" @change="fetchMatchandPlayer" style="width: 400px">
+                <div class="mb-3">
+                    <label for="team" class="cp_sl06_selectlabel">チーム</label>
+                    <div class="cp_ipselect">
+                        <select class="cp_sl06" id="team" name="team" v-model="selectedTeam" @change="fetchMatchandPlayer">
                            <option v-for="team in teams">
                                {{ team.name }}
                            </option>
                         </select>
+                        <span class="cp_sl06_highlight"></span>
+                        <span class="cp_sl06_selectbar"></span>
                     </div>
                 </div>
 
-                <div class="mb-3" style="margin-left: 9rem" >
-                <label class="mr-3" for="match">試合</label>
-                    <div>
-                        <select id="match" name="match" v-model="selectedMatch" style="width: 400px">
-                            <option v-for="match in matches">
+                <div class="mb-3">
+                <label class="mr-3 cp_sl06_selectlabel" for="match">試合</label>
+                    <div class="cp_ipselect">
+                        <select class="cp_sl06" id="match" name="match" v-model="selectedMatch">
+                            <option v-for="match in matches" v-bind:value="match.id">
                                 {{ match.match_type }} {{ match.home_team_name }} vs {{ match.away_team_name }}
                             </option>
                         </select>
+                        <span class="cp_sl06_highlight"></span>
+                        <span class="cp_sl06_selectbar"></span>
                     </div>
                 </div>
 
-                <div class="mb-3" style="margin-left: 9rem" >
-                    <label class="mr-3" for="player">Man of the Match</label>
-                    <div>
-                        <select id="player" name="player" v-model="selectedPlayer" style="width: 400px">
-                            <option v-for="player in players">
+                <div class="mb-3">
+                    <label class="mr-3 cp_sl06_selectlabel" for="player">Man of the Match</label>
+                    <div class="cp_ipselect">
+                        <select class="cp_sl06" id="player" name="player" v-model="selectedPlayer">
+                            <option v-for="player in players" v-bind:value="player.id">
                                 {{ player.number }} {{ player.name }}
                             </option>
                         </select>
+                        <span class="cp_sl06_highlight"></span>
+                        <span class="cp_sl06_selectbar"></span>
                     </div>
                 </div>
 
+<!--                <div class="mb-3" style="margin-left: 9.5rem" >-->
+<!--                    <label class="mr-3" for="comment">コメント</label>-->
+<!--                    <div>-->
+<!--                        <textarea id="comment" name="comment" style="width: 400px; height:100px"></textarea>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-                <div class="evaluation-form-button" style="float: right">
-                    <button type="submit" style="width: 60px; margin-top: 20px; height: 40px;">投稿</button>
+
+                <div class="evaluation-form-button" style="float: right;">
+                    <button class="button06" type="submit" style="margin-right: 50px; margin-top: 5px">投稿</button>
                 </div>
 
         </div>
