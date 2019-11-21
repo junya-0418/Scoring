@@ -1,17 +1,6 @@
-/*.evaluation-content {*/
-/*    margin-top: 15px;*/
-/*}*/
-
-/*.evaluation-content label {*/
-/*    padding: 15px 10px 0px 10px;*/
-/*}*/
-
-/*.evaluation-content select {*/
-/*    height: 40px;*/
-/*    padding: 15px;*/
-/*    margin-left: 10px;*/
-/*    margin-right: 10px;*/
-/*}*/
+.form_one {
+    display: none;
+}
 
 .evaluation-form-button {
     margin-left: auto;
@@ -74,7 +63,7 @@
 }
 .cp_sl06_selectlabel {
     color: rgba(0,0,0, 0.5);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
     pointer-events: none;
     left: 80;
@@ -117,4 +106,7 @@
     pointer-events: none;
     opacity: 0.5;
 }
+
+
+
 

@@ -39,16 +39,8 @@
                     </div>
                 </div>
 
-<!--                <div class="mb-3" style="margin-left: 9.5rem" >-->
-<!--                    <label class="mr-3" for="comment">コメント</label>-->
-<!--                    <div>-->
-<!--                        <textarea id="comment" name="comment" style="width: 400px; height:100px"></textarea>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-
                 <div class="evaluation-form-button" style="float: right;">
-                    <button class="button06" type="submit" style="margin-right: 50px; margin-top: 5px">投稿</button>
+                    <button class="button06" type="submit" style="margin-right: 50px; margin-top: 5pxP">投稿</button>
                 </div>
 
         </div>
