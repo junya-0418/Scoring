@@ -5,7 +5,7 @@
 
     <!-- Styles -->
 {{--    <script type="text/javascript" src="app.js"></script>--}}
-    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/match_review.css') }}" rel="stylesheet">
 </head>
 
 @extends('layouts.app')
@@ -33,45 +33,25 @@
             </div>
         </div>
 
-        <div class="mvp-area" style="margin-top: 20px">
-            <div style="margin-bottom: 10px">Man of the Match</div>
-
-            <table border="1" width="600px">
-                <tr align="center">
-                    <th>Team</th>
-                    <th>Number</th>
-                    <th>Name</th>
-                    <th>Count</th>
-                </tr>
-                <tr align="center">
-                    <td>川崎フロンターレ</td>
-                    <td>34</td>
-                    <td>山村 和也</td>
-                    <td>10</td>
-                </tr>
-                <tr align="center">
-                    <td>川崎フロンターレ</td>
-                    <td>10</td>
-                    <td>大島 僚太</td>
-                    <td>8</td>
-                </tr>
-                <tr align="center">
-                    <td>川崎フロンターレ</td>
-                    <td>41</td>
-                    <td>家長 昭博</td>
-                    <td>3</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="scoring-area" style="margin-top: 30px">
-            <div class="card" style="width: 600px">
-                <div style="border: dashed 1px #ccc; background-color: #fff">
-                    test_user
+        <div class="card" style="margin-top: 20px">
+            <div style="margin-bottom: 10px; margin-left: 5rem;"><strong>Man of the Match</strong></div>
+                <div class="mvp-card">
+                    @foreach( $mvp_outputs as $mvp)
+                    {{ $mvp->number }} {{ $mvp->name }} {{ $mvp->player_count }}票
+                    @endforeach
                 </div>
-            </div>
+
         </div>
 
+        <div class="card" style="margin-top: 20px">
+            <div style="margin-bottom: 10px; margin-left: 5rem;"><strong>Evaluations</strong></div>
+            <div class="mvp-card">
+                @foreach( $user_evaluation_outputs as $user_evaluation)
+                    <div>{{ $user_evaluation->user_id }} {{ $user_evaluation->name }} {{ $user_evaluation->evaluation }}</div>
+                @endforeach
+            </div>
+
+        </div>
 
         </div>
         <div id="sidebar" style="float: right;">

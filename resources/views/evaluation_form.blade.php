@@ -24,7 +24,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('mvp_create') }}" method="POST">
+                    <form action="{{ route('evaluation_create') }}" method="POST">
                         {{ csrf_field() }}
                         <evaluation-form></evaluation-form>
                     </form>

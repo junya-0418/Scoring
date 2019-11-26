@@ -9,6 +9,8 @@ use App\Match;
 use App\Player;
 use App\User;
 use App\Mvp;
+use App\Post;
+use App\Evaluation;
 
 class EvaluationController extends Controller
 {
@@ -29,25 +31,37 @@ class EvaluationController extends Controller
 
     }
 
-    public function mvp_create(Request $request) {
-
-//        dd($request->team);
-//        dd($request->match);
-//        dd($request->player);
-//        dd($request->comment);
+    public function create(Request $request) {
 
         $match_id = Match::where('id',$request->match)->first()->id;
-        $player_id = Player::where('id',$request->player)->first()->id;
+        $player_id = Player::where('id',$request->mvp)->first()->id;
+        $team_id = Team::where('name',$request->team)->first()->id;
         $user = Auth::user();
 
-        Mvp::create([
+        Post::create([
+            'team_id' => $team_id,
             'match_id' => $match_id,
-            'player_id' => $player_id,
             'user_id' => $user->id,
-            'comment' => $request->comment,
         ]);
 
-        return redirect('/home');
+        $posts_id = Post::where('team_id',$team_id)->where('match_id', $match_id)->where('user_id', $user->id)->first()->id;
+
+        Mvp::create([
+            'posts_id' => $posts_id,
+            'player_id' => $player_id,
+        ]);
+
+        for ($i=0; $i<count($request->playersForEvaluation); $i++) {
+
+        Evaluation::create([
+            'posts_id' => $posts_id,
+            'player_id' => $request->playersForEvaluation[$i],
+            'evaluation' => $request->evaluations[$i]
+        ]);
+
+        }
+
+        return redirect('/');
 
     }
 }

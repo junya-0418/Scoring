@@ -17,8 +17,7 @@ class CreateEvaluationsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('posts_id')->unsigned();
             $table->bigInteger('player_id')->unsigned();
-            $table->Integer('evaluation');
-            $table->string('comment');
+            $table->Float('evaluation');
             $table->timestamps();
 
             $table->foreign('posts_id')->references('id')->on('posts');

@@ -33,4 +33,4 @@ Route::post('/create/team', 'TeamController@create')->name('create');
 
 Route::post('/create/player', 'PlayerController@create')->name('player_create');
 
-Route::post('/create/mvp', 'EvaluationController@mvp_create')->name('mvp_create');
+Route::post('/create/mvp', 'EvaluationController@create')->name('evaluation_create');

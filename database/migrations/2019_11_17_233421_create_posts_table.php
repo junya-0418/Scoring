@@ -15,6 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('team_id');
             $table->bigInteger('match_id')->unsigned();
             $table->bigInteger('user_id')->unsigned();
             $table->timestamps();

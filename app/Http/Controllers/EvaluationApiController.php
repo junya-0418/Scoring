@@ -40,4 +40,12 @@ class EvaluationApiController extends Controller
 
     }
 
+    public function getMatchesforSearch() {
+
+        $matches = Match::all();
+
+        return $matches;
+
+    }
+
 }

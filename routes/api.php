@@ -22,9 +22,15 @@ Route::group(['middleware' => 'api'], function() {
 });
 
 Route::group(['middleware' => 'api'], function() {
+    Route::get('/forsearch',  'EvaluationApiController@getMatchesforSearch');
+});
+
+Route::group(['middleware' => 'api'], function() {
     Route::post('/get_matches',  'EvaluationApiController@getMatches');
 });
 
 Route::group(['middleware' => 'api'], function() {
     Route::post('/get_players',  'EvaluationApiController@getPlayers');
 });
+
+
