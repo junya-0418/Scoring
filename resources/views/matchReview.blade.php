@@ -75,9 +75,9 @@
                 <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 7px">ホームチームに投稿したユーザー</div>
                 <div>
                     @foreach( $home_team_users as $home_team_user)
-                        <div style="border-bottom: solid 1px #ccc; padding-left: 10px">
+                        <a class="user_name" href="{{ route('user_show', ['id' => $home_team_user->id]) }}">
                             {{ $home_team_user->name }}
-                        </div>
+                        </a>
                     @endforeach
                 </div>
             </div>
@@ -85,9 +85,9 @@
                 <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 7px">アウェイチームに投稿したユーザー</div>
                 <div>
                     @foreach( $away_team_users as $away_team_user)
-                        <div style="border-bottom: solid 1px #ccc; padding-left: 10px">
+                        <a class="user_name" href="{{ route('user_show', ['id' => $away_team_user->id]) }}">
                             {{ $away_team_user->name }}
-                        </div>
+                        </a>
                     @endforeach
                 </div>
             </div>
