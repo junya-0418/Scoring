@@ -8,6 +8,50 @@
     font-size: 18px;
 }
 
+.evaluation-card-left {
+    float: left;
+    width: 250px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    /*text-align: center;*/
+    font-size: 15px;
+    /*display: inline-block;*/
+}
+
+
+.evaluation-card-right {
+    /*float: right;*/
+    width: 250px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    /*text-align: center;*/
+    font-size: 15px;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.users-card-left {
+    float: left;
+    width: 250px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    /*text-align: center;*/
+    font-size: 15px;
+}
+
+
+.users-card-right {
+    /*float: right;*/
+    width: 250px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    /*text-align: center;*/
+    font-size: 15px;
+    display: inline-block;
+    margin-left: 50px;
+
+}
+
 
 
 

@@ -10,4 +10,5 @@ class Mvp extends Model
         'posts_id',
         'player_id',
     ];
+
 }

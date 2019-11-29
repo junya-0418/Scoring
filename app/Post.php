@@ -11,4 +11,5 @@ class Post extends Model
         'match_id',
         'user_id'
     ];
+
 }

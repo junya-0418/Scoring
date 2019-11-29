@@ -37580,7 +37580,7 @@ var render = function() {
                     _c("div", [_vm._v(_vm._s(match.match_type))]),
                     _vm._v(" "),
                     _c("div", [
-                      _c("strong", [
+                      _c("strong", { staticStyle: { "font-size": "16px" } }, [
                         _vm._v(
                           _vm._s(match.home_team_name) +
                             " vs " +

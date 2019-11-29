@@ -11,4 +11,5 @@ class Evaluation extends Model
         'player_id',
         'evaluation',
     ];
+
 }

@@ -13,7 +13,7 @@
             <div style="float: left">
                 <div>{{ match.date }}</div>
                 <div>{{ match.match_type }}</div>
-                <div><strong>{{ match.home_team_name }} vs {{ match.away_team_name }}</strong></div>
+                <div><strong style="font-size: 16px;">{{ match.home_team_name }} vs {{ match.away_team_name }}</strong></div>
                 <div>{{ match.score }}</div>
             </div>
             <div>
