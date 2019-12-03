@@ -32,7 +32,7 @@
             return {
                 matches: [],
                 selectedMatchType: 'J1 第32節',
-                matchTypes: ['J1 第32節', 'J1 第31節']
+                matchTypes: ['J1 第33節', 'J1 第32節', 'J1 第31節']
             }
         },
         methods: {
@@ -67,7 +67,7 @@
 
             }
         },
-        created(){
+        mounted(){
             this.fetchMatch()
         },
     }

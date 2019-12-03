@@ -10,6 +10,7 @@ class Evaluation extends Model
         'posts_id',
         'player_id',
         'evaluation',
+        'comment',
     ];
 
 }

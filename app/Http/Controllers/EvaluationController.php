@@ -56,7 +56,8 @@ class EvaluationController extends Controller
         Evaluation::create([
             'posts_id' => $posts_id,
             'player_id' => $request->playersForEvaluation[$i],
-            'evaluation' => $request->evaluations[$i]
+            'evaluation' => $request->evaluations[$i],
+            'comment' => $request->comments[$i]
         ]);
 
         }

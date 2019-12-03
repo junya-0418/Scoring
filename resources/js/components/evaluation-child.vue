@@ -25,6 +25,13 @@
             <span class="cp_sl06_selectbar"></span>
         </div>
     </div>
+
+    <div style="margin-bottom: 20px;">
+        <div>
+            <label class="mr-3 cp_sl06_selectlabel" for="evaluation" style="font-size: 12px">コメント</label>
+        </div>
+        <textarea name="comments[]" style=" width: 370px; height: 110px;"></textarea>
+    </div>
 </div>
 </template>
 

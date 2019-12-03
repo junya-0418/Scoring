@@ -45,8 +45,8 @@
 
         </div>
 
-        <div style="margin-bottom: 10px; margin-left: 5rem;"><strong>Evaluations</strong></div>
-        <div style="margin-bottom: 40px">
+        <div style="margin-bottom: 10px; margin-left: 5rem;"><strong>平均採点</strong></div>
+        <div style="margin-bottom: 40px; display: flex">
             <div class="evaluation-card-left">
                 <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 7px">Home Team</div>
                 <div>
@@ -69,8 +69,8 @@
             </div>
         </div>
 
-        <div style="margin-bottom: 10px; margin-left: 5rem;"><strong>Users</strong></div>
-        <div style="margin-bottom: 40px">
+        <div style="margin-bottom: 10px; margin-left: 5rem;"><strong>ユーザー</strong></div>
+        <div style="margin-bottom: 40px; display: flex" >
             <div class="users-card-left">
                 <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 7px">ホームチームに投稿したユーザー</div>
                 <div>

@@ -141,6 +141,17 @@
             }
         });
 
+        var app3 = new Vue({
+            el: '#app2',
+            data: {
+            },
+            methods: {
+                test: function() {
+                    console.log('Hello World')
+                },
+            }
+        });
+
 
     </script>
 </body>

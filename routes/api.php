@@ -26,6 +26,18 @@ Route::group(['middleware' => 'api'], function() {
 });
 
 Route::group(['middleware' => 'api'], function() {
+    Route::get('/forUserIndex/{id}',  'UserController@getUserForIndex');
+});
+
+Route::group(['middleware' => 'api'], function() {
+    Route::get('/forUserPost/{id}',  'UserController@forUserPost');
+});
+
+Route::group(['middleware' => 'api'], function() {
+    Route::get('/forUserEvaluation/{id}',  'UserController@forUserEvaluation');
+});
+
+Route::group(['middleware' => 'api'], function() {
     Route::post('/get_matches',  'EvaluationApiController@getMatches');
 });
 

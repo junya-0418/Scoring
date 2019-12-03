@@ -31,7 +31,7 @@
 }
 
 .users-card-left {
-    float: left;
+    /*float: left;*/
     width: 250px;
     border: solid 1px #ccc;
     background-color: #fff;
@@ -41,7 +41,7 @@
 
 
 .users-card-right {
-    /*float: right;*/
+    float: right;
     width: 250px;
     border: solid 1px #ccc;
     background-color: #fff;
