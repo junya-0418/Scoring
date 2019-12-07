@@ -29,6 +29,8 @@ Route::get('/evaluation/form', 'EvaluationController@index')->name('evaluation_f
 
 Route::get('/match/review/{id}', 'MatchReviewController@index')->name('match_review');
 
+Route::get('/user/match/review/{id}', 'UserReviewController@index')->name('user_review');
+
 Route::get('/users/{id}', 'UserController@index')->name('user_show');
 
 Route::post('/create/team', 'TeamController@create')->name('create');

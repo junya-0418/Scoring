@@ -59,7 +59,7 @@
                         @else
 
 
-                                <button class="button05" v-on:click="showContent=true" class="mr-2">選手登録</button>
+{{--                                <button class="button05" v-on:click="showContent=true" class="mr-2">選手登録</button>--}}
 
                                 <button class="button05" style="padding:10px;font-size:15px;"
                                     onclick="location.href='{{ route('evaluation_form') }}'">投稿</button>
@@ -83,36 +83,21 @@
                                 </div>
                             </li>
 
-                                <div v-show="showContent" id="overlay" v-on:click="closeModal">
-                                    <div id="modal-window"　v-on:click="stopEvent">
-
-                                        <button @click="closeModal" style="float: right">Close</button>
-
-                                        <form action="{{ route('player_create') }}" method="POST">
-                                            {{ csrf_field() }}
-
-                                            <label for="team" style="padding-left: 15px;">Teams</label>
-                                            <select name="team" id="team" style="padding-left: 15px;">
-                                                @foreach ($teams as $team)
-                                                    <option value="{{ $team->name }}">{{ $team->name }}</option>
-                                                @endforeach
-                                            </select>
-
-                                            <p style="padding-left: 15px;">背番号</p>
-                                            <input name="number" style="padding-left: 15px;">
-
-                                            <p style="padding-left: 15px;">選手名</p>
-                                            <input name="player" style="padding-left: 15px;">
-
-                                            <button class="md-raised md-primary" type="submit" style="float: right">送信</button>
-                                        </form>
-
-                                    </div>
-                                </div>
                         @endguest
                     </ul>
 
                 </div>
+
+            </div>
+        </nav>
+
+        <nav>
+            <div style="border-bottom: solid 1px #ccc; width: 100%; margin-bottom: 10px; margin-top: 20px;">
+                <ul class="glonavi" style="margin-left: 300px;">
+                    <li><a class="glonavi-menu" href="/" style="margin-left: 30px">Home</a></li>
+                    <li><a class="glonavi-menu" href="/" style="margin-left: 30px">チーム</a></li>
+                    <li><a class="glonavi-menu" href="/" style="margin-left: 30px">試合一覧</a></li>
+                </ul>
             </div>
         </nav>
 
@@ -138,17 +123,6 @@
                 stopEvent: function(){
                     event.stopPropagation()
                 }
-            }
-        });
-
-        var app3 = new Vue({
-            el: '#app2',
-            data: {
-            },
-            methods: {
-                test: function() {
-                    console.log('Hello World')
-                },
             }
         });
 

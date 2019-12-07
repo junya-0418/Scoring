@@ -82,6 +82,36 @@ button.nav-item-sauna {
     color: #fff;
 }
 
+/*グロナビ*/
+.glonavi {
+    display: table;
+    /*margin: 20px auto;*/
+    padding: 0;
+    /*width: 100%;*/
+    /*text-align: center;*/
+}
+ul li{
+    display: table-cell;
+    min-width: 50px;
+}
+ul li a{
+    /*display: block;*/
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #ccc;
+}
+ul li.current{
+    border: 3px solid #555;
+}
+ul li.current a{
+    color: #555;
+}
+ul li a:hover{
+    color: #343a40;
+    text-decoration: none;
+}
+
 
 *,
 *::before,

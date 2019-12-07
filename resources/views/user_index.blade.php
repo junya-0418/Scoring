@@ -24,9 +24,26 @@
                         </div>
                     @endif
 
+                    <div style="display: flex">
                     <h1 class="user-name" style="margin-bottom: 30px;">{{ $user->name }}</h1>
 
+                    @if(Auth::check())
+                        @if (Auth::user()->id  == $user->id)
+                            <span style="margin-left: 30px; margin-top: 10px;">
+                                <button>編集</button>
+                            </span>
+                        @endif
+                    @endif
+                    </div>
+
+                    @if ($user->support_team_id !== null)
+
+                    <p style="font-size: 12px; color: #6c757d">応援チーム</p>
+                    <div style="margin-bottom: 20px; font-size: 18px"><strong> {{ $user_support_team->name }} </strong></div>
+                    @endif
+
                     <user-index></user-index>
+
                 </div>
             </div>
 

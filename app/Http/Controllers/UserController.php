@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 use App\Team;
 use App\User;
@@ -18,7 +19,9 @@ class UserController extends Controller
 
         $user = User::where('id', $id)->get()->first();
 
-        return view('user_index', compact('teams', 'user'));
+        $user_support_team = Team::where('id', $user->support_team_id)->get()->first();
+
+        return view('user_index', compact('teams', 'user', 'user_support_team'));
 
     }
 

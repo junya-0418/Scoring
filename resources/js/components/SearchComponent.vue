@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div style="float: right">
+    <div style="margin-left: 250px; margin-bottom: 20px;">
         <select class="cp_sl06" id="match" name="match" v-model="selectedMatchType">
             <option v-for="type in matchTypes">
                 {{ type }}
@@ -32,7 +32,7 @@
             return {
                 matches: [],
                 selectedMatchType: 'J1 第32節',
-                matchTypes: ['J1 第33節', 'J1 第32節', 'J1 第31節']
+                matchTypes: ['J1 第34節','J1 第33節', 'J1 第32節', 'J1 第31節']
             }
         },
         methods: {
