@@ -8,10 +8,6 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-import VueRouter from 'vue-router';
-
-Vue.use(VueRouter);
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -23,9 +19,11 @@ Vue.use(VueRouter);
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
+
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('evaluation-form', require('./components/evaluation_form.vue').default);
 Vue.component('search-component', require('./components/SearchComponent.vue').default);
+Vue.component('matchreview-component', require('./components/matchReview.vue').default);
 Vue.component('user-index', require('./components/user-index.vue').default);
 
 /**
@@ -41,5 +39,9 @@ Vue.component('user-index', require('./components/user-index.vue').default);
 const app = new Vue({
     el: '#app',
 });
+
+// new Vue({
+//     vuetify,
+// }).$mount('#app')
 
 

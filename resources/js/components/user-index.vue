@@ -1,17 +1,20 @@
 <template>
 <div>
     <div class="user-posts">
-        <p>投稿した試合</p>
-        <div class="post-card" v-for="post in posts" style="border: solid 1px #ccc; width: 500px;">
-            <div class="match-information">{{ post.match_type }} {{ post.home_team_name }} vs {{ post.away_team_name }}</div>
-            <p style="font-size: 12px;">team</p>
-            <div v-if="post.team_id === post.home_team_id" style="margin-bottom: 15px; float: left;">
-                {{ post.home_team_name }}
-            </div>
-            <div v-else style="margin-bottom: 15px; float: left;">
-                {{ post.away_team_name }}
-            </div>
-            <span><button style="margin-left: 17rem; margin-bottom: 10px;" @click="gonext(post.posts_id)">詳細を見る</button></span>
+        <p style="color: #6c757d">投稿した試合</p>
+        <div class="post-card" v-for="post in posts">
+            <a href="javascript:void(0)" @click="gonext(post.posts_id)">
+                <div class="match-information" style="display: flex">{{ post.match_type }} {{ post.home_team_name }} vs {{ post.away_team_name }}</div>
+                <div style="display: flex">
+                    <div style="font-size: 12px; margin-right: 10px;">team</div>
+                    <div v-if="post.team_id === post.home_team_id" style="margin-bottom: 15px;">
+                        {{ post.home_team_name }}
+                    </div>
+                    <div v-else style="margin-bottom: 15px;">
+                        {{ post.away_team_name }}
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -26,6 +29,20 @@
 
     .post-card {
         padding-left: 15px;
+        background-color: #fff;
+        border: solid 1px #ccc;
+        width: 500px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .post-card a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .post-card a:hover {
+        background-color: #eaeaea;
     }
 
     .match-information {
@@ -34,6 +51,8 @@
         margin-bottom: 15px;
 
     }
+
+
 </style>
 
 <script>
@@ -43,7 +62,7 @@
     export default {
         data(){
             return {
-                user_id: location.href.slice(-1),
+                user_id: location.href.split('/')[-1],
                 user: [],
                 posts: [],
                 showContent: false,
@@ -60,21 +79,7 @@
                     this.posts = res.data
                 })
             },
-            // openModal: function(id) {
-            //     this.showContent = true
-            //
-            //     axios.get('/api/forUserEvaluation/' + id).then((res)=>{
-            //         this.evaluations = res.data
-            //     })
-            //
-            // },
-            // closeModal: function() {
-            //     this.showContent = false
-            //     this.evaluations = ''
-            // },
-            // stopEvent: function(){
-            //     event.stopPropagation()
-            // },
+
             gonext(id) {
                 location.href="/user/match/review/" + id;
             }

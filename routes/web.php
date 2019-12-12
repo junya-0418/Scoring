@@ -38,3 +38,5 @@ Route::post('/create/team', 'TeamController@create')->name('create');
 Route::post('/create/player', 'PlayerController@create')->name('player_create');
 
 Route::post('/create/mvp', 'EvaluationController@create')->name('evaluation_create');
+
+Route::post('/create/comment', 'UserReviewController@comment_create')->name('comment_create');

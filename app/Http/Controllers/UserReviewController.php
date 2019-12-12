@@ -13,6 +13,7 @@ use App\Match;
 use App\MVP;
 use App\Player;
 use App\Evaluation;
+use App\Comment;
 
 class UserReviewController extends Controller
 {
@@ -26,7 +27,7 @@ class UserReviewController extends Controller
 
         $mvp_id = MVP::where('posts_id', $post->id)->get()->first()->player_id;
 
-        $mvp_player = Player::where('id', $mvp_id)->get()->first()->name;
+        $mvp_player = Player::where('id', $mvp_id)->get()->first();
 
         $evaluations = DB::table('evaluations')
             ->select('evaluations.id as evaluation_id', 'player_id', 'evaluation', 'number', 'name', 'comment')
@@ -34,7 +35,23 @@ class UserReviewController extends Controller
             ->where('posts_id', $post->id)
             ->get();
 
-        return view('user_review_detail', compact('match', 'user','mvp_player', 'evaluations'));
+        $comments = Comment::where('post_id', $post->id)->orderBy('created_at','desc')->get();
+
+        return view('user_review_detail', compact('post', 'match', 'user','mvp_player', 'evaluations', 'comments'));
+
+    }
+
+    public function comment_create(Request $request) {
+
+        $user_id = Auth::user()->id;
+
+        Comment::create([
+            'comment' => $request->comment,
+            'post_id' => $request->post_id,
+            'user_id' => $user_id,
+        ]);
+
+        return back();
 
     }
 }

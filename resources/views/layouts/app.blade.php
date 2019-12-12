@@ -18,10 +18,9 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
-{{--    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/vue-material.min.css">--}}
-{{--    <link rel="stylesheet" href="https://unpkg.com/vue-material/dist/theme/default.css">--}}
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+{{--    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">--}}
+{{--    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">--}}
 
 </head>
 <body>
@@ -52,7 +51,7 @@
                             @if (Route::has('register'))
                                 <li class="nav-item">
 {{--                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
-                                    <button class="button05" style="padding:6px;font-size:14px;"
+                                    <button class="btn-flat-border"
                                             onclick="location.href='{{ route('register') }}'">新規登録</button>
                                 </li>
                             @endif
@@ -61,7 +60,7 @@
 
 {{--                                <button class="button05" v-on:click="showContent=true" class="mr-2">選手登録</button>--}}
 
-                                <button class="button05" style="padding:10px;font-size:15px;"
+                                <button class="btn-flat-border"
                                     onclick="location.href='{{ route('evaluation_form') }}'">投稿</button>
 
                             <li class="nav-item dropdown">
@@ -70,6 +69,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown-item" href="javascript:void(0)"
+                                       @click="go_user_page({{ Auth::user()->id }})">
+                                        マイページ
+                                    </a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -104,9 +108,16 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+{{--        <footer id="globalfooter">--}}
+{{--            <div class="footer-container">--}}
+{{--                <div style="font-size: 30px;"><strong>Zidane</strong></div>--}}
+{{--            </div>--}}
+{{--        </footer>--}}
     </div>
 
     <script src="https://unpkg.com/vue"></script>
+{{--    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>--}}
     <script>
         var app2 = new Vue({
             el: '#app2',
@@ -122,6 +133,9 @@
                 },
                 stopEvent: function(){
                     event.stopPropagation()
+                },
+                go_user_page(id) {
+                    location.href="/users/" + id;
                 }
             }
         });
