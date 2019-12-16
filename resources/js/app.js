@@ -23,6 +23,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('evaluation-form', require('./components/evaluation_form.vue').default);
 Vue.component('search-component', require('./components/SearchComponent.vue').default);
+Vue.component('side-component', require('./components/SideComponent.vue').default);
 Vue.component('matchreview-component', require('./components/matchReview.vue').default);
 Vue.component('user-index', require('./components/user-index.vue').default);
 

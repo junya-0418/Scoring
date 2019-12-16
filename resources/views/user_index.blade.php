@@ -3,7 +3,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <!-- Styles -->
-{{--    <link href="{{ asset('css/user-index.css') }}" rel="stylesheet">--}}
+    <link href="{{ asset('css/user-index.css') }}" rel="stylesheet">
 </head>
 
 

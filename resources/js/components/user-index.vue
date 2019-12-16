@@ -1,11 +1,11 @@
 <template>
 <div>
     <div class="user-posts">
-        <p style="color: #6c757d">投稿した試合</p>
+        <p style="color: #6c757d;">投稿した試合</p>
         <div class="post-card" v-for="post in posts">
             <a href="javascript:void(0)" @click="gonext(post.posts_id)">
                 <div class="match-information" style="display: flex">{{ post.match_type }} {{ post.home_team_name }} vs {{ post.away_team_name }}</div>
-                <div style="display: flex">
+                <div style="display: flex;">
                     <div style="font-size: 12px; margin-right: 10px;">team</div>
                     <div v-if="post.team_id === post.home_team_id" style="margin-bottom: 15px;">
                         {{ post.home_team_name }}
@@ -23,6 +23,11 @@
 </template>
 
 <style>
+
+    .post-card a:hover {
+        background-color: #f0f8ff!important;
+    }
+
     .user-name h1 {
         margin-bottom: 30px;
     }
@@ -39,10 +44,6 @@
     .post-card a {
         text-decoration: none;
         color: black;
-    }
-
-    .post-card a:hover {
-        background-color: #eaeaea;
     }
 
     .match-information {
@@ -62,7 +63,7 @@
     export default {
         data(){
             return {
-                user_id: location.href.split('/')[-1],
+                user_id: location.href.split('/').pop(),
                 user: [],
                 posts: [],
                 showContent: false,

@@ -30,13 +30,13 @@
                     <div style="margin-bottom: 20px">{{ $user->name }}</div>
 
                     <label for="manofthematch" style="border-bottom: solid 1px #ccc; width: 114px;">Man of the Match</label>
-                    <div id="manofthematch" style="background-color: #fff; width: 200px; padding: 10px 20px; margin-bottom: 20px;">
+                    <div id="manofthematch" style="background-color: #fff; width: 200px; padding: 10px 20px; margin-bottom: 20px; text-align: center;">
                         <div>{{ $mvp_player->name }}</div>
                     </div>
 
                     @foreach($evaluations as $evaluation)
                         <div style="background-color: #fff; padding:5px 10px;">
-                            <div style="margin-top: 5px; margin-bottom: 5px;">{{ $evaluation->number }} {{ $evaluation->name }} {{ $evaluation->evaluation }}</div>
+                            <div style="margin-top: 5px; margin-bottom: 5px;">{{ $evaluation->number }} {{ $evaluation->name }} {{ sprintf('%.1f',$evaluation->evaluation) }}</div>
                             <div style="border-bottom: solid 1px #ccc;">{{ $evaluation->comment }}</div>
                         </div>
                     @endforeach

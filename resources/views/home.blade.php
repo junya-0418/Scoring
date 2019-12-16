@@ -23,6 +23,7 @@
             @endif
 
             <search-component></search-component>
+            <side-component></side-component>
 
 
         </div>

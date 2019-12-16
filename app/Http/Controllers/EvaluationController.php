@@ -38,6 +38,10 @@ class EvaluationController extends Controller
         $team_id = Team::where('name',$request->team)->first()->id;
         $user = Auth::user();
 
+        if ($request->playersForEvaluation === null) {
+            return redirect('/evaluation/form')->withErrors('採点を行ってから送信してください')->withInput();
+        }
+
         Post::create([
             'team_id' => $team_id,
             'match_id' => $match_id,

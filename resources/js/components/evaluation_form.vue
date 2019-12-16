@@ -64,30 +64,7 @@
     <!--    ２つ目のフォーム-->
     <div class="input2-content" v-bind:style="{display: show2}" style="margin-left: 30px;">
 
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-        <child-component v-bind:players="players"></child-component>
-
-
-        <div class="evaluation-form-button" style="float: right;">
-            <button class="button06" type="button"  style="margin-right: 50px; margin-top: 5px" v-on:click="backForm">
-                戻る
-            </button>
-            <button class="button06" type="submit"  style="margin-right: 50px; margin-top: 5px">
-                送信
-            </button>
-        </div>
+        <child-component v-bind:players="players" @backForm="backForm"></child-component>
 
     </div>
 
@@ -121,15 +98,6 @@
 
     /*.load-wrapp p {padding: 0 0 20px;}*/
     /*.load-wrapp:last-child {margin-right: 0;}*/
-
-    .ring-1 {
-        width: 10px;
-        height: 10px;
-        margin: 0 auto;
-        padding: 10px;
-        border: 7px dashed #4b9cdb;
-        border-radius: 100%;
-    }
 
     /* =Animate the stuff
     ------------------------ */

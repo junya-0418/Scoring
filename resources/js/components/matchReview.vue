@@ -6,7 +6,7 @@
             <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 7px">Home Team</div>
             <div>
                 <div class="player-name" v-for="home_team_evaluation in home_team_evaluation_outputs" style="border-bottom: solid 1px #ccc; padding-left: 7px" @click="openModal(home_team_evaluation.player_id)">
-                    {{ home_team_evaluation.number }} {{ home_team_evaluation.name }} {{ home_team_evaluation.player_evaluation_average }}
+                    {{ home_team_evaluation.number }} {{ home_team_evaluation.name }} {{ home_team_evaluation.player_evaluation_average.toFixed(1) }}
                 </div>
             </div>
         </div>
@@ -14,7 +14,7 @@
             <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 7px">Away Team</div>
             <div>
                 <div class="player-name" v-for="away_team_evaluation in away_team_evaluation_outputs" style="border-bottom: solid 1px #ccc; padding-left: 7px" @click="openModal(away_team_evaluation.player_id)">
-                    {{ away_team_evaluation.number }} {{ away_team_evaluation.name }} {{ away_team_evaluation.player_evaluation_average }}
+                    {{ away_team_evaluation.number }} {{ away_team_evaluation.name }} {{ away_team_evaluation.player_evaluation_average.toFixed(1) }}
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
         <div id="modal-window" @click="stopEvent">
             <div v-for="comment in comments" style="border-bottom: solid 1px #ccc; margin-bottom: 20px; padding-bottom: 5px;">
                 <div>{{ comment.comment}}</div>
-                <div>{{ comment.user_name }}  {{ comment.evaluation }}</div>
+                <div>{{ comment.user_name }}  {{ comment.evaluation.toFixed(1) }}</div>
             </div>
             <button class="btn btn-primary" v-on:click="closeModal" style="float: right">Close</button>
         </div>
@@ -96,7 +96,7 @@
         data(){
             return {
                 items: [],
-                match_id: location.href.split('/')[-1],
+                match_id: location.href.split('/').pop(),
                 home_team_evaluation_outputs: [],
                 away_team_evaluation_outputs: [],
                 home_team_users: [],

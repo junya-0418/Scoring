@@ -1,25 +1,15 @@
 <template>
-<div style="float: left">
-    <div style="margin-left: 100px; margin-bottom: 20px; width: 130px;">
-        <select class="custom-select sources" id="match" name="match" v-model="selectedMatchType">
-            <option v-for="type in matchTypes">
-                {{ type }}
-            </option>
-        </select>
-    </div>
-    <div class="card" style="width: 600px;margin-left: 100px; border-bottom: solid 1px #ccc; background-color: #fff; margin-bottom: 15px;" v-for="match in filteredMatches">
-        <a class="match-card" style="color: black; padding-bottom: 10px;" href="javascript:void(0)" @click="goNext(match.id)">
-            <div>
-                <div style="width: 600px; padding: 15px 30px; margin-bottom: 15px;">
-                    <div style="float: left; font-size: 12px;">
-                        <div>{{ match.date }}</div>
-                        <div>{{ match.match_type }}</div>
-                        <div style="font-size: 16px;">{{ match.home_team_name }} vs {{ match.away_team_name }}</div>
-                        <div style="font-size: 14px;">{{ match.score }}</div>
+<div style="float: right">
+    <div class="card" style="margin-top: 58px; margin-right: 60px;">
+            <div style="width: 250px; margin-left: 100px; background-color: #fff;">
+                <div style="padding: 15px 30px 10px 30px;">
+                    <p style="font-size: 12px;">第34節プレーヤーランキング</p>
+                    <div style="font-size: 14px;  border-bottom: solid 1px #ccc; margin-bottom: 15px;" v-for="n in 5">
+                        <div style="display: contents;"><strong>{{ n }}</strong>　{{ players[n - 1].name }}</div>
+                        <div style="display: flex; float: right;"><strong>{{ players[n - 1].player_evaluation_average.toFixed(1) }}</strong></div>
                     </div>
                 </div>
             </div>
-        </a>
     </div>
 </div>
 </template>
@@ -159,40 +149,17 @@
     export default {
         data(){
             return {
-                matches: [],
-                selectedMatchType: 'J1 第32節',
-                matchTypes: ['J1 第34節','J1 第33節', 'J1 第32節', 'J1 第31節']
+                players: [],
             }
         },
-        methods: {
-            goNext: function (id) {
-                location.href="/match/review/" + id;
-            }
-        },
-        computed: {
-            filteredMatches: function() {
-
-                var matches = [];
-
-                for(var i in this.matches) {
-
-                    var match = this.matches[i];
-
-                    if(match.match_type == this.selectedMatchType) {
-
-                        matches.push(match);
-
-                    }
-
-                }
-
-                return matches;
-
-            }
-        },
+        // methods: {
+        //     goNext: function (id) {
+        //         location.href="/match/review/" + id;
+        //     }
+        // },
         mounted(){
-            axios.get('/api/forsearch').then((res)=>{
-                this.matches = res.data
+            axios.get('/api/getPlayerRanking').then((res)=>{
+                this.players = res.data
             })
         },
     }

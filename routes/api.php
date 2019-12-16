@@ -42,6 +42,10 @@ Route::group(['middleware' => 'api'], function() {
 });
 
 Route::group(['middleware' => 'api'], function() {
+    Route::get('/getPlayerRanking',  'EvaluationApiController@getPlayerRanking');
+});
+
+Route::group(['middleware' => 'api'], function() {
     Route::post('/getPlayerComments/{id}',  'MatchReviewController@getPlayerComments');
 });
 
