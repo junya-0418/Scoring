@@ -24,6 +24,7 @@
 
                 <div class="team-card">
                     <div><strong>{{ $team->name }}</strong></div>
+                    <div>Supporters</div>
                 </div>
 
                 <div class="information-card">
