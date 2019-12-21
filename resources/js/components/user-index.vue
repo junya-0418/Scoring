@@ -3,7 +3,7 @@
     <div class="user-posts">
         <p style="color: #6c757d;">投稿した試合</p>
         <div class="post-card" v-for="post in posts">
-            <a href="javascript:void(0)" @click="gonext(post.posts_id)">
+            <a class="match-card" href="javascript:void(0)" @click="gonext(post.posts_id)">
                 <div class="match-information" style="display: flex">{{ post.match_type }} {{ post.home_team_name }} vs {{ post.away_team_name }}</div>
                 <div style="display: flex;">
                     <div style="font-size: 12px; margin-right: 10px;">team</div>
@@ -25,7 +25,7 @@
 <style>
 
     .post-card a:hover {
-        background-color: #f0f8ff!important;
+        background-color: #f0f8ff;
     }
 
     .user-name h1 {

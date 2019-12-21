@@ -3,18 +3,34 @@
     <div style="margin-bottom: 10px; margin-left: 5rem;"><strong>平均採点</strong></div>
     <div style="margin-bottom: 40px; display: flex">
         <div class="evaluation-card-left">
-            <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 7px">Home Team</div>
+            <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 17px">Home Team</div>
             <div>
                 <div class="player-name" v-for="home_team_evaluation in home_team_evaluation_outputs" style="border-bottom: solid 1px #ccc; padding-left: 7px" @click="openModal(home_team_evaluation.player_id)">
-                    {{ home_team_evaluation.number }} {{ home_team_evaluation.name }} {{ home_team_evaluation.player_evaluation_average.toFixed(1) }}
+                    <div style="display: inline; float: left; margin-right: 1.25rem; width: 10px;">
+                        {{ home_team_evaluation.number }}
+                    </div>
+                    <div style="display: contents;">
+                        {{ home_team_evaluation.name }}
+                    </div>
+                    <div style="float: right; padding-right: 10px;">
+                        {{ home_team_evaluation.player_evaluation_average.toFixed(1) }}
+                    </div>
                 </div>
             </div>
         </div>
         <div class="evaluation-card-right">
-            <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 7px">Away Team</div>
+            <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 17px">Away Team</div>
             <div>
                 <div class="player-name" v-for="away_team_evaluation in away_team_evaluation_outputs" style="border-bottom: solid 1px #ccc; padding-left: 7px" @click="openModal(away_team_evaluation.player_id)">
-                    {{ away_team_evaluation.number }} {{ away_team_evaluation.name }} {{ away_team_evaluation.player_evaluation_average.toFixed(1) }}
+                    <div style="display: inline; float: left; margin-right: 1.25rem; width: 10px;">
+                        {{ away_team_evaluation.number }}
+                    </div>
+                    <div style="display: contents;">
+                        {{ away_team_evaluation.name }}
+                    </div>
+                    <div style="float: right; padding-right: 10px;">
+                        {{ away_team_evaluation.player_evaluation_average.toFixed(1) }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -34,14 +50,14 @@
     <div style="margin-bottom: 10px; margin-left: 5rem;"><strong>ユーザー</strong></div>
     <div style="margin-bottom: 40px; display: flex" >
         <div class="users-card-left">
-            <div style="background-color: #ccc; font-size: 12px; padding-left: 7px">ホームチームに投稿したユーザー</div>
-            <div class="user_name" v-for="home_team_user in home_team_users" @click="goNext(home_team_user.id)" style="border-bottom: solid 1px #ccc;">
+            <div style="background-color: #ccc; font-size: 12px; padding-left: 17px">ホームチームに投稿したユーザー</div>
+            <div class="user_name" v-for="home_team_user in home_team_users" @click="goNext(home_team_user.id)" style="border-bottom: solid 1px #ccc; padding-left: 17px;">
                     {{ home_team_user.name }}
             </div>
         </div>
         <div class="users-card-right">
-            <div style="background-color: #ccc; font-size: 12px; padding-left: 7px">アウェイチームに投稿したユーザー</div>
-            <div class="user_name" v-for="away_team_user in away_team_users" @click="goNext(away_team_user.id)" style="border-bottom: solid 1px #ccc;">
+            <div style="background-color: #ccc; font-size: 12px; padding-left: 17px">アウェイチームに投稿したユーザー</div>
+            <div class="user_name" v-for="away_team_user in away_team_users" @click="goNext(away_team_user.id)" style="border-bottom: solid 1px #ccc; padding-left: 17px;">
                     {{ away_team_user.name }}
             </div>
         </div>

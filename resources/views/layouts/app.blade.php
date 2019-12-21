@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Zidane</title>
+    <title>ALEGOAL</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -24,11 +24,11 @@
 
 </head>
 <body>
-    <div id="app2">
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Zidane
+                    ALEGOAL
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -95,15 +95,8 @@
             </div>
         </nav>
 
-        <nav>
-            <div style="border-bottom: solid 1px #ccc; width: 100%; margin-bottom: 10px; margin-top: 20px;">
-                <ul class="glonavi" style="margin-left: 300px;">
-                    <li><a class="glonavi-menu" href="/" style="margin-left: 30px">Home</a></li>
-                    <li><a class="glonavi-menu" href="/" style="margin-left: 30px">チーム</a></li>
-                    <li><a class="glonavi-menu" href="/" style="margin-left: 30px">試合一覧</a></li>
-                </ul>
-            </div>
-        </nav>
+            <globalmenu-component></globalmenu-component>
+
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -115,42 +108,11 @@
             </div>
         @endif
 
-        <main class="py-4">
+        <main class="py-4" style="z-index: 1">
             @yield('content')
         </main>
 
-{{--        <footer id="globalfooter">--}}
-{{--            <div class="footer-container">--}}
-{{--                <div style="font-size: 30px;"><strong>Zidane</strong></div>--}}
-{{--            </div>--}}
-{{--        </footer>--}}
     </div>
 
-    <script src="https://unpkg.com/vue"></script>
-{{--    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>--}}
-    <script>
-        var app2 = new Vue({
-            el: '#app2',
-            data: {
-                showContent: false
-            },
-            methods: {
-                openModal: function() {
-                    this.showContent = true
-                },
-                closeModal: function() {
-                    this.showContent = false
-                },
-                stopEvent: function(){
-                    event.stopPropagation()
-                },
-                go_user_page(id) {
-                    location.href="/users/" + id;
-                }
-            }
-        });
-
-
-    </script>
 </body>
 </html>

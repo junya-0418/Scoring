@@ -27,13 +27,13 @@
 
 
         </div>
-            <div id="sidebar" style="float: right;">
-                <ul style= "list-style: none">
-                    <li>
+{{--            <div id="sidebar" style="float: right;">--}}
+{{--                <ul style= "list-style: none">--}}
+{{--                    <li>--}}
 
-                    </li>
-                </ul>
-            </div>
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
 
 
     </div>
