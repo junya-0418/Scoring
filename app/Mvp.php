@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MVP extends Model
+class Mvp extends Model
 {
     protected $fillable = [
         'posts_id',

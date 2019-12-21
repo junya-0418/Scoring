@@ -10,7 +10,7 @@ use App\Team;
 use App\User;
 use App\Post;
 use App\Match;
-use App\MVP;
+use App\Mvp;
 use App\Player;
 use App\Evaluation;
 use App\Comment;
@@ -25,7 +25,7 @@ class UserReviewController extends Controller
 
         $user = User::where('id', $post->user_id)->get()->first();
 
-        $mvp_id = MVP::where('posts_id', $post->id)->get()->first()->player_id;
+        $mvp_id = Mvp::where('posts_id', $post->id)->get()->first()->player_id;
 
         $mvp_player = Player::where('id', $mvp_id)->get()->first();
 
