@@ -71,7 +71,7 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
                                     <a class="dropdown-item" href="javascript:void(0)"
-                                       @click="go_user_page({{ Auth::user()->id }})">
+                                       onclick="location.href='{{ route('user_show', ['id' => Auth::user()->id]) }}'">
                                         マイページ
                                     </a>
 

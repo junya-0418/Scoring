@@ -2146,7 +2146,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       matches: [],
       selectedMatchType: 'J1 第32節',
-      matchTypes: ['J1 第34節', 'J1 第33節', 'J1 第32節', 'J1 第31節']
+      matchTypes: ['天皇杯 準決勝', 'J1 第34節', 'J1 第33節', 'J1 第32節', 'J1 第31節']
     };
   },
   methods: {

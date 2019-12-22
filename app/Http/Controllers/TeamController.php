@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Team;
 use App\Post;
+use App\User;
 
 class TeamController extends Controller
 {
@@ -26,6 +27,8 @@ class TeamController extends Controller
 
         $team = Team::where('id', $id)->get()->first();
 
+        $supporters_count = User::where('support_team_id', $id)->get()->count();
+
         $posts = DB::table('posts')
             ->join('matches', 'posts.match_id', '=', 'matches.id')
             ->join('users', 'posts.user_id', '=', 'users.id')
@@ -34,7 +37,7 @@ class TeamController extends Controller
             ->orderBy('posts_created_at', 'desc')
             ->get();
 
-        return view('team_index', compact('team', 'posts'));
+        return view('team_index', compact('team', 'supporters_count', 'posts'));
 
     }
 }
