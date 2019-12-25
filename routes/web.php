@@ -35,6 +35,8 @@ Route::get('/users/{id}', 'UserController@index')->name('user_show');
 
 Route::get('/teams/{id}', 'TeamController@index')->name('team_show');
 
+Route::get('/user/edit/{id}', 'UserController@edit_index')->name('user_edit_show');
+
 Route::post('/create/team', 'TeamController@create')->name('create');
 
 Route::post('/create/player', 'PlayerController@create')->name('player_create');

@@ -1,6 +1,6 @@
 <template>
 <div style="float: left">
-    <div style="margin-left: 100px; margin-bottom: 20px; width: 130px;">
+    <div style="margin-left: 100px; margin-bottom: 20px; width: 140px;">
         <select class="custom-select sources" id="match" name="match" v-model="selectedMatchType">
             <option v-for="type in matchTypes">
                 {{ type }}

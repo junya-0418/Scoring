@@ -27,6 +27,8 @@ Vue.component('search-component', require('./components/SearchComponent.vue').de
 Vue.component('side-component', require('./components/SideComponent.vue').default);
 Vue.component('matchreview-component', require('./components/matchReview.vue').default);
 Vue.component('user-index', require('./components/user-index.vue').default);
+Vue.component('user-edit', require('./components/user-edit.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -58,4 +58,10 @@ class UserController extends Controller
         return $evaluations;
 
     }
+
+    public function edit_index($id) {
+
+        return view('user_edit');
+
+    }
 }

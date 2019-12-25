@@ -30,7 +30,7 @@
                     @if(Auth::check())
                         @if (Auth::user()->id  == $user->id)
                             <span style="margin-left: 30px; margin-top: 10px;">
-                                <button class="btn btn-secondary" style="padding: 4px;">編集</button>
+                                <button onclick="location.href='/user/edit/{{ $user->id }}'" class="btn btn-secondary" style="padding: 4px;">設定</button>
                             </span>
                         @endif
                     @endif
@@ -55,6 +55,8 @@
 </div>
 
 @endsection
+
+
 
 
 

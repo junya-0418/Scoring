@@ -27,10 +27,6 @@
                     <div style="margin-top: 30px; font-size: 15px;">{{ $supporters_count }} Supporters</div>
                 </div>
 
-                <div class="information-card">
-                    <strong>Coming Soon</strong>
-                </div>
-
                 <div class="user-card">
                     @foreach($posts as $post)
                     <div class="post-list" style="border-bottom: solid 1px #ccc; padding-bottom: 3px; margin: 7px 7px;">
