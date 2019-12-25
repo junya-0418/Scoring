@@ -67,9 +67,10 @@ class UserController extends Controller
 
     public function update(Request $request, $id) {
 
+        $data = ['name' => $request->name, 'support_team_id' => $request->team];
+
         User::where('id', $id)
-            ->updateOrCreate(['name' => $request->name],
-                ['support_team_id' => $request->team]);
+            ->update($data);
 
         return redirect(route('user_show', [
             'id' => $id,
