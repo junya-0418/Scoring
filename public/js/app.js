@@ -3015,27 +3015,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      errors: [],
       user_id: location.href.split('/').pop(),
-      user: [],
-      teams: []
+      username: '',
+      teams: [],
+      selectedTeam: ''
     };
   },
   methods: {
@@ -3043,11 +3031,22 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/forUserIndex/' + this.user_id).then(function (res) {
-        _this.user = res.data;
+        _this.username = res.data.name;
       });
     },
-    gonext: function gonext(id) {
-      location.href = "/user/match/review/" + id;
+    goPrevious: function goPrevious(id) {
+      location.href = "/users/" + id;
+    },
+    formCheck: function formCheck(e) {
+      this.errors = [];
+
+      if (!this.username) {
+        this.errors.push('名前を入力してください');
+      }
+
+      if (this.errors.length) {
+        e.preventDefault();
+      }
     }
   },
   mounted: function mounted() {
@@ -40697,21 +40696,29 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", [
                       _c("input", {
-                        attrs: {
-                          id: "name",
-                          type: "text",
-                          name: "name",
-                          required: "",
-                          autocomplete: "name",
-                          autofocus: ""
-                        },
-                        domProps: { value: _vm.user.name }
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.username,
+                            expression: "username"
+                          }
+                        ],
+                        staticStyle: { "padding-left": "3px" },
+                        attrs: { id: "name", type: "text", name: "name" },
+                        domProps: { value: _vm.username },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.username = $event.target.value
+                          }
+                        }
                       })
                     ])
                   ]
                 ),
-                _vm._v(" "),
-                _vm._m(0),
                 _vm._v(" "),
                 _c("div", { staticStyle: { "margin-left": "20px" } }, [
                   _c(
@@ -40726,12 +40733,34 @@ var render = function() {
                   _c(
                     "select",
                     {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.selectedTeam,
+                          expression: "selectedTeam"
+                        }
+                      ],
                       staticStyle: { width: "180px" },
                       attrs: { id: "team", name: "team" },
-                      domProps: { value: "" }
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.selectedTeam = $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        }
+                      }
                     },
                     _vm._l(_vm.teams, function(team) {
-                      return _c("option", [
+                      return _c("option", { domProps: { value: team.id } }, [
                         _vm._v(
                           "\n                                        " +
                             _vm._s(team.name) +
@@ -40747,7 +40776,60 @@ var render = function() {
                   _c("span", { staticClass: "cp_sl06_selectbar" })
                 ]),
                 _vm._v(" "),
-                _vm._m(1)
+                _vm.errors.length
+                  ? _c(
+                      "div",
+                      _vm._l(_vm.errors, function(error) {
+                        return _c(
+                          "div",
+                          { staticStyle: { color: "#dc143c" } },
+                          [
+                            _vm._v(
+                              "\n                                    " +
+                                _vm._s(error) +
+                                "\n                                "
+                            )
+                          ]
+                        )
+                      }),
+                      0
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _c("div", { staticStyle: { float: "right" } }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-secondary",
+                      staticStyle: { "margin-right": "10px" },
+                      attrs: { type: "button" },
+                      on: {
+                        click: function($event) {
+                          return _vm.goPrevious(_vm.user_id)
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                    キャンセル\n                                "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: { type: "submit" },
+                      on: { click: _vm.formCheck }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                    保存\n                                "
+                      )
+                    ]
+                  )
+                ])
               ]
             )
           ])
@@ -40756,63 +40838,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "form-group row", staticStyle: { "margin-left": "20px" } },
-      [
-        _c(
-          "label",
-          {
-            staticStyle: { "margin-right": "30px", width: "100px" },
-            attrs: { for: "text" }
-          },
-          [_vm._v("自己紹介文")]
-        ),
-        _vm._v(" "),
-        _c("div", [
-          _c("textarea", {
-            staticStyle: { height: "130px", width: "500px" },
-            attrs: { name: "text", id: "text", cols: "30", rows: "10" }
-          })
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticStyle: { float: "right" } }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-secondary",
-          staticStyle: { "margin-right": "10px" }
-        },
-        [
-          _vm._v(
-            "\n                                    キャンセル\n                                "
-          )
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-        [
-          _vm._v(
-            "\n                                    保存\n                                "
-          )
-        ]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

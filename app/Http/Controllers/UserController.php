@@ -61,7 +61,19 @@ class UserController extends Controller
 
     public function edit_index($id) {
 
-        return view('user_edit');
+        return view('user_edit', compact('id'));
+
+    }
+
+    public function update(Request $request, $id) {
+
+        User::where('id', $id)
+            ->updateOrCreate(['name' => $request->name],
+                ['support_team_id' => $request->team]);
+
+        return redirect(route('user_show', [
+            'id' => $id,
+        ]));
 
     }
 }
