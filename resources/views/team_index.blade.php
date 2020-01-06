@@ -1,12 +1,3 @@
-<head>
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/team_index.css') }}" rel="stylesheet">
-</head>
-
-
 @extends('layouts.app')
 
 @section('content')

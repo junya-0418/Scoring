@@ -47,3 +47,6 @@ Route::post('/create/comment', 'UserReviewController@comment_create')->name('com
 
 Route::post('/user/update/{id}', 'UserController@update')->name('user_update');
 
+
+
+

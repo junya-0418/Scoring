@@ -62,4 +62,20 @@ Route::group(['middleware' => 'api'], function() {
     Route::post('/get_players',  'EvaluationApiController@getPlayers');
 });
 
+Route::group(['middleware' => 'api'], function() {
+    Route::post('/getCounts',  'CheckinController@getCounts');
+});
+
+Route::group(['middleware' => 'api'], function() {
+    Route::post('/judge',  'CheckinController@judge');
+});
+
+Route::group(['middleware' => 'api'], function() {
+    Route::post('/checkin/store',  'CheckinController@store');
+});
+
+Route::group(['middleware' => 'api'], function() {
+    Route::post('/checkin/destroy',  'CheckinController@destroy');
+});
+
 

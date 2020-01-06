@@ -1,14 +1,3 @@
-<head>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue"></script>
-
-    <!-- Styles -->
-{{--    <script type="text/javascript" src="app.js"></script>--}}
-    <link href="{{ asset('css/match_review.css') }}" rel="stylesheet">
-</head>
-
 @extends('layouts.app')
 
 @section('content')
@@ -34,7 +23,9 @@
             </div>
         </div>
 
-        <div class="card" style="margin-top: 20px; margin-bottom: 20px;">
+        <checkin></checkin>
+
+        <div class="card" style="margin-top: 30px; margin-bottom: 20px;">
             <div style="margin-bottom: 20px; margin-left: 5rem;"><strong>Man of the Match</strong></div>
                 <div class="mvp-card">
                     @foreach( $mvp_outputs as $mvp)

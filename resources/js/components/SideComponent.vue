@@ -152,11 +152,6 @@
                 players: [],
             }
         },
-        // methods: {
-        //     goNext: function (id) {
-        //         location.href="/match/review/" + id;
-        //     }
-        // },
         mounted(){
             axios.get('/api/getPlayerRanking').then((res)=>{
                 this.players = res.data

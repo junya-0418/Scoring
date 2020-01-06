@@ -1,12 +1,3 @@
-<head>
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-    <!-- Styles -->
-{{--    <link href="{{ asset('css/user-index.css') }}" rel="stylesheet">--}}
-</head>
-
-
 @extends('layouts.app')
 
 @section('content')
@@ -30,8 +21,10 @@
                     <div style="margin-bottom: 20px">{{ $user->name }}</div>
 
                     <label for="manofthematch" style="border-bottom: solid 1px #ccc; width: 114px;">Man of the Match</label>
-                    <div id="manofthematch" style="background-color: #fff; width: 200px; padding: 10px 20px; margin-bottom: 20px; text-align: center;">
-                        <div>{{ $mvp_player->name }}</div>
+                    <div >
+                        <div id="manofthematch" style="background-color: #fff; width: 200px; padding: 10px 20px; margin-bottom: 20px; text-align: center; display: inline; float: left;">
+                            <div>{{ $mvp_player->name }}</div>
+                        </div>
                     </div>
 
                     @foreach($evaluations as $evaluation)

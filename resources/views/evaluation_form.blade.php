@@ -1,12 +1,3 @@
-<head>
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/evaluation.css') }}" rel="stylesheet">
-</head>
-
-
 @extends('layouts.app')
 
 @section('content')
@@ -50,7 +41,6 @@
 
 @endsection
 
-<script src=" {{ mix('js/app.js') }} "></script>
 
 
 

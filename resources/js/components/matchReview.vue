@@ -1,6 +1,11 @@
 <template>
 <div>
-    <div style="margin-bottom: 10px; margin-left: 5rem;"><strong>平均採点</strong></div>
+<!--    <div style="margin-bottom: 30px; width: 330px; margin-left: auto; margin-right: auto;">-->
+<!--        <button class="cp_btn" style="display: inline; margin-right: 5px;">スタジアム観戦</button>-->
+<!--        <button class="cp_btn" style="display: inline">TV観戦</button>-->
+<!--    </div>-->
+
+    <div style="margin-bottom: 10px; margin-left: 5rem; margin-top: 20px;"><strong>平均採点</strong></div>
     <div style="margin-bottom: 40px; display: flex">
         <div class="evaluation-card-left">
             <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 17px">Home Team</div>
@@ -102,6 +107,24 @@
     .user_name:hover {
         background-color: #f0f8ff;
         cursor: pointer;
+    }
+
+    button.cp_btn {
+        position: relative;
+        display: block;
+        width: 160px;
+        padding: 4px;
+        text-align: center;
+        text-decoration: none;
+        color: #FFF;
+        background: #26C6DA;
+        border-bottom: 2px solid #00838F;
+        border-radius: 4px;
+        box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    }
+    button.cp_btn:active {
+        border-bottom: 2px solid #26C6DA;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
     }
 
 </style>

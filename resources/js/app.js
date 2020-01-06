@@ -28,6 +28,7 @@ Vue.component('side-component', require('./components/SideComponent.vue').defaul
 Vue.component('matchreview-component', require('./components/matchReview.vue').default);
 Vue.component('user-index', require('./components/user-index.vue').default);
 Vue.component('user-edit', require('./components/user-edit.vue').default);
+Vue.component('checkin', require('./components/Checkin.vue').default);
 
 
 /**
