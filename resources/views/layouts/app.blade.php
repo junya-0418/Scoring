@@ -2,16 +2,16 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132067059-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155577082-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'UA-132067059-1');
+        gtag('config', 'UA-155577082-1');
     </script>
 
-    <!-- Google AdSence -->
+    <!-- Google AdSense -->
     <script data-ad-client="ca-pub-3317102263412689" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
     <meta charset="utf-8">
