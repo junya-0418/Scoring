@@ -7932,7 +7932,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.post-card a:hover {\n    background-color: #f0f8ff;\n}\n.user-name h1 {\n    margin-bottom: 30px;\n}\n.post-card {\n    padding-left: 15px;\n    background-color: #fff;\n    border: solid 1px #ccc;\n    width: 500px;\n    border-radius: 8px;\n    margin-bottom: 15px;\n}\n.post-card a {\n    text-decoration: none;\n    color: black;\n}\n.match-information {\n\n    margin-top: 10px;\n    margin-bottom: 15px;\n}\n\n\n", ""]);
+exports.push([module.i, "\n.card a:hover {\n    background-color: #f0f8ff;\n}\n.user-name h1 {\n    margin-bottom: 30px;\n}\n\n/*.card {*/\n/*    padding-left: 15px;*/\n/*    background-color: #fff;*/\n/*    border: solid 1px #ccc;*/\n/*    width: 500px;*/\n/*    border-radius: 8px;*/\n/*    margin-bottom: 15px;*/\n/*}*/\n.card a {\n    text-decoration: none;\n    color: black;\n}\n.match-information {\n\n    margin-top: 10px;\n    margin-bottom: 15px;\n    padding-left: 20px;\n}\n\n\n", ""]);
 
 // exports
 
@@ -41187,67 +41187,93 @@ var render = function() {
         ]),
         _vm._v(" "),
         _vm._l(_vm.posts, function(post) {
-          return _c("div", { staticClass: "post-card" }, [
-            _c(
-              "a",
-              {
-                staticClass: "match-card",
-                attrs: { href: "javascript:void(0)" },
-                on: {
-                  click: function($event) {
-                    return _vm.gonext(post.posts_id)
+          return _c(
+            "div",
+            {
+              staticClass: "card",
+              staticStyle: {
+                width: "500px",
+                "border-bottom": "solid 1px #ccc",
+                "background-color": "#fff",
+                "margin-bottom": "15px"
+              }
+            },
+            [
+              _c(
+                "a",
+                {
+                  staticClass: "match-card",
+                  attrs: { href: "javascript:void(0)" },
+                  on: {
+                    click: function($event) {
+                      return _vm.gonext(post.posts_id)
+                    }
                   }
-                }
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "match-information",
-                    staticStyle: { display: "flex" }
-                  },
-                  [
-                    _vm._v(
-                      _vm._s(post.match_type) +
-                        " " +
-                        _vm._s(post.home_team_name) +
-                        " vs " +
-                        _vm._s(post.away_team_name)
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticStyle: { display: "flex" } }, [
+                },
+                [
                   _c(
                     "div",
                     {
-                      staticStyle: {
-                        "font-size": "12px",
-                        "margin-right": "10px"
-                      }
+                      staticClass: "match-information",
+                      staticStyle: { display: "flex" }
                     },
-                    [_vm._v("team")]
+                    [
+                      _vm._v(
+                        _vm._s(post.match_type) +
+                          " " +
+                          _vm._s(post.home_team_name) +
+                          " vs " +
+                          _vm._s(post.away_team_name)
+                      )
+                    ]
                   ),
                   _vm._v(" "),
-                  post.team_id === post.home_team_id
-                    ? _c("div", { staticStyle: { "margin-bottom": "15px" } }, [
-                        _vm._v(
-                          "\n                        " +
-                            _vm._s(post.home_team_name) +
-                            "\n                    "
-                        )
-                      ])
-                    : _c("div", { staticStyle: { "margin-bottom": "15px" } }, [
-                        _vm._v(
-                          "\n                        " +
-                            _vm._s(post.away_team_name) +
-                            "\n                    "
-                        )
-                      ])
-                ])
-              ]
-            )
-          ])
+                  _c(
+                    "div",
+                    {
+                      staticStyle: { display: "flex", "padding-left": "20px" }
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticStyle: {
+                            "font-size": "12px",
+                            "margin-right": "10px"
+                          }
+                        },
+                        [_vm._v("team")]
+                      ),
+                      _vm._v(" "),
+                      post.team_id === post.home_team_id
+                        ? _c(
+                            "div",
+                            { staticStyle: { "margin-bottom": "15px" } },
+                            [
+                              _vm._v(
+                                "\n                        " +
+                                  _vm._s(post.home_team_name) +
+                                  "\n                    "
+                              )
+                            ]
+                          )
+                        : _c(
+                            "div",
+                            { staticStyle: { "margin-bottom": "15px" } },
+                            [
+                              _vm._v(
+                                "\n                        " +
+                                  _vm._s(post.away_team_name) +
+                                  "\n                    "
+                              )
+                            ]
+                          )
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
         })
       ],
       2
