@@ -9,7 +9,7 @@
                 <div class="alert alert-danger">
                     <ul>
                         @foreach ($errors->all() as $error)
-                        <li>採点を行ってから送信してください</li>
+                        <li>{{ $error }}</li>
                         @endforeach
                     </ul>
                 </div>

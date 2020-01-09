@@ -34,6 +34,10 @@ Route::group(['middleware' => 'api'], function() {
 });
 
 Route::group(['middleware' => 'api'], function() {
+    Route::get('/forUserCheckin/{id}',  'UserController@forUserCheckin');
+});
+
+Route::group(['middleware' => 'api'], function() {
     Route::get('/forUserEvaluation/{id}',  'UserController@forUserEvaluation');
 });
 

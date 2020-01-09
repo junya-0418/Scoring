@@ -10,6 +10,7 @@ use App\Team;
 use App\User;
 use App\Post;
 use App\Evaluation;
+use App\Checkin;
 
 class UserController extends Controller
 {
@@ -44,6 +45,19 @@ class UserController extends Controller
             ->get();
 
         return $posts;
+
+    }
+
+    public function forUserCheckin($id) {
+
+        $user = User::where('id', $id)->get()->first();
+
+        $checkins = DB::table('checkins')
+            ->join('matches', 'checkins.match_id', '=', 'matches.id')
+            ->where('user_id', $user->id)
+            ->get();
+
+        return $checkins;
 
     }
 

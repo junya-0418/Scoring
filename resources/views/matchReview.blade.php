@@ -4,7 +4,7 @@
 <div id="app">
     <div class="container">
 
-        <div style="width: 550px;margin-left: 240px;">
+        <div style="width: 560px;margin-left: 240px;">
 
             @if (session('status'))
                 <div class="alert alert-success" role="alert">

@@ -26,6 +26,7 @@
     <link href="{{ asset('css/team_index.css') }}" rel="stylesheet">
     <link href="{{ asset('css/match_review.css') }}" rel="stylesheet">
     <link href="{{ asset('css/evaluation.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/user_review_detail.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>

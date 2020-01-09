@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8" style="margin-top: 2rem">
 
-                <div class="card">
+                <div class="card2">
 
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -15,10 +15,10 @@
                         </div>
                     @endif
 
-                    <div style="margin-bottom: 10px; font-size: 20px;">{{ $match->match_type }}</div>
-                    <div style="margin-bottom: 10px; font-size: 25px;">{{ $match->home_team_name }} vs {{ $match->away_team_name }}</div>
-                    <div style="margin-bottom: 20px; font-size: 20px;">{{ $match->score }}</div>
-                    <div style="margin-bottom: 20px">{{ $user->name }}</div>
+                    <div style="margin-bottom: 10px; font-size: 15px; margin-left: 50px;"><strong>{{ $match->match_type }}</strong></div>
+                    <div style="margin-bottom: 10px; font-size: 25px; text-align: center;"><strong>{{ $match->home_team_name }} vs {{ $match->away_team_name }}</strong></div>
+                    <div style="margin-bottom: 20px; font-size: 20px; text-align: center;"><strong>{{ $match->score }}</strong></div>
+                    <a class="username" href="/users/{{ $user->id }}" style="margin-bottom: 20px;">{{ $user->name }}</a>
 
                     <label for="manofthematch" style="border-bottom: solid 1px #ccc; width: 114px;">Man of the Match</label>
                     <div >

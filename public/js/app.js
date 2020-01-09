@@ -3309,13 +3309,38 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      posted: 'block',
+      checkin: 'none',
+      postedLine: 'solid 3px #ccc',
+      checkinLine: 'none',
       user_id: location.href.split('/').pop(),
       user: [],
       posts: [],
+      UserCheckins: [],
       showContent: false,
       evaluations: ''
     };
@@ -3330,9 +3355,22 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/forUserPost/' + this.user_id).then(function (res) {
         _this.posts = res.data;
       });
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/forUserCheckin/' + this.user_id).then(function (res) {
+        _this.UserCheckins = res.data;
+      });
     },
-    gonext: function gonext(id) {
+    goPosted: function goPosted() {
+      this.posted = 'block', this.checkin = 'none', this.postedLine = 'solid 3px #ccc', this.checkinLine = 'none';
+    },
+    goCheckin: function goCheckin() {
+      this.posted = 'none', this.checkin = 'block';
+      this.postedLine = 'none', this.checkinLine = 'solid 3px #ccc';
+    },
+    goUserReview: function goUserReview(id) {
       location.href = "/user/match/review/" + id;
+    },
+    goMatch: function goMatch(id) {
+      location.href = "/match/review/" + id;
     }
   },
   created: function created() {
@@ -41178,14 +41216,41 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "div",
-      { staticClass: "user-posts" },
-      [
-        _c("p", { staticStyle: { color: "#6c757d" } }, [
-          _vm._v("投稿した試合")
-        ]),
+    _c("div", { staticClass: "user-posts" }, [
+      _c("div", [
+        _c(
+          "a",
+          {
+            staticStyle: {
+              color: "#6c757d",
+              display: "inline",
+              "margin-right": "20px"
+            },
+            style: { borderBottom: _vm.postedLine },
+            attrs: { href: "javascript:void(0)" },
+            on: { click: _vm.goPosted }
+          },
+          [_vm._v("投稿した試合")]
+        ),
         _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticStyle: { color: "#6c757d", display: "inline" },
+            style: { borderBottom: _vm.checkinLine },
+            attrs: { href: "javascript:void(0)" },
+            on: { click: _vm.goCheckin }
+          },
+          [_vm._v("観戦した試合")]
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticStyle: { "margin-top": "20px" },
+          style: { display: _vm.posted }
+        },
         _vm._l(_vm.posts, function(post) {
           return _c(
             "div",
@@ -41206,7 +41271,7 @@ var render = function() {
                   attrs: { href: "javascript:void(0)" },
                   on: {
                     click: function($event) {
-                      return _vm.gonext(post.posts_id)
+                      return _vm.goUserReview(post.posts_id)
                     }
                   }
                 },
@@ -41251,9 +41316,9 @@ var render = function() {
                             { staticStyle: { "margin-bottom": "15px" } },
                             [
                               _vm._v(
-                                "\n                        " +
+                                "\n                            " +
                                   _vm._s(post.home_team_name) +
-                                  "\n                    "
+                                  "\n                        "
                               )
                             ]
                           )
@@ -41262,9 +41327,9 @@ var render = function() {
                             { staticStyle: { "margin-bottom": "15px" } },
                             [
                               _vm._v(
-                                "\n                        " +
+                                "\n                            " +
                                   _vm._s(post.away_team_name) +
-                                  "\n                    "
+                                  "\n                        "
                               )
                             ]
                           )
@@ -41274,10 +41339,80 @@ var render = function() {
               )
             ]
           )
-        })
-      ],
-      2
-    )
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticStyle: { "margin-top": "20px" },
+          style: { display: _vm.checkin }
+        },
+        _vm._l(_vm.UserCheckins, function(usercheckin) {
+          return _c(
+            "div",
+            {
+              staticClass: "card",
+              staticStyle: {
+                width: "500px",
+                "border-bottom": "solid 1px #ccc",
+                "background-color": "#fff",
+                "margin-bottom": "15px"
+              }
+            },
+            [
+              _c(
+                "a",
+                {
+                  staticClass: "match-card",
+                  attrs: { href: "javascript:void(0)" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goMatch(usercheckin.match_id)
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "match-information",
+                      staticStyle: { display: "flex" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                        " +
+                          _vm._s(usercheckin.match_type) +
+                          "\n                    "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "match-information",
+                      staticStyle: { display: "flex" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                        " +
+                          _vm._s(usercheckin.home_team_name) +
+                          " vs " +
+                          _vm._s(usercheckin.away_team_name) +
+                          "\n                    "
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        }),
+        0
+      )
+    ])
   ])
 }
 var staticRenderFns = []
