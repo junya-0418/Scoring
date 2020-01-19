@@ -1,16 +1,46 @@
 <?php
 
 return [
-    "driver" => "smtp",
-    "host" => "smtp.mailtrap.io",
-    "port" => 2525,
-    "from" => array(
-        "address" => "alegoal@gmail.com",
-        "name" => "ALEGOAL"
-    ),
-    "username" => "ebcdeeb14d435a",
-    "password" => "707b7e97cf525b",
-    "sendmail" => "/usr/sbin/sendmail -bs"
+    // Mail Driver
+    'driver' => "smtp",
+
+    // SMTP Host Address
+    'host' => "smtp.gmail.com",
+
+    // SMTP Host Port
+    'port' => 465,
+
+    // Global "From" Address
+    'from' => [
+        'address' => "alegoal.jp@gmail.com",
+        'name' => "ALEGOAL"
+    ],
+
+    // E-Mail Encryption Protocol
+    'encryption' => "ssl",
+
+    // SMTP Server Username
+    'username' => "alegoal.jp@gmail.com",
+
+    // SMTP Server Password
+    'password' => "xmbzfuhiongaibyq",
+
+    // Sendmail System Path
+    'sendmail' => '/usr/sbin/sendmail -bs',
+
+    // Mail "Pretend"
+    'pretend' => false,
+
+//    "driver" => "smtp",
+//    "host" => "smtp.gmail.com",
+//    "port" => 587,
+//    "from" => array(
+//        "address" => "alegoal.jp@gmail.com",
+//        "name" => "ALEGOAL"
+//    ),
+//    "username" => "alegoal.jp@gmail.com",
+//    "password" => "xmbzfuhiongaibyq",
+//    "sendmail" => "/usr/sbin/sendmail -bs"
 
 //    /*
 //    |--------------------------------------------------------------------------

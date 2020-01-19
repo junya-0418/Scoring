@@ -24,8 +24,8 @@ class ContactController extends Controller
           'body' => $request->body
         ];
 
-        Mail::to('jharada0418@gmail.com')->send(new Contacted($params));
-    
+        Mail::to('alegoal.jp@gmail.com')->send(new Contacted($params));
+
         return view('contact_complete');
 
     }
