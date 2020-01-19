@@ -38,8 +38,10 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-button.nav-item-sauna {
-    margin-right: 3px;
+.error {
+
+    color: red;
+
 }
 
 #overlay{

@@ -37,6 +37,8 @@ Route::get('/teams/{id}', 'TeamController@index')->name('team_show');
 
 Route::get('/user/edit/{id}', 'UserController@edit_index')->name('user_edit_show');
 
+Route::get('/contact', 'ContactController@input')->name('contact');
+
 Route::post('/create/team', 'TeamController@create')->name('create');
 
 Route::post('/create/player', 'PlayerController@create')->name('player_create');
@@ -46,6 +48,9 @@ Route::post('/create/mvp', 'EvaluationController@create')->name('evaluation_crea
 Route::post('/create/comment', 'UserReviewController@comment_create')->name('comment_create');
 
 Route::post('/user/update/{id}', 'UserController@update')->name('user_update');
+
+Route::post('/contact/send', 'ContactController@send')->name('contact_send');
+
 
 
 

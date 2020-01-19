@@ -5,13 +5,12 @@
         <li  class="list-item">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="#"  @mouseenter="dropdown_show">チーム</a></li>
-                <ul v-if="active===true" @mouseleave="dropdown_hide" style="border: solid 1px #ccc; margin-top: 5px; z-index: 1000; position: relative; background-color: #f0f8ff;">
-                    <div v-for="team in teams" class="sublist-item">
-
+                <li><a href="#" @mouseenter="dropdown_show">チーム</a></li>
+                <li><a href="/contact" style="margin-left: 750px;">お問い合わせ</a></li>
+                <ul v-if="active===true" @mouseleave="dropdown_hide" style="border: solid 1px #ccc; margin-top: 5px; z-index: 1000; position: relative; background-color: #f0f8ff; margin-right: 150px;">
+                    <li v-for="team in teams" class="sublist-item">
                         <a href="javascript:void(0)" @click="go_team_page(team.id)">{{team.name}}</a>
-
-                    </div>
+                    </li>
                 </ul>
             </ul>
         </li>
@@ -68,7 +67,7 @@
         /*content:"▲";*/
     }
     .sublist-item{
-        font-size: 14px;
+        font-size: 11px;
     }
 </style>
 

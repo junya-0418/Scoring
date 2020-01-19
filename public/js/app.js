@@ -2107,7 +2107,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -7856,7 +7855,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.global_menu {\n    border-bottom:solid 1px #ccc;\n    height: 45px;\n    margin-bottom: 15px;\n    z-index: 9999;\n    margin-top: 10px;\n    /*background-color: #f0ffff;;*/\n}\nul{\n    padding: 0;\n}\nli{\n    list-style:none;\n}\na{\n    color:#333;\n    text-decoration:none;\n}\n.list{\n    padding: 0;\n    margin-left: 250px;\n}\n.list-item a{\n    position: relative;\n    padding: 8px;\n    /*border-bottom:solid 1px #ccc;*/\n    margin-right: 3px;\n}\n.list-item a{\n    display: block;\n}\n.list-item:last-of-type a{\n    border-bottom:none;\n}\n.list-item > a::after{\n    /*content:\"▼\";*/\n    /*position: absolute;*/\n    top:12px;\n    right:10px;\n    font-size:12px;\n}\n.list-item >a.active::after{\n    /*content:\"▲\";*/\n}\n.sublist-item{\n    font-size: 14px;\n}\n", ""]);
+exports.push([module.i, "\n.global_menu {\n    border-bottom:solid 1px #ccc;\n    height: 45px;\n    margin-bottom: 15px;\n    z-index: 9999;\n    margin-top: 10px;\n    /*background-color: #f0ffff;;*/\n}\nul{\n    padding: 0;\n}\nli{\n    list-style:none;\n}\na{\n    color:#333;\n    text-decoration:none;\n}\n.list{\n    padding: 0;\n    margin-left: 250px;\n}\n.list-item a{\n    position: relative;\n    padding: 8px;\n    /*border-bottom:solid 1px #ccc;*/\n    margin-right: 3px;\n}\n.list-item a{\n    display: block;\n}\n.list-item:last-of-type a{\n    border-bottom:none;\n}\n.list-item > a::after{\n    /*content:\"▼\";*/\n    /*position: absolute;*/\n    top:12px;\n    right:10px;\n    font-size:12px;\n}\n.list-item >a.active::after{\n    /*content:\"▲\";*/\n}\n.sublist-item{\n    font-size: 11px;\n}\n", ""]);
 
 // exports
 
@@ -39821,6 +39820,8 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
             _vm.active === true
               ? _c(
                   "ul",
@@ -39830,12 +39831,13 @@ var render = function() {
                       "margin-top": "5px",
                       "z-index": "1000",
                       position: "relative",
-                      "background-color": "#f0f8ff"
+                      "background-color": "#f0f8ff",
+                      "margin-right": "150px"
                     },
                     on: { mouseleave: _vm.dropdown_hide }
                   },
                   _vm._l(_vm.teams, function(team) {
-                    return _c("div", { staticClass: "sublist-item" }, [
+                    return _c("li", { staticClass: "sublist-item" }, [
                       _c(
                         "a",
                         {
@@ -39865,6 +39867,21 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Home")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c(
+        "a",
+        {
+          staticStyle: { "margin-left": "750px" },
+          attrs: { href: "/contact" }
+        },
+        [_vm._v("お問い合わせ")]
+      )
+    ])
   }
 ]
 render._withStripped = true
@@ -53592,6 +53609,7 @@ Vue.component('matchreview-component', __webpack_require__(/*! ./components/matc
 Vue.component('user-index', __webpack_require__(/*! ./components/user-index.vue */ "./resources/js/components/user-index.vue")["default"]);
 Vue.component('user-edit', __webpack_require__(/*! ./components/user-edit.vue */ "./resources/js/components/user-edit.vue")["default"]);
 Vue.component('checkin', __webpack_require__(/*! ./components/Checkin.vue */ "./resources/js/components/Checkin.vue")["default"]);
+Vue.component('contact', __webpack_require__(/*! ./components/contact.vue */ "./resources/js/components/contact.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -54068,6 +54086,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SideComponent_vue_vue_type_template_id_7d586a0b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/components/contact.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/components/contact.vue ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/components/contact.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
