@@ -2307,8 +2307,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       matches: [],
-      selectedMatchType: 'J1 第32節',
-      matchTypes: ['天皇杯 決勝', '天皇杯 準決勝', 'J1 第34節', 'J1 第33節', 'J1 第32節', 'J1 第31節']
+      selectedMatchType: 'J1 第1節',
+      matchTypes: ['J1 第1節', 'J1 第2節', 'J1 第3節', 'J1 第4節', 'J1 第5節', 'J1 第6節', 'J1 第7節', 'J1 第8節', 'J1 第9節', 'J1 第10節']
     };
   },
   methods: {
@@ -2351,6 +2351,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -40069,51 +40071,54 @@ var render = function() {
             }
           },
           [
-            _c(
-              "div",
-              { staticStyle: { padding: "15px 30px 10px 30px" } },
-              [
-                _c("p", { staticStyle: { "font-size": "12px" } }, [
-                  _vm._v("第34節プレーヤーランキング")
-                ]),
-                _vm._v(" "),
-                _vm._l(5, function(n) {
-                  return _c(
+            _c("div", { staticStyle: { padding: "15px 30px 10px 30px" } }, [
+              _c("p", { staticStyle: { "font-size": "12px" } }, [
+                _vm._v("J1第1節 プレーヤーランキング")
+              ]),
+              _vm._v(" "),
+              _vm.players.length
+                ? _c(
                     "div",
-                    {
-                      staticStyle: {
-                        "font-size": "14px",
-                        "border-bottom": "solid 1px #ccc",
-                        "margin-bottom": "15px"
-                      }
-                    },
-                    [
-                      _c("div", { staticStyle: { display: "contents" } }, [
-                        _c("strong", [_vm._v(_vm._s(n))]),
-                        _vm._v("　" + _vm._s(_vm.players[n - 1].name))
-                      ]),
-                      _vm._v(" "),
-                      _c(
+                    _vm._l(5, function(n) {
+                      return _c(
                         "div",
-                        { staticStyle: { display: "flex", float: "right" } },
+                        {
+                          staticStyle: {
+                            "font-size": "14px",
+                            "border-bottom": "solid 1px #ccc",
+                            "margin-bottom": "15px"
+                          }
+                        },
                         [
-                          _c("strong", [
-                            _vm._v(
-                              _vm._s(
-                                _vm.players[
-                                  n - 1
-                                ].player_evaluation_average.toFixed(1)
-                              )
-                            )
-                          ])
+                          _c("div", { staticStyle: { display: "contents" } }, [
+                            _c("strong", [_vm._v(_vm._s(n))]),
+                            _vm._v("　" + _vm._s(_vm.players[n - 1].name))
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticStyle: { display: "flex", float: "right" }
+                            },
+                            [
+                              _c("strong", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.players[
+                                      n - 1
+                                    ].player_evaluation_average.toFixed(1)
+                                  )
+                                )
+                              ])
+                            ]
+                          )
                         ]
                       )
-                    ]
+                    }),
+                    0
                   )
-                })
-              ],
-              2
-            )
+                : _vm._e()
+            ])
           ]
         )
       ]

@@ -3,10 +3,12 @@
     <div class="card" style="margin-top: 58px; margin-right: 60px;">
             <div style="width: 250px; margin-left: 100px; background-color: #fff;">
                 <div style="padding: 15px 30px 10px 30px;">
-                    <p style="font-size: 12px;">第34節プレーヤーランキング</p>
-                    <div style="font-size: 14px;  border-bottom: solid 1px #ccc; margin-bottom: 15px;" v-for="n in 5">
-                        <div style="display: contents;"><strong>{{ n }}</strong>　{{ players[n - 1].name }}</div>
-                        <div style="display: flex; float: right;"><strong>{{ players[n - 1].player_evaluation_average.toFixed(1) }}</strong></div>
+                    <p style="font-size: 12px;">J1第1節 プレーヤーランキング</p>
+                    <div v-if="players.length">
+                        <div style="font-size: 14px;  border-bottom: solid 1px #ccc; margin-bottom: 15px;" v-for="n in 5">
+                            <div style="display: contents;"><strong>{{ n }}</strong>　{{ players[n - 1].name }}</div>
+                            <div style="display: flex; float: right;"><strong>{{ players[n - 1].player_evaluation_average.toFixed(1) }}</strong></div>
+                        </div>
                     </div>
                 </div>
             </div>
