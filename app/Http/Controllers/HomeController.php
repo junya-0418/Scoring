@@ -25,10 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $teams = Team::orderBy('created_at', 'desc')->get();
-        $matches = Match::all();
 
-        return view('home', compact('teams', 'matches'));
+        return view('home');
+
+
     }
 
 }

@@ -44,6 +44,12 @@
 
 }
 
+@media (max-width: 479px) {
+ .globalMenu {
+     display: none;
+ }
+}
+
 #overlay{
     /*　要素を重ねた時の順番　*/
     z-index:1;

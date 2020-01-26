@@ -1,23 +1,19 @@
 <template>
-<div style="float: left">
-    <div style="margin-left: 100px; margin-bottom: 20px; width: 140px;">
+<div class="main">
+    <div class="selectMatch">
         <select class="custom-select sources" id="match" name="match" v-model="selectedMatchType">
             <option v-for="type in matchTypes">
                 {{ type }}
             </option>
         </select>
     </div>
-    <div class="card" style="width: 600px;margin-left: 100px; border-bottom: solid 1px #ccc; background-color: #fff; margin-bottom: 15px;" v-for="match in filteredMatches">
-        <a class="match-card" style="color: black; padding-bottom: 10px;" href="javascript:void(0)" @click="goNext(match.id)">
-            <div>
-                <div style="width: 600px; padding: 15px 30px; margin-bottom: 15px;">
-                    <div style="float: left; font-size: 12px;">
-                        <div>{{ match.date }}</div>
-                        <div>{{ match.match_type }}</div>
-                        <div style="font-size: 16px;">{{ match.home_team_name }} vs {{ match.away_team_name }}</div>
-                        <div style="font-size: 14px;">{{ match.score }}</div>
-                    </div>
-                </div>
+    <div class="card board"  v-for="match in filteredMatches">
+        <a class="match-card" href="javascript:void(0)" @click="goNext(match.id)">
+            <div class="match">
+                <div>{{ match.date }}</div>
+                <div>{{ match.match_type }}</div>
+                <div style="font-size: 16px;">{{ match.home_team_name }} vs {{ match.away_team_name }}</div>
+                <div style="font-size: 14px;">{{ match.score }}</div>
             </div>
         </a>
     </div>
@@ -25,6 +21,80 @@
 </template>
 
 <style>
+
+    @media (min-width: 767px) {
+        .main {
+            float: left;
+        }
+
+        .selectMatch {
+
+            margin-left: 100px;
+            margin-bottom: 20px;
+            width: 140px;
+
+        }
+
+        .board {
+            width: 600px;
+            margin-left: 100px;
+            border-bottom: solid 1px #ccc;
+            background-color: #fff;
+            margin-bottom: 15px;
+
+        }
+
+        .match-card {
+
+            color: black;
+            /*padding-bottom: 10px;*/
+
+        }
+
+        .match {
+
+            width: 600px;
+            padding: 15px 30px;
+            font-size: 12px;
+
+        }
+    }
+
+
+    @media (max-width: 479px) {
+        /*ウィンドウ幅が最大479pxまでの場合に適用*/
+        .selectMatch{
+
+            margin-bottom: 20px;
+            width: 140px;
+            margin-top: 15px;
+
+        }
+
+        .board {
+            width: 350px;
+            border-bottom: solid 1px #ccc;
+            background-color: #fff;
+            margin-bottom: 15px;
+
+        }
+
+        .match-card {
+
+            color: black;
+            /*padding-bottom: 10px;*/
+
+        }
+
+        .match {
+
+            width: 600px;
+            padding: 15px 30px;
+            font-size: 12px;
+
+        }
+    }
+
     .card a:hover {
         background-color: #f0f8ff;
     }

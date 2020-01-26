@@ -2303,6 +2303,76 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -7876,7 +7946,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.card a:hover {\n    background-color: #f0f8ff;\n}\n.btn-gradation {\n    display: inline-block;\n    text-align: left;\n    background-image: linear-gradient(#eaeaea 0%, #c6c6c6 100%);\n    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);\n    color: #a5a5a5;\n    font-size: 16px;\n    text-decoration: none;\n    font-weight: bold;\n    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);\n    padding: 6px 12px;\n    border-radius: 4px;\n    font-size: 16px;\n}\n.btn-gradation:hover {\n    opacity: 0.8;\n}\n.custom-select-wrapper {\n    position: relative;\n    display: inline-block;\n    user-select: none;\n}\n.custom-select-wrapper select {\n    display: none;\n}\n.custom-select {\n    position: relative;\n    display: inline-block;\n}\n.custom-select-trigger {\n    position: relative;\n    display: block;\n    width: 130px;\n    padding: 0 84px 0 22px;\n    font-size: 22px;\n    font-weight: 300;\n    color: #fff;\n    line-height: 60px;\n    background: #5c9cd8;\n    border-radius: 4px;\n    cursor: pointer;\n}\n.custom-select-trigger:after {\n    position: absolute;\n    display: block;\n    content: '';\n    width: 10px; height: 10px;\n    top: 50%; right: 25px;\n    margin-top: -3px;\n    border-bottom: 1px solid #fff;\n    border-right: 1px solid #fff;\n    transform: rotate(45deg) translateY(-50%);\n    transition: all .4s ease-in-out;\n    transform-origin: 50% 0;\n}\n.custom-select.opened .custom-select-trigger:after {\n    margin-top: 3px;\n    transform: rotate(-135deg) translateY(-50%);\n}\n.custom-options {\n    position: absolute;\n    display: block;\n    top: 100%; left: 0; right: 0;\n    min-width: 100%;\n    margin: 15px 0;\n    border: 1px solid #b5b5b5;\n    border-radius: 4px;\n    box-sizing: border-box;\n    box-shadow: 0 2px 1px rgba(0,0,0,.07);\n    background: #fff;\n    transition: all .4s ease-in-out;\n\n    opacity: 0;\n    visibility: hidden;\n    pointer-events: none;\n    transform: translateY(-15px);\n}\n.custom-select.opened .custom-options {\n    opacity: 1;\n    visibility: visible;\n    pointer-events: all;\n    transform: translateY(0);\n}\n.custom-options:before {\n    position: absolute;\n    display: block;\n    content: '';\n    bottom: 100%; right: 25px;\n    width: 7px; height: 7px;\n    margin-bottom: -4px;\n    border-top: 1px solid #b5b5b5;\n    border-left: 1px solid #b5b5b5;\n    background: #fff;\n    transform: rotate(45deg);\n    transition: all .4s ease-in-out;\n}\n.option-hover:before {\n    background: #f9f9f9;\n}\n.custom-option {\n    position: relative;\n    display: block;\n    padding: 0 22px;\n    border-bottom: 1px solid #b5b5b5;\n    font-size: 18px;\n    font-weight: 600;\n    color: #b5b5b5;\n    line-height: 47px;\n    cursor: pointer;\n    transition: all .4s ease-in-out;\n}\n.custom-option:first-of-type {\n    border-radius: 4px 4px 0 0;\n}\n.custom-option:last-of-type {\n    border-bottom: 0;\n    border-radius: 0 0 4px 4px;\n}\n.custom-option:hover,\n.custom-option.selection {\n    background: #f9f9f9;\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.main {\n        float: left;\n}\n.selectMatch {\n\n        margin-left: 100px;\n        margin-bottom: 20px;\n        width: 140px;\n}\n.board {\n        width: 600px;\n        margin-left: 100px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.match-card {\n\n        color: black;\n        /*padding-bottom: 10px;*/\n}\n.match {\n\n        width: 600px;\n        padding: 15px 30px;\n        font-size: 12px;\n}\n}\n@media (max-width: 479px) {\n    /*ウィンドウ幅が最大479pxまでの場合に適用*/\n.selectMatch{\n\n        margin-bottom: 20px;\n        width: 140px;\n        margin-top: 15px;\n}\n.board {\n        width: 350px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.match-card {\n\n        color: black;\n        /*padding-bottom: 10px;*/\n}\n.match {\n\n        width: 600px;\n        padding: 15px 30px;\n        font-size: 12px;\n}\n}\n.card a:hover {\n    background-color: #f0f8ff;\n}\n.btn-gradation {\n    display: inline-block;\n    text-align: left;\n    background-image: linear-gradient(#eaeaea 0%, #c6c6c6 100%);\n    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);\n    color: #a5a5a5;\n    font-size: 16px;\n    text-decoration: none;\n    font-weight: bold;\n    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);\n    padding: 6px 12px;\n    border-radius: 4px;\n    font-size: 16px;\n}\n.btn-gradation:hover {\n    opacity: 0.8;\n}\n.custom-select-wrapper {\n    position: relative;\n    display: inline-block;\n    user-select: none;\n}\n.custom-select-wrapper select {\n    display: none;\n}\n.custom-select {\n    position: relative;\n    display: inline-block;\n}\n.custom-select-trigger {\n    position: relative;\n    display: block;\n    width: 130px;\n    padding: 0 84px 0 22px;\n    font-size: 22px;\n    font-weight: 300;\n    color: #fff;\n    line-height: 60px;\n    background: #5c9cd8;\n    border-radius: 4px;\n    cursor: pointer;\n}\n.custom-select-trigger:after {\n    position: absolute;\n    display: block;\n    content: '';\n    width: 10px; height: 10px;\n    top: 50%; right: 25px;\n    margin-top: -3px;\n    border-bottom: 1px solid #fff;\n    border-right: 1px solid #fff;\n    transform: rotate(45deg) translateY(-50%);\n    transition: all .4s ease-in-out;\n    transform-origin: 50% 0;\n}\n.custom-select.opened .custom-select-trigger:after {\n    margin-top: 3px;\n    transform: rotate(-135deg) translateY(-50%);\n}\n.custom-options {\n    position: absolute;\n    display: block;\n    top: 100%; left: 0; right: 0;\n    min-width: 100%;\n    margin: 15px 0;\n    border: 1px solid #b5b5b5;\n    border-radius: 4px;\n    box-sizing: border-box;\n    box-shadow: 0 2px 1px rgba(0,0,0,.07);\n    background: #fff;\n    transition: all .4s ease-in-out;\n\n    opacity: 0;\n    visibility: hidden;\n    pointer-events: none;\n    transform: translateY(-15px);\n}\n.custom-select.opened .custom-options {\n    opacity: 1;\n    visibility: visible;\n    pointer-events: all;\n    transform: translateY(0);\n}\n.custom-options:before {\n    position: absolute;\n    display: block;\n    content: '';\n    bottom: 100%; right: 25px;\n    width: 7px; height: 7px;\n    margin-bottom: -4px;\n    border-top: 1px solid #b5b5b5;\n    border-left: 1px solid #b5b5b5;\n    background: #fff;\n    transform: rotate(45deg);\n    transition: all .4s ease-in-out;\n}\n.option-hover:before {\n    background: #f9f9f9;\n}\n.custom-option {\n    position: relative;\n    display: block;\n    padding: 0 22px;\n    border-bottom: 1px solid #b5b5b5;\n    font-size: 18px;\n    font-weight: 600;\n    color: #b5b5b5;\n    line-height: 47px;\n    cursor: pointer;\n    transition: all .4s ease-in-out;\n}\n.custom-option:first-of-type {\n    border-radius: 4px 4px 0 0;\n}\n.custom-option:last-of-type {\n    border-bottom: 0;\n    border-radius: 0 0 4px 4px;\n}\n.custom-option:hover,\n.custom-option.selection {\n    background: #f9f9f9;\n}\n\n", ""]);
 
 // exports
 
@@ -39909,123 +39979,81 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticStyle: { float: "left" } },
+    { staticClass: "main" },
     [
-      _c(
-        "div",
-        {
-          staticStyle: {
-            "margin-left": "100px",
-            "margin-bottom": "20px",
-            width: "140px"
-          }
-        },
-        [
+      _c("div", { staticClass: "selectMatch" }, [
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.selectedMatchType,
+                expression: "selectedMatchType"
+              }
+            ],
+            staticClass: "custom-select sources",
+            attrs: { id: "match", name: "match" },
+            on: {
+              change: function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.selectedMatchType = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              }
+            }
+          },
+          _vm._l(_vm.matchTypes, function(type) {
+            return _c("option", [
+              _vm._v("\n                " + _vm._s(type) + "\n            ")
+            ])
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _vm._l(_vm.filteredMatches, function(match) {
+        return _c("div", { staticClass: "card board" }, [
           _c(
-            "select",
+            "a",
             {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.selectedMatchType,
-                  expression: "selectedMatchType"
-                }
-              ],
-              staticClass: "custom-select sources",
-              attrs: { id: "match", name: "match" },
+              staticClass: "match-card",
+              attrs: { href: "javascript:void(0)" },
               on: {
-                change: function($event) {
-                  var $$selectedVal = Array.prototype.filter
-                    .call($event.target.options, function(o) {
-                      return o.selected
-                    })
-                    .map(function(o) {
-                      var val = "_value" in o ? o._value : o.value
-                      return val
-                    })
-                  _vm.selectedMatchType = $event.target.multiple
-                    ? $$selectedVal
-                    : $$selectedVal[0]
+                click: function($event) {
+                  return _vm.goNext(match.id)
                 }
               }
             },
-            _vm._l(_vm.matchTypes, function(type) {
-              return _c("option", [
-                _vm._v("\n                " + _vm._s(type) + "\n            ")
-              ])
-            }),
-            0
-          )
-        ]
-      ),
-      _vm._v(" "),
-      _vm._l(_vm.filteredMatches, function(match) {
-        return _c(
-          "div",
-          {
-            staticClass: "card",
-            staticStyle: {
-              width: "600px",
-              "margin-left": "100px",
-              "border-bottom": "solid 1px #ccc",
-              "background-color": "#fff",
-              "margin-bottom": "15px"
-            }
-          },
-          [
-            _c(
-              "a",
-              {
-                staticClass: "match-card",
-                staticStyle: { color: "black", "padding-bottom": "10px" },
-                attrs: { href: "javascript:void(0)" },
-                on: {
-                  click: function($event) {
-                    return _vm.goNext(match.id)
-                  }
-                }
-              },
-              [
-                _c("div", [
-                  _c(
-                    "div",
-                    {
-                      staticStyle: {
-                        width: "600px",
-                        padding: "15px 30px",
-                        "margin-bottom": "15px"
-                      }
-                    },
-                    [
-                      _c(
-                        "div",
-                        { staticStyle: { float: "left", "font-size": "12px" } },
-                        [
-                          _c("div", [_vm._v(_vm._s(match.date))]),
-                          _vm._v(" "),
-                          _c("div", [_vm._v(_vm._s(match.match_type))]),
-                          _vm._v(" "),
-                          _c("div", { staticStyle: { "font-size": "16px" } }, [
-                            _vm._v(
-                              _vm._s(match.home_team_name) +
-                                " vs " +
-                                _vm._s(match.away_team_name)
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticStyle: { "font-size": "14px" } }, [
-                            _vm._v(_vm._s(match.score))
-                          ])
-                        ]
-                      )
-                    ]
+            [
+              _c("div", { staticClass: "match" }, [
+                _c("div", [_vm._v(_vm._s(match.date))]),
+                _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(match.match_type))]),
+                _vm._v(" "),
+                _c("div", { staticStyle: { "font-size": "16px" } }, [
+                  _vm._v(
+                    _vm._s(match.home_team_name) +
+                      " vs " +
+                      _vm._s(match.away_team_name)
                   )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticStyle: { "font-size": "14px" } }, [
+                  _vm._v(_vm._s(match.score))
                 ])
-              ]
-            )
-          ]
-        )
+              ])
+            ]
+          )
+        ])
       })
     ],
     2
