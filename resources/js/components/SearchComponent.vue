@@ -88,7 +88,6 @@
 
         .match {
 
-            width: 600px;
             padding: 15px 30px;
             font-size: 12px;
 
