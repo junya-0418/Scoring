@@ -1,63 +1,85 @@
-.mvp-card {
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid 1px #ccc;
-    border-radius: 3px;
-    background-color: #fff;
-    text-align: center;
-    font-size: 18px;
-}
+@media (min-width: 767px) {
 
-.evaluation-card-left {
-    float: left;
-    width: 250px;
-    border: solid 1px #ccc;
-    background-color: #fff;
-    /*text-align: center;*/
-    font-size: 15px;
-    /*display: inline-block;*/
-}
+    .matchReviewMain {
 
+        width: 560px;
+        margin-left: 240px;
 
-.evaluation-card-right {
-    /*float: right;*/
-    width: 250px;
-    border: solid 1px #ccc;
-    background-color: #fff;
-    /*text-align: center;*/
-    font-size: 15px;
-    display: inline-block;
-    margin-left: 50px;
-}
+    }
 
-.users-card-left {
-    /*float: left;*/
-    width: 250px;
-    border: solid 1px #ccc;
-    background-color: #fff;
-    /*text-align: center;*/
-    font-size: 15px;
-}
+    .evaluationCard {
 
+        margin-top: 30px;
+        margin-bottom: 20px;
 
-.users-card-right {
-    float: right;
-    width: 250px;
-    border: solid 1px #ccc;
-    background-color: #fff;
-    /*text-align: center;*/
-    font-size: 15px;
-    display: inline-block;
-    margin-left: 50px;
+    }
+
+    .mvp-title {
+
+        margin-bottom: 20px;
+        margin-left: 5rem;
+
+    }
+
+    .mvp-card {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid 1px #ccc;
+        border-radius: 3px;
+        background-color: #fff;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .user_name {
+
+        padding-left: 10px;
+        text-decoration: none;
+
+    }
 
 }
 
-.user_name{
+/*モバイル対応*/
+@media (max-width: 479px) {
 
-    padding-left: 10px;
-    text-decoration: none;
+    .matchReviewMain {
 
+
+    }
+
+    .evaluationCard {
+
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+    }
+
+    .mvp-title {
+
+        margin-bottom: 20px;
+        margin-left: 5rem;
+
+    }
+
+    .mvp-card {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid 1px #ccc;
+        border-radius: 3px;
+        background-color: #fff;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .user_name {
+
+        padding-left: 10px;
+        text-decoration: none;
+
+    }
 }
 
 

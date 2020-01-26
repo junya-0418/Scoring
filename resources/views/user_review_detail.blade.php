@@ -23,7 +23,7 @@
                     <label for="manofthematch" style="border-bottom: solid 1px #ccc; width: 114px;">Man of the Match</label>
                     <div >
                         <div id="manofthematch" style="background-color: #fff; width: 200px; padding: 10px 20px; margin-bottom: 20px; text-align: center; display: inline; float: left;">
-                            <div>{{ $mvp_player->name }}</div>
+                            <div>{{ $mvp_player }}</div>
                         </div>
                     </div>
 

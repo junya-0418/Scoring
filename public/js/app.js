@@ -2876,6 +2876,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2976,6 +2977,223 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -8002,7 +8220,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#overlay{\n    /*　要素を重ねた時の順番　*/\n    z-index:1;\n\n    /*　画面全体を覆う設定　*/\n    position:fixed;\n    top:0;\n    left:0;\n    width:100%;\n    height:100%;\n    background-color:rgba(0,0,0,0.5);\n\n    /*　画面の中央に要素を表示させる設定　*/\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n#modal-window {\n    z-index:2;\n    width:50%;\n    padding: 1em;\n    background:#fff;\n}\n.player-name:hover {\n    background-color: #f0f8ff;\n    cursor: pointer;\n}\n.user_name:hover {\n    background-color: #f0f8ff;\n    cursor: pointer;\n}\nbutton.cp_btn {\n    position: relative;\n    display: block;\n    width: 160px;\n    padding: 4px;\n    text-align: center;\n    text-decoration: none;\n    color: #FFF;\n    background: #26C6DA;\n    border-bottom: 2px solid #00838F;\n    border-radius: 4px;\n    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn:active {\n    border-bottom: 2px solid #26C6DA;\n    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.evaluation-title {\n        margin-bottom: 10px;\n        margin-left: 5rem;\n        margin-top: 20px;\n}\n.average-score-main {\n        margin-bottom: 40px;\n        display: flex;\n}\n.team-index {\n        border-bottom: solid 1px #ccc;\n        background-color: #ccc;\n        font-size: 12px;\n        padding-left: 17px;\n}\n.player-name {\n        border-bottom: solid 1px #ccc;\n        padding-left: 7px;\n}\n.user-index{\n        margin-bottom: 10px;\n        margin-left: 5rem;\n}\n.user-main {\n        margin-bottom: 40px;\n        display: flex;\n}\n.evaluation-card-left {\n        float: left;\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        /*display: inline-block;*/\n}\n.evaluation-card-right {\n        /*float: right;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n.users-card-left {\n        /*float: left;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n}\n.users-card-right {\n        float: right;\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n#overlay {\n        /*　要素を重ねた時の順番　*/\n        z-index: 1;\n\n        /*　画面全体を覆う設定　*/\n        position: fixed;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        background-color: rgba(0, 0, 0, 0.5);\n\n        /*　画面の中央に要素を表示させる設定　*/\n        display: flex;\n        align-items: center;\n        justify-content: center;\n}\n#modal-window {\n        z-index: 2;\n        width: 50%;\n        padding: 1em;\n        background: #fff;\n}\n.player-name:hover {\n        background-color: #f0f8ff;\n        cursor: pointer;\n}\n.user_name:hover {\n        background-color: #f0f8ff;\n        cursor: pointer;\n}\nbutton.cp_btn {\n        position: relative;\n        display: block;\n        width: 160px;\n        padding: 4px;\n        text-align: center;\n        text-decoration: none;\n        color: #FFF;\n        background: #26C6DA;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n}\n@media (max-width: 479px) {\n.evaluation-title {\n        margin-bottom: 10px;\n        margin-left: 5rem;\n        margin-top: 20px;\n}\n.average-score-main {\n        margin-bottom: 40px;\n}\n.team-index {\n        border-bottom: solid 1px #ccc;\n        background-color: #ccc;\n        font-size: 12px;\n        padding-left: 17px;\n}\n.player-name {\n        border-bottom: solid 1px #ccc;\n        padding-left: 7px;\n}\n.evaluation-card-left {\n\n        margin-left: 50px;\n        margin-bottom: 20px;\n}\n.user-index{\n        margin-bottom: 10px;\n        margin-left: 5rem;\n}\n.user-main {\n        margin-bottom: 40px;\n}\n.evaluation-card-left {\n        float: left;\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        /*display: inline-block;*/\n}\n.evaluation-card-right {\n        /*float: right;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n.users-card-left {\n        /*float: left;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        margin-left: 50px;\n        margin-bottom: 20px;\n}\n.users-card-right {\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n#overlay {\n        /*　要素を重ねた時の順番　*/\n        z-index: 1;\n\n        /*　画面全体を覆う設定　*/\n        position: fixed;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        background-color: rgba(0, 0, 0, 0.5);\n\n        /*　画面の中央に要素を表示させる設定　*/\n        display: flex;\n        align-items: center;\n        justify-content: center;\n}\n#modal-window {\n        z-index: 2;\n        width: 80%;\n        padding: 1em;\n        background: #fff;\n}\n.player-name:hover {\n        background-color: #f0f8ff;\n        cursor: pointer;\n}\n.user_name:hover {\n        background-color: #f0f8ff;\n        cursor: pointer;\n}\nbutton.cp_btn {\n        position: relative;\n        display: block;\n        width: 160px;\n        padding: 4px;\n        text-align: center;\n        text-decoration: none;\n        color: #FFF;\n        background: #26C6DA;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n}\n\n", ""]);
 
 // exports
 
@@ -39944,14 +40162,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("li", [
-      _c(
-        "a",
-        {
-          staticStyle: { "margin-left": "750px" },
-          attrs: { href: "/contact" }
-        },
-        [_vm._v("お問い合わせ")]
-      )
+      _c("a", { attrs: { href: "/contact" } }, [_vm._v("お問い合わせ")])
     ])
   }
 ]
@@ -40597,18 +40808,24 @@ var render = function() {
                 }
               }
             },
-            _vm._l(_vm.players, function(player) {
-              return _c("option", { domProps: { value: player.id } }, [
-                _vm._v(
-                  "\n                        " +
-                    _vm._s(player.number) +
-                    " " +
-                    _vm._s(player.name) +
-                    "\n                    "
-                )
-              ])
-            }),
-            0
+            [
+              _c("option", { attrs: { value: "noMVP" } }, [
+                _vm._v("該当者なし")
+              ]),
+              _vm._v(" "),
+              _vm._l(_vm.players, function(player) {
+                return _c("option", { domProps: { value: player.id } }, [
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(player.number) +
+                      " " +
+                      _vm._s(player.name) +
+                      "\n                    "
+                  )
+                ])
+              })
+            ],
+            2
           ),
           _vm._v(" "),
           _c("span", { staticClass: "cp_sl06_highlight" }),
@@ -40700,20 +40917,9 @@ var render = function() {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticStyle: { "margin-bottom": "40px", display: "flex" } }, [
+    _c("div", { staticClass: "average-score-main" }, [
       _c("div", { staticClass: "evaluation-card-left" }, [
-        _c(
-          "div",
-          {
-            staticStyle: {
-              "border-bottom": "solid 1px #ccc",
-              "background-color": "#ccc",
-              "font-size": "12px",
-              "padding-left": "17px"
-            }
-          },
-          [_vm._v("Home Team")]
-        ),
+        _c("div", { staticClass: "team-index" }, [_vm._v("Home Team")]),
         _vm._v(" "),
         _c(
           "div",
@@ -40724,10 +40930,6 @@ var render = function() {
               "div",
               {
                 staticClass: "player-name",
-                staticStyle: {
-                  "border-bottom": "solid 1px #ccc",
-                  "padding-left": "7px"
-                },
                 on: {
                   click: function($event) {
                     return _vm.openModal(home_team_evaluation.player_id)
@@ -40785,18 +40987,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "evaluation-card-right" }, [
-        _c(
-          "div",
-          {
-            staticStyle: {
-              "border-bottom": "solid 1px #ccc",
-              "background-color": "#ccc",
-              "font-size": "12px",
-              "padding-left": "17px"
-            }
-          },
-          [_vm._v("Away Team")]
-        ),
+        _c("div", { staticClass: "team-index" }, [_vm._v("Away Team")]),
         _vm._v(" "),
         _c(
           "div",
@@ -40807,10 +40998,6 @@ var render = function() {
               "div",
               {
                 staticClass: "player-name",
-                staticStyle: {
-                  "border-bottom": "solid 1px #ccc",
-                  "padding-left": "7px"
-                },
                 on: {
                   click: function($event) {
                     return _vm.openModal(away_team_evaluation.player_id)
@@ -40928,7 +41115,7 @@ var render = function() {
     _vm._v(" "),
     _vm._m(1),
     _vm._v(" "),
-    _c("div", { staticStyle: { "margin-bottom": "40px", display: "flex" } }, [
+    _c("div", { staticClass: "user-main" }, [
       _c(
         "div",
         { staticClass: "users-card-left" },
@@ -41024,27 +41211,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticStyle: {
-          "margin-bottom": "10px",
-          "margin-left": "5rem",
-          "margin-top": "20px"
-        }
-      },
-      [_c("strong", [_vm._v("平均採点")])]
-    )
+    return _c("div", { staticClass: "evaluation-title" }, [
+      _c("strong", [_vm._v("平均採点")])
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticStyle: { "margin-bottom": "10px", "margin-left": "5rem" } },
-      [_c("strong", [_vm._v("ユーザー")])]
-    )
+    return _c("div", { staticClass: "user-index" }, [
+      _c("strong", [_vm._v("ユーザー")])
+    ])
   }
 ]
 render._withStripped = true

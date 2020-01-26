@@ -34,7 +34,6 @@ class EvaluationController extends Controller
     public function create(Request $request) {
 
         $match_id = Match::where('id',$request->match)->first()->id;
-        $player_id = Player::where('id',$request->mvp)->first()->id;
         $team_id = Team::where('name',$request->team)->first()->id;
         $user = Auth::user();
 
@@ -48,8 +47,6 @@ class EvaluationController extends Controller
             return redirect('/evaluation/form')->withErrors('採点を行ってから送信してください')->withInput();
         }
 
-
-
         Post::create([
             'team_id' => $team_id,
             'match_id' => $match_id,
@@ -58,10 +55,17 @@ class EvaluationController extends Controller
 
         $posts_id = Post::where('team_id',$team_id)->where('match_id', $match_id)->where('user_id', $user->id)->first()->id;
 
-        Mvp::create([
-            'posts_id' => $posts_id,
-            'player_id' => $player_id,
-        ]);
+        if ($request->mvp === 'noMVP') {
+
+            $player_id = null;
+
+        } else {
+            $player_id = Player::where('id',$request->mvp)->first()->id;
+            Mvp::create([
+                'posts_id' => $posts_id,
+                'player_id' => $player_id,
+            ]);
+        }
 
         for ($i=0; $i<count($request->playersForEvaluation); $i++) {
 

@@ -4,7 +4,7 @@
 <div id="app">
     <div class="container">
 
-        <div style="width: 560px;margin-left: 240px;">
+        <div class="matchReviewMain">
 
             @if (session('status'))
                 <div class="alert alert-success" role="alert">
@@ -15,8 +15,10 @@
         <div class="match-information">
             <div>{{ $match->date }}</div>
             <div>{{ $match->match_type }}</div>
-            <div style="font-size: 30px; text-align: center">
-                <strong>{{ $match->hometeam->name }} vs {{ $match->awayteam->name }}</strong>
+            <div style="font-size: 24px; text-align: center">
+                <div><strong>{{ $match->hometeam->name }}</strong></div>
+                <div> vs </div>
+                <div><strong>{{ $match->awayteam->name }}</strong></div>
             </div>
             <div style="font-size: 25px; text-align: center">
                 <strong>{{ $match->score }}</strong>
@@ -25,8 +27,8 @@
 
         <checkin></checkin>
 
-        <div class="card" style="margin-top: 30px; margin-bottom: 20px;">
-            <div style="margin-bottom: 20px; margin-left: 5rem;"><strong>Man of the Match</strong></div>
+        <div class="evaluationCard">
+            <div class="mvp-title"><strong>Man of the Match</strong></div>
                 <div class="mvp-card">
                     @foreach( $mvp_outputs as $mvp)
                     <div style="border-bottom: solid 1px #ccc; font-size: 15px">

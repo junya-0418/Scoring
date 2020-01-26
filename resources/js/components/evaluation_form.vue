@@ -32,6 +32,7 @@
             <label class="mr-3 cp_sl06_selectlabel" for="mvp">Man of the Match</label>
             <div class="cp_ipselect">
                 <select class="cp_sl06" id="mvp" name="mvp" v-model="selectedPlayer">
+                    <option value="noMVP">該当者なし</option>
                     <option v-for="player in players" v-bind:value="player.id">
                         {{ player.number }} {{ player.name }}
                     </option>

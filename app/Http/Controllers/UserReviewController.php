@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 use App\Team;
 use App\User;
@@ -25,9 +26,15 @@ class UserReviewController extends Controller
 
         $user = User::where('id', $post->user_id)->get()->first();
 
-        $mvp_id = Mvp::where('posts_id', $post->id)->get()->first()->player_id;
+        try {
 
-        $mvp_player = Player::where('id', $mvp_id)->get()->first();
+            $mvp_id = Mvp::where('posts_id', $post->id)->firstOrFail()->player_id;
+            $mvp_player = Player::where('id', $mvp_id)->firstOrFail()->name;
+
+        } catch (ModelNotFoundException $e) {
+            $mvp_player = '該当者なし';
+        }
+
 
         $evaluations = DB::table('evaluations')
             ->select('evaluations.id as evaluation_id', 'player_id', 'evaluation', 'number', 'name', 'comment')

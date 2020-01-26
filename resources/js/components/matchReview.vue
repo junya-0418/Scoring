@@ -1,16 +1,11 @@
 <template>
 <div>
-<!--    <div style="margin-bottom: 30px; width: 330px; margin-left: auto; margin-right: auto;">-->
-<!--        <button class="cp_btn" style="display: inline; margin-right: 5px;">スタジアム観戦</button>-->
-<!--        <button class="cp_btn" style="display: inline">TV観戦</button>-->
-<!--    </div>-->
-
-    <div style="margin-bottom: 10px; margin-left: 5rem; margin-top: 20px;"><strong>平均採点</strong></div>
-    <div style="margin-bottom: 40px; display: flex">
+    <div class="evaluation-title"><strong>平均採点</strong></div>
+    <div class="average-score-main">
         <div class="evaluation-card-left">
-            <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 17px">Home Team</div>
+            <div class="team-index">Home Team</div>
             <div>
-                <div class="player-name" v-for="home_team_evaluation in home_team_evaluation_outputs" style="border-bottom: solid 1px #ccc; padding-left: 7px" @click="openModal(home_team_evaluation.player_id)">
+                <div class="player-name" v-for="home_team_evaluation in home_team_evaluation_outputs" @click="openModal(home_team_evaluation.player_id)">
                     <div style="display: inline; float: left; margin-right: 1.25rem; width: 10px;">
                         {{ home_team_evaluation.number }}
                     </div>
@@ -24,9 +19,9 @@
             </div>
         </div>
         <div class="evaluation-card-right">
-            <div style="border-bottom: solid 1px #ccc; background-color: #ccc; font-size: 12px; padding-left: 17px">Away Team</div>
+            <div class="team-index">Away Team</div>
             <div>
-                <div class="player-name" v-for="away_team_evaluation in away_team_evaluation_outputs" style="border-bottom: solid 1px #ccc; padding-left: 7px" @click="openModal(away_team_evaluation.player_id)">
+                <div class="player-name" v-for="away_team_evaluation in away_team_evaluation_outputs" @click="openModal(away_team_evaluation.player_id)">
                     <div style="display: inline; float: left; margin-right: 1.25rem; width: 10px;">
                         {{ away_team_evaluation.number }}
                     </div>
@@ -52,8 +47,8 @@
         </div>
     </div>
 
-    <div style="margin-bottom: 10px; margin-left: 5rem;"><strong>ユーザー</strong></div>
-    <div style="margin-bottom: 40px; display: flex" >
+    <div class="user-index"><strong>ユーザー</strong></div>
+    <div class="user-main">
         <div class="users-card-left">
             <div style="background-color: #ccc; font-size: 12px; padding-left: 17px">ホームチームに投稿したユーザー</div>
             <div class="user_name" v-for="home_team_user in home_team_users" @click="goNext(home_team_user.id)" style="border-bottom: solid 1px #ccc; padding-left: 17px;">
@@ -73,58 +68,280 @@
 </template>
 
 <style>
-    #overlay{
-        /*　要素を重ねた時の順番　*/
-        z-index:1;
 
-        /*　画面全体を覆う設定　*/
-        position:fixed;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        background-color:rgba(0,0,0,0.5);
+    @media (min-width: 767px) {
 
-        /*　画面の中央に要素を表示させる設定　*/
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .evaluation-title {
+            margin-bottom: 10px;
+            margin-left: 5rem;
+            margin-top: 20px;
+        }
 
+        .average-score-main {
+            margin-bottom: 40px;
+            display: flex;
+        }
+
+        .team-index {
+            border-bottom: solid 1px #ccc;
+            background-color: #ccc;
+            font-size: 12px;
+            padding-left: 17px;
+        }
+
+        .player-name {
+            border-bottom: solid 1px #ccc;
+            padding-left: 7px;
+        }
+
+        .user-index{
+            margin-bottom: 10px;
+            margin-left: 5rem;
+        }
+
+        .user-main {
+            margin-bottom: 40px;
+            display: flex;
+        }
+
+        .evaluation-card-left {
+            float: left;
+            width: 250px;
+            border: solid 1px #ccc;
+            background-color: #fff;
+            /*text-align: center;*/
+            font-size: 15px;
+            /*display: inline-block;*/
+        }
+
+
+        .evaluation-card-right {
+            /*float: right;*/
+            width: 250px;
+            border: solid 1px #ccc;
+            background-color: #fff;
+            /*text-align: center;*/
+            font-size: 15px;
+            display: inline-block;
+            margin-left: 50px;
+        }
+
+        .users-card-left {
+            /*float: left;*/
+            width: 250px;
+            border: solid 1px #ccc;
+            background-color: #fff;
+            /*text-align: center;*/
+            font-size: 15px;
+        }
+
+
+        .users-card-right {
+            float: right;
+            width: 250px;
+            border: solid 1px #ccc;
+            background-color: #fff;
+            /*text-align: center;*/
+            font-size: 15px;
+            display: inline-block;
+            margin-left: 50px;
+        }
+
+        #overlay {
+            /*　要素を重ねた時の順番　*/
+            z-index: 1;
+
+            /*　画面全体を覆う設定　*/
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            /*　画面の中央に要素を表示させる設定　*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #modal-window {
+            z-index: 2;
+            width: 50%;
+            padding: 1em;
+            background: #fff;
+        }
+
+        .player-name:hover {
+            background-color: #f0f8ff;
+            cursor: pointer;
+        }
+
+        .user_name:hover {
+            background-color: #f0f8ff;
+            cursor: pointer;
+        }
+
+        button.cp_btn {
+            position: relative;
+            display: block;
+            width: 160px;
+            padding: 4px;
+            text-align: center;
+            text-decoration: none;
+            color: #FFF;
+            background: #26C6DA;
+            border-bottom: 2px solid #00838F;
+            border-radius: 4px;
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+        }
+
+        button.cp_btn:active {
+            border-bottom: 2px solid #26C6DA;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+        }
     }
 
-    #modal-window {
-        z-index:2;
-        width:50%;
-        padding: 1em;
-        background:#fff;
-    }
+    @media (max-width: 479px) {
 
-    .player-name:hover {
-        background-color: #f0f8ff;
-        cursor: pointer;
-    }
+        .evaluation-title {
+            margin-bottom: 10px;
+            margin-left: 5rem;
+            margin-top: 20px;
+        }
 
-    .user_name:hover {
-        background-color: #f0f8ff;
-        cursor: pointer;
-    }
+        .average-score-main {
+            margin-bottom: 40px;
+        }
 
-    button.cp_btn {
-        position: relative;
-        display: block;
-        width: 160px;
-        padding: 4px;
-        text-align: center;
-        text-decoration: none;
-        color: #FFF;
-        background: #26C6DA;
-        border-bottom: 2px solid #00838F;
-        border-radius: 4px;
-        box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
-    }
-    button.cp_btn:active {
-        border-bottom: 2px solid #26C6DA;
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+        .team-index {
+            border-bottom: solid 1px #ccc;
+            background-color: #ccc;
+            font-size: 12px;
+            padding-left: 17px;
+        }
+
+        .player-name {
+            border-bottom: solid 1px #ccc;
+            padding-left: 7px;
+        }
+
+        .evaluation-card-left {
+
+            margin-left: 50px;
+            margin-bottom: 20px;
+
+        }
+
+        .user-index{
+            margin-bottom: 10px;
+            margin-left: 5rem;
+        }
+
+        .user-main {
+            margin-bottom: 40px;
+        }
+
+        .evaluation-card-left {
+            float: left;
+            width: 250px;
+            border: solid 1px #ccc;
+            background-color: #fff;
+            /*text-align: center;*/
+            font-size: 15px;
+            /*display: inline-block;*/
+        }
+
+
+        .evaluation-card-right {
+            /*float: right;*/
+            width: 250px;
+            border: solid 1px #ccc;
+            background-color: #fff;
+            /*text-align: center;*/
+            font-size: 15px;
+            display: inline-block;
+            margin-left: 50px;
+        }
+
+        .users-card-left {
+            /*float: left;*/
+            width: 250px;
+            border: solid 1px #ccc;
+            background-color: #fff;
+            /*text-align: center;*/
+            font-size: 15px;
+            margin-left: 50px;
+            margin-bottom: 20px;
+        }
+
+
+        .users-card-right {
+            width: 250px;
+            border: solid 1px #ccc;
+            background-color: #fff;
+            /*text-align: center;*/
+            font-size: 15px;
+            display: inline-block;
+            margin-left: 50px;
+        }
+
+        #overlay {
+            /*　要素を重ねた時の順番　*/
+            z-index: 1;
+
+            /*　画面全体を覆う設定　*/
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            /*　画面の中央に要素を表示させる設定　*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #modal-window {
+            z-index: 2;
+            width: 80%;
+            padding: 1em;
+            background: #fff;
+        }
+
+        .player-name:hover {
+            background-color: #f0f8ff;
+            cursor: pointer;
+        }
+
+        .user_name:hover {
+            background-color: #f0f8ff;
+            cursor: pointer;
+        }
+
+        button.cp_btn {
+            position: relative;
+            display: block;
+            width: 160px;
+            padding: 4px;
+            text-align: center;
+            text-decoration: none;
+            color: #FFF;
+            background: #26C6DA;
+            border-bottom: 2px solid #00838F;
+            border-radius: 4px;
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+        }
+
+        button.cp_btn:active {
+            border-bottom: 2px solid #26C6DA;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+        }
+
     }
 
 </style>
