@@ -3617,6 +3617,50 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -8258,7 +8302,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.card a:hover {\n    background-color: #f0f8ff;\n}\n.user-name h1 {\n    margin-bottom: 30px;\n}\n\n/*.card {*/\n/*    padding-left: 15px;*/\n/*    background-color: #fff;*/\n/*    border: solid 1px #ccc;*/\n/*    width: 500px;*/\n/*    border-radius: 8px;*/\n/*    margin-bottom: 15px;*/\n/*}*/\n.card a {\n    text-decoration: none;\n    color: black;\n}\n.match-information {\n\n    margin-top: 10px;\n    margin-bottom: 15px;\n    padding-left: 20px;\n}\n\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.posted-match {\n        color: #6c757d;\n        display: inline;\n        margin-right: 20px;\n}\n.checkin-match {\n        color: #6c757d;\n        display: inline;\n}\n.match-board {\n        width: 500px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n.card a {\n        text-decoration: none;\n        color: black;\n}\n.match-info {\n        margin-top: 10px;\n        margin-bottom: 10px;\n        padding-left: 20px;\n}\n}\n@media (max-width: 479px) {\n.posted-match {\n        color: #6c757d;\n        display: inline;\n        margin-right: 20px;\n}\n.checkin-match {\n        color: #6c757d;\n        display: inline;\n}\n.match-board {\n        width: 300px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n.card a {\n        text-decoration: none;\n        color: black;\n}\n.match-info {\n        margin-top: 10px;\n        margin-bottom: 10px;\n        padding-left: 20px;\n}\n}\n\n\n", ""]);
 
 // exports
 
@@ -41447,11 +41491,7 @@ var render = function() {
         _c(
           "a",
           {
-            staticStyle: {
-              color: "#6c757d",
-              display: "inline",
-              "margin-right": "20px"
-            },
+            staticClass: "posted-match",
             style: { borderBottom: _vm.postedLine },
             attrs: { href: "javascript:void(0)" },
             on: { click: _vm.goPosted }
@@ -41462,7 +41502,7 @@ var render = function() {
         _c(
           "a",
           {
-            staticStyle: { color: "#6c757d", display: "inline" },
+            staticClass: "checkin-match",
             style: { borderBottom: _vm.checkinLine },
             attrs: { href: "javascript:void(0)" },
             on: { click: _vm.goCheckin }
@@ -41478,93 +41518,74 @@ var render = function() {
           style: { display: _vm.posted }
         },
         _vm._l(_vm.posts, function(post) {
-          return _c(
-            "div",
-            {
-              staticClass: "card",
-              staticStyle: {
-                width: "500px",
-                "border-bottom": "solid 1px #ccc",
-                "background-color": "#fff",
-                "margin-bottom": "15px"
-              }
-            },
-            [
-              _c(
-                "a",
-                {
-                  staticClass: "match-card",
-                  attrs: { href: "javascript:void(0)" },
-                  on: {
-                    click: function($event) {
-                      return _vm.goUserReview(post.posts_id)
-                    }
+          return _c("div", { staticClass: "card match-board" }, [
+            _c(
+              "a",
+              {
+                staticClass: "match-card",
+                attrs: { href: "javascript:void(0)" },
+                on: {
+                  click: function($event) {
+                    return _vm.goUserReview(post.posts_id)
                   }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "match-information",
-                      staticStyle: { display: "flex" }
-                    },
-                    [
-                      _vm._v(
-                        _vm._s(post.match_type) +
-                          " " +
-                          _vm._s(post.home_team_name) +
-                          " vs " +
-                          _vm._s(post.away_team_name)
-                      )
-                    ]
-                  ),
+                }
+              },
+              [
+                _c("div", { staticClass: "match-info" }, [
+                  _c("div", [_vm._v(_vm._s(post.match_type))]),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticStyle: { display: "flex", "padding-left": "20px" }
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticStyle: {
-                            "font-size": "12px",
-                            "margin-right": "10px"
-                          }
-                        },
-                        [_vm._v("team")]
-                      ),
-                      _vm._v(" "),
-                      post.team_id === post.home_team_id
-                        ? _c(
-                            "div",
-                            { staticStyle: { "margin-bottom": "15px" } },
-                            [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(post.home_team_name) +
-                                  "\n                        "
-                              )
-                            ]
-                          )
-                        : _c(
-                            "div",
-                            { staticStyle: { "margin-bottom": "15px" } },
-                            [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(post.away_team_name) +
-                                  "\n                        "
-                              )
-                            ]
-                          )
-                    ]
-                  )
-                ]
-              )
-            ]
-          )
+                  _c("div", [
+                    _vm._v(
+                      _vm._s(post.home_team_name) +
+                        " vs " +
+                        _vm._s(post.away_team_name)
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticStyle: { display: "flex", "padding-left": "20px" } },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticStyle: {
+                          "font-size": "12px",
+                          "margin-right": "10px"
+                        }
+                      },
+                      [_vm._v("team")]
+                    ),
+                    _vm._v(" "),
+                    post.team_id === post.home_team_id
+                      ? _c(
+                          "div",
+                          { staticStyle: { "margin-bottom": "15px" } },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(post.home_team_name) +
+                                "\n                        "
+                            )
+                          ]
+                        )
+                      : _c(
+                          "div",
+                          { staticStyle: { "margin-bottom": "15px" } },
+                          [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(post.away_team_name) +
+                                "\n                        "
+                            )
+                          ]
+                        )
+                  ]
+                )
+              ]
+            )
+          ])
         }),
         0
       ),
@@ -41576,65 +41597,39 @@ var render = function() {
           style: { display: _vm.checkin }
         },
         _vm._l(_vm.UserCheckins, function(usercheckin) {
-          return _c(
-            "div",
-            {
-              staticClass: "card",
-              staticStyle: {
-                width: "500px",
-                "border-bottom": "solid 1px #ccc",
-                "background-color": "#fff",
-                "margin-bottom": "15px"
-              }
-            },
-            [
-              _c(
-                "a",
-                {
-                  staticClass: "match-card",
-                  attrs: { href: "javascript:void(0)" },
-                  on: {
-                    click: function($event) {
-                      return _vm.goMatch(usercheckin.match_id)
-                    }
+          return _c("div", { staticClass: "card match-board" }, [
+            _c(
+              "a",
+              {
+                staticClass: "match-card",
+                attrs: { href: "javascript:void(0)" },
+                on: {
+                  click: function($event) {
+                    return _vm.goMatch(usercheckin.match_id)
                   }
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "match-information",
-                      staticStyle: { display: "flex" }
-                    },
-                    [
-                      _vm._v(
-                        "\n                        " +
-                          _vm._s(usercheckin.match_type) +
-                          "\n                    "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "match-information",
-                      staticStyle: { display: "flex" }
-                    },
-                    [
-                      _vm._v(
-                        "\n                        " +
-                          _vm._s(usercheckin.home_team_name) +
-                          " vs " +
-                          _vm._s(usercheckin.away_team_name) +
-                          "\n                    "
-                      )
-                    ]
+                }
+              },
+              [
+                _c("div", { staticClass: "match-info" }, [
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(usercheckin.match_type) +
+                      "\n                    "
                   )
-                ]
-              )
-            ]
-          )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "match-info" }, [
+                  _vm._v(
+                    "\n                        " +
+                      _vm._s(usercheckin.home_team_name) +
+                      " vs " +
+                      _vm._s(usercheckin.away_team_name) +
+                      "\n                    "
+                  )
+                ])
+              ]
+            )
+          ])
         }),
         0
       )

@@ -2,14 +2,17 @@
 <div>
     <div class="user-posts">
         <div>
-            <a href="javascript:void(0)" @click="goPosted" style="color: #6c757d; display: inline; margin-right: 20px;" v-bind:style="{ borderBottom: postedLine }">投稿した試合</a>
-            <a href="javascript:void(0)" @click="goCheckin" style="color: #6c757d; display: inline;" v-bind:style="{ borderBottom: checkinLine }">観戦した試合</a>
+            <a href="javascript:void(0)" @click="goPosted" class="posted-match" v-bind:style="{ borderBottom: postedLine }">投稿した試合</a>
+            <a href="javascript:void(0)" @click="goCheckin" class="checkin-match" v-bind:style="{ borderBottom: checkinLine }">観戦した試合</a>
         </div>
 
         <div v-bind:style="{ display: posted }" style="margin-top: 20px;">
-            <div class="card" style="width: 500px; border-bottom: solid 1px #ccc; background-color: #fff; margin-bottom: 15px;" v-for="post in posts">
+            <div class="card match-board" v-for="post in posts">
                 <a class="match-card" href="javascript:void(0)" @click="goUserReview(post.posts_id)">
-                    <div class="match-information" style="display: flex">{{ post.match_type }} {{ post.home_team_name }} vs {{ post.away_team_name }}</div>
+                    <div class="match-info">
+                        <div>{{ post.match_type }}</div>
+                        <div>{{ post.home_team_name }} vs {{ post.away_team_name }}</div>
+                    </div>
                     <div style="display: flex; padding-left: 20px;">
                         <div style="font-size: 12px; margin-right: 10px;">team</div>
                         <div v-if="post.team_id === post.home_team_id" style="margin-bottom: 15px;">
@@ -24,12 +27,12 @@
         </div>
 
         <div v-bind:style="{ display: checkin }" style="margin-top: 20px;">
-            <div class="card" style="width: 500px; border-bottom: solid 1px #ccc; background-color: #fff; margin-bottom: 15px;" v-for="usercheckin in UserCheckins">
+            <div class="card match-board" v-for="usercheckin in UserCheckins">
                 <a class="match-card" href="javascript:void(0)" @click="goMatch(usercheckin.match_id)">
-                    <div class="match-information" style="display: flex">
+                    <div class="match-info">
                         {{ usercheckin.match_type }}
                     </div>
-                    <div class="match-information" style="display: flex">
+                    <div class="match-info">
                         {{ usercheckin.home_team_name }} vs {{ usercheckin.away_team_name }}
                     </div>
                 </a>
@@ -44,33 +47,74 @@
 
 <style>
 
-    .card a:hover {
-        background-color: #f0f8ff;
+    @media (min-width: 767px) {
+        .posted-match {
+            color: #6c757d;
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .checkin-match {
+            color: #6c757d;
+            display: inline;
+        }
+
+        .match-board {
+            width: 500px;
+            border-bottom: solid 1px #ccc;
+            background-color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .card a:hover {
+            background-color: #f0f8ff;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .match-info {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
     }
 
-    .user-name h1 {
-        margin-bottom: 30px;
-    }
+    @media (max-width: 479px) {
+        .posted-match {
+            color: #6c757d;
+            display: inline;
+            margin-right: 20px;
+        }
 
-    /*.card {*/
-    /*    padding-left: 15px;*/
-    /*    background-color: #fff;*/
-    /*    border: solid 1px #ccc;*/
-    /*    width: 500px;*/
-    /*    border-radius: 8px;*/
-    /*    margin-bottom: 15px;*/
-    /*}*/
+        .checkin-match {
+            color: #6c757d;
+            display: inline;
+        }
 
-    .card a {
-        text-decoration: none;
-        color: black;
-    }
+        .match-board {
+            width: 300px;
+            border-bottom: solid 1px #ccc;
+            background-color: #fff;
+            margin-bottom: 15px;
+        }
 
-    .match-information {
+        .card a:hover {
+            background-color: #f0f8ff;
+        }
 
-        margin-top: 10px;
-        margin-bottom: 15px;
-        padding-left: 20px;
+        .card a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .match-info {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
     }
 
 

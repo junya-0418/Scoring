@@ -1,0 +1,71 @@
+@media (min-width: 767px) {
+
+    .user-index-main {
+        margin-left: 15rem;
+        margin-top: 2rem;
+    }
+
+    .user-box {
+        display: flex;
+    }
+
+    .user-name {
+        margin-bottom: 30px;
+    }
+
+    .edit-button{
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    .support-team {
+        margin-bottom: 20px;
+        font-size: 14px;
+        border: solid 1px #ccc;
+        width: 200px;
+        padding: 6px 8px;
+        background-color: #fff;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 479px) {
+
+    .user-index-main {
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .user-box {
+        display: flex;
+    }
+
+    .user-name {
+        margin-bottom: 30px;
+    }
+
+    .edit-button{
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    .support-team {
+        margin-bottom: 20px;
+        font-size: 14px;
+        border: solid 1px #ccc;
+        width: 200px;
+        padding: 6px 8px;
+        background-color: #fff;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+
