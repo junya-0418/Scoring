@@ -13,7 +13,9 @@
             @endif
 
             <search-component></search-component>
-            <side-component></side-component>
+            <div class="no-display-at-sp">
+                <side-component></side-component>
+            </div>
 
         </div>
 

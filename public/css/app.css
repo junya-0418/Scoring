@@ -44,92 +44,183 @@
 
 }
 
+@media (min-width: 767px) {
+
+    #overlay {
+        /*　要素を重ねた時の順番　*/
+        z-index: 1;
+
+        /*　画面全体を覆う設定　*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        /*　画面の中央に要素を表示させる設定　*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #modal-window {
+        z-index: 2;
+        width: 50%;
+        padding: 1em;
+        background: #fff;
+    }
+
+    #globalfooter {
+        background-color: #fff;
+        margin-top: 64px;
+        padding: 32px 16px;
+        color: #ccc;
+    }
+
+    .footer-container {
+        max-width: 980px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .button05 {
+        background: #fff;
+        border: 2px solid #00bcd4;
+        color: #00bcd4;
+        padding: 10px 0;
+        width: 80px;
+        margin-right: 10px;
+    }
+
+    .button05:hover {
+        background: #00bcd4;
+        border: 2px solid transparent;
+        color: #fff;
+    }
+
+    .btn-flat-border {
+        display: inline-block;
+        padding: 0.3em 1em;
+        text-decoration: none;
+        color: #67c5ff;
+        border: solid 2px #67c5ff;
+        border-radius: 3px;
+        transition: .4s;
+        margin-right: 5px;
+    }
+
+    .btn-flat-border:hover {
+        background: #67c5ff;
+        color: white;
+    }
+
+    /*グロナビ*/
+    .glonavi {
+        display: table;
+        /*margin: 20px auto;*/
+        padding: 0;
+        /*width: 100%;*/
+        /*text-align: center;*/
+    }
+
+}
+
 @media (max-width: 479px) {
- .globalMenu {
-     display: none;
- }
+    .no-display-at-sp {
+        display: none;
+    }
+
+    #overlay {
+        /*　要素を重ねた時の順番　*/
+        z-index: 1;
+
+        /*　画面全体を覆う設定　*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        /*　画面の中央に要素を表示させる設定　*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #modal-window {
+        z-index: 2;
+        width: 50%;
+        padding: 1em;
+        background: #fff;
+    }
+
+    #globalfooter {
+        background-color: #fff;
+        margin-top: 64px;
+        padding: 32px 16px;
+        color: #ccc;
+    }
+
+    .footer-container {
+        max-width: 980px;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .button05 {
+        background: #fff;
+        border: 2px solid #00bcd4;
+        color: #00bcd4;
+        padding: 10px 0;
+        width: 80px;
+        margin-right: 10px;
+    }
+
+    .button05:hover {
+        background: #00bcd4;
+        border: 2px solid transparent;
+        color: #fff;
+    }
+
+    .btn-flat-border {
+        display: inline-block;
+        text-decoration: none;
+        color: #67c5ff;
+        border: solid 2px #67c5ff;
+        border-radius: 3px;
+        transition: .4s;
+        margin-left: 5px;
+        margin-top: 3px;
+        margin-right: 5px;
+    }
+
+    .btn-flat-border:hover {
+        background: #67c5ff;
+        color: white;
+    }
+
+    /*グロナビ*/
+    .glonavi {
+        display: table;
+        /*margin: 20px auto;*/
+        padding: 0;
+        /*width: 100%;*/
+        /*text-align: center;*/
+    }
+
 }
 
-#overlay{
-    /*　要素を重ねた時の順番　*/
-    z-index:1;
 
-    /*　画面全体を覆う設定　*/
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color:rgba(0,0,0,0.5);
-
-    /*　画面の中央に要素を表示させる設定　*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-#modal-window {
-    z-index:2;
-    width:50%;
-    padding: 1em;
-    background:#fff;
-}
-
-#globalfooter {
-    background-color: #fff;
-    margin-top: 64px;
-    padding: 32px 16px;
-    color: #ccc;
-}
-
-.footer-container {
-    max-width: 980px;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.button05 {
-    background: #fff;
-    border: 2px solid #00bcd4;
-    color: #00bcd4;
-    padding: 10px 0;
-    width: 80px;
-    margin-right: 10px;
-}
-.button05:hover {
-    background: #00bcd4;
-    border: 2px solid transparent;
-    color: #fff;
-}
-
-.btn-flat-border {
-    display: inline-block;
-    padding: 0.3em 1em;
-    text-decoration: none;
-    color: #67c5ff;
-    border: solid 2px #67c5ff;
-    border-radius: 3px;
-    transition: .4s;
-    margin-right: 5px;
-}
-
-.btn-flat-border:hover {
-    background: #67c5ff;
-    color: white;
-}
-
-/*グロナビ*/
-.glonavi {
-    display: table;
-    /*margin: 20px auto;*/
-    padding: 0;
-    /*width: 100%;*/
-    /*text-align: center;*/
-}
 ul li{
     display: table-cell;
     min-width: 50px;
@@ -4713,7 +4804,7 @@ input[type=button].btn-block {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-direction: column;
+          /*flex-direction: column;*/
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -4725,7 +4816,7 @@ input[type=button].btn-block {
 }
 
 .navbar-nav .dropdown-menu {
-  position: static;
+  /*position: static;*/
   float: none;
 }
 

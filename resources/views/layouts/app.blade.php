@@ -117,7 +117,7 @@
             </div>
         </nav>
 
-        <div class="globalMenu">
+        <div class="no-display-at-sp">
             <globalmenu-component></globalmenu-component>
         </div>
 
