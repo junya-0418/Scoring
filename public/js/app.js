@@ -1936,6 +1936,96 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2655,6 +2745,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['players'],
   data: function data() {
@@ -2713,40 +2827,44 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     formCheck: function formCheck(e) {
-      this.errors = [];
+      if (window.confirm("入力内容を送信しますか？")) {
+        this.errors = [];
 
-      for (var i = 1; i < 15; i++) {
-        if (this.selectedPlayer['player' + i]) {
-          if (!this.selectedNumber['number' + i]) {
-            this.errors.push('選手' + i + 'に未入力の項目があります');
-          } else if (this.comments['comment' + i] === '') {
-            this.errors.push('選手' + i + 'に未入力の項目があります');
+        for (var i = 1; i < 15; i++) {
+          if (this.selectedPlayer['player' + i]) {
+            if (!this.selectedNumber['number' + i]) {
+              this.errors.push('選手' + i + 'に未入力の項目があります');
+            } else if (this.comments['comment' + i] === '') {
+              this.errors.push('選手' + i + 'に未入力の項目があります');
+            }
           }
-        }
 
-        if (this.selectedNumber['number' + i]) {
-          if (!this.selectedPlayer['player' + i]) {
-            this.errors.push('選手' + i + 'に未入力の項目があります');
-          } else if (this.comments['comment' + i] === '') {
-            this.errors.push('選手' + i + 'に未入力の項目があります');
+          if (this.selectedNumber['number' + i]) {
+            if (!this.selectedPlayer['player' + i]) {
+              this.errors.push('選手' + i + 'に未入力の項目があります');
+            } else if (this.comments['comment' + i] === '') {
+              this.errors.push('選手' + i + 'に未入力の項目があります');
+            }
           }
-        }
 
-        if (this.comments['comment' + i]) {
-          if (!this.selectedPlayer['player' + i]) {
-            this.errors.push('選手' + i + 'に未入力の項目があります');
-          } else if (this.selectedNumber['number' + i] === '') {
-            this.errors.push('選手' + i + 'に未入力の項目があります');
+          if (this.comments['comment' + i]) {
+            if (!this.selectedPlayer['player' + i]) {
+              this.errors.push('選手' + i + 'に未入力の項目があります');
+            } else if (this.selectedNumber['number' + i] === '') {
+              this.errors.push('選手' + i + 'に未入力の項目があります');
+            }
           }
+        } // エラーの重複を排除
+
+
+        this.errors = this.errors.filter(function (x, i, self) {
+          return self.indexOf(x) === i;
+        });
+
+        if (this.errors.length) {
+          e.preventDefault();
         }
-      } // エラーの重複を排除
-
-
-      this.errors = this.errors.filter(function (x, i, self) {
-        return self.indexOf(x) === i;
-      });
-
-      if (this.errors.length) {
+      } else {
         e.preventDefault();
       }
     }
@@ -2765,6 +2883,57 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _evaluation_child_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./evaluation-child.vue */ "./resources/js/components/evaluation-child.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3363,7 +3532,6 @@ __webpack_require__.r(__webpack_exports__);
       axios.post('/api/getPlayerComments/' + id, match_id).then(function (res) {
         _this2.comments = res.data;
       });
-      console.log(this.comments);
     },
     closeModal: function closeModal() {
       this.showContent = false;
@@ -8169,7 +8337,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nbutton.cp_btn {\n    position: relative;\n    display: block;\n    width: 160px;\n    padding: 4px;\n    text-align: center;\n    text-decoration: none;\n    color: #FFF;\n    background: #26C6DA;\n    border-bottom: 2px solid #00838F;\n    border-radius: 4px;\n    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn:active {\n    border-bottom: 2px solid #26C6DA;\n    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\nbutton.cp_btn2 {\n    position: relative;\n    display: block;\n    width: 160px;\n    padding: 4px;\n    text-align: center;\n    text-decoration: none;\n    color: black;\n    background: #CCC;\n    border-bottom: 2px solid #00838F;\n    border-radius: 4px;\n    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn2:active {\n    border-bottom: 2px solid #26C6DA;\n    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n.ring-1-forReview {\n    width: 10px;\n    height: 10px;\n    margin: 0 auto;\n    padding: 10px;\n    border: 7px dashed #4b9cdb;\n    border-radius: 100%;\n}\n.load-4-forReview .ring-1-forReview\n{animation: loadingD 1.5s .3s cubic-bezier(.17,.37,.43,.67) infinite;}\n.load-wrapp-forReview {\n    margin-left: auto;\n    margin-right: auto;\n    width: 550px;\n    height: 100px;\n    border-radius: 5px;\n    text-align: center;\n    position: absolute;\n    z-index: 9999;\n}\n\n/*.load-wrapp-forReview p {padding: 0 0 20px;}*/\n/*.load-wrapp-forReview:last-child {margin-right: 0;}*/\n\n/* =Animate the stuff\n------------------------ */\n@keyframes loadingD {\n0 {transform: rotate(0deg);}\n50% {transform: rotate(180deg);}\n100% {transform: rotate(360deg);}\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\nbutton.cp_btn {\n        position: relative;\n        display: block;\n        width: 160px;\n        padding: 4px;\n        text-align: center;\n        text-decoration: none;\n        color: #FFF;\n        background: #26C6DA;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\nbutton.cp_btn2 {\n        position: relative;\n        display: block;\n        width: 160px;\n        padding: 4px;\n        text-align: center;\n        text-decoration: none;\n        color: black;\n        background: #CCC;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn2:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n.ring-1-forReview {\n        width: 10px;\n        height: 10px;\n        margin: 0 auto;\n        padding: 10px;\n        border: 7px dashed #4b9cdb;\n        border-radius: 100%;\n}\n.load-4-forReview .ring-1-forReview {\n        animation: loadingD 1.5s .3s cubic-bezier(.17, .37, .43, .67) infinite;\n}\n.load-wrapp-forReview {\n        margin-left: auto;\n        margin-right: auto;\n        width: 550px;\n        height: 100px;\n        border-radius: 5px;\n        text-align: center;\n        position: absolute;\n        z-index: 9999;\n}\n\n    /*.load-wrapp-forReview p {padding: 0 0 20px;}*/\n    /*.load-wrapp-forReview:last-child {margin-right: 0;}*/\n    /* =Animate the stuff\n------------------------ */\n@keyframes loadingD {\n0% {\n            transform: rotate(0deg);\n}\n50% {\n            transform: rotate(180deg);\n}\n100% {\n            transform: rotate(360deg);\n}\n}\n}\n@media (max-width: 479px) {\nbutton.cp_btn {\n        position: relative;\n        display: block;\n        width: 160px;\n        padding: 4px;\n        text-align: center;\n        text-decoration: none;\n        color: #FFF;\n        background: #26C6DA;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\nbutton.cp_btn2 {\n        position: relative;\n        display: block;\n        width: 160px;\n        padding: 4px;\n        text-align: center;\n        text-decoration: none;\n        color: black;\n        background: #CCC;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn2:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n.ring-1-forReview {\n        width: 10px;\n        height: 10px;\n        margin: 0 auto;\n        padding: 10px;\n        border: 7px dashed #4b9cdb;\n        border-radius: 100%;\n}\n.load-4-forReview .ring-1-forReview {\n        animation: loadingD 1.5s .3s cubic-bezier(.17, .37, .43, .67) infinite;\n}\n.load-wrapp-forReview {\n        margin-left: auto;\n        margin-right: auto;\n        width: 350px;\n        height: 100px;\n        border-radius: 5px;\n        text-align: center;\n        position: absolute;\n        z-index: 9999;\n}\n\n    /*.load-wrapp-forReview p {padding: 0 0 20px;}*/\n    /*.load-wrapp-forReview:last-child {margin-right: 0;}*/\n    /* =Animate the stuff\n------------------------ */\n@keyframes loadingD {\n0% {\n            transform: rotate(0deg);\n}\n50% {\n            transform: rotate(180deg);\n}\n100% {\n            transform: rotate(360deg);\n}\n}\n}\n\n", ""]);
 
 // exports
 
@@ -8233,6 +8401,25 @@ exports.push([module.i, "\n.card a:hover {\n    background-color: #f0f8ff;\n}\n.
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/evaluation-child.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/evaluation-child.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n@media (min-width: 767px) {\n.select-player {\n        width: 300px;\n}\n.evaluation-form-textarea {\n        width: 370px;\n        height: 110px;\n}\n}\n@media (max-width: 479px) {\n.select-player {\n        width: 200px;\n}\n.evaluation-form-textarea {\n        width: 300px;\n        height: 110px;\n}\n}\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/evaluation_form.vue?vue&type=style&index=0&lang=css&":
 /*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/evaluation_form.vue?vue&type=style&index=0&lang=css& ***!
@@ -8245,7 +8432,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.ring-1 {\n    width: 10px;\n    height: 10px;\n    margin: 0 auto;\n    padding: 10px;\n    border: 7px dashed #4b9cdb;\n    border-radius: 100%;\n}\n.load-4 .ring-1\n{animation: loadingD 1.5s .3s cubic-bezier(.17,.37,.43,.67) infinite;}\n.load-wrapp {\n    top: 120px;\n    left: 180px;\n    width: 100px;\n    height: 100px;\n    margin: 0 auto;\n    border-radius: 5px;\n    text-align: center;\n    position: absolute;\n    z-index: 9999;\n}\n\n/*.load-wrapp p {padding: 0 0 20px;}*/\n/*.load-wrapp:last-child {margin-right: 0;}*/\n\n/* =Animate the stuff\n------------------------ */\n@keyframes loadingD {\n0 {transform: rotate(0deg);}\n50% {transform: rotate(180deg);}\n100% {transform: rotate(360deg);}\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.ring-1 {\n            width: 10px;\n            height: 10px;\n            margin: 0 auto;\n            padding: 10px;\n            border: 7px dashed #4b9cdb;\n            border-radius: 100%;\n}\n.load-4 .ring-1 {\n            animation: loadingD 1.5s .3s cubic-bezier(.17, .37, .43, .67) infinite;\n}\n.load-wrapp {\n            top: 120px;\n            left: 180px;\n            width: 100px;\n            height: 100px;\n            margin: 0 auto;\n            border-radius: 5px;\n            text-align: center;\n            position: absolute;\n            z-index: 9999;\n}\n\n        /*.load-wrapp p {padding: 0 0 20px;}*/\n        /*.load-wrapp:last-child {margin-right: 0;}*/\n        /* =Animate the stuff\n        ------------------------ */\n@keyframes loadingD {\n0% {\n            transform: rotate(0deg);\n}\n50% {\n            transform: rotate(180deg);\n}\n100% {\n            transform: rotate(360deg);\n}\n}\n}\n@media (max-width: 479px) {\n.ring-1 {\n        width: 10px;\n        height: 10px;\n        margin: 0 auto;\n        padding: 10px;\n        border: 7px dashed #4b9cdb;\n        border-radius: 100%;\n}\n.load-4 .ring-1 {\n        animation: loadingD 1.5s .3s cubic-bezier(.17, .37, .43, .67) infinite;\n}\n.load-wrapp {\n        top: 120px;\n        left: 120px;\n        width: 100px;\n        height: 100px;\n        margin: 0 auto;\n        border-radius: 5px;\n        text-align: center;\n        position: absolute;\n        z-index: 9999;\n}\n\n    /*.load-wrapp p {padding: 0 0 20px;}*/\n    /*.load-wrapp:last-child {margin-right: 0;}*/\n    /* =Animate the stuff\n    ------------------------ */\n@keyframes loadingD {\n0% {\n            transform: rotate(0deg);\n}\n50% {\n            transform: rotate(180deg);\n}\n100% {\n            transform: rotate(360deg);\n}\n}\n}\n\n", ""]);
 
 // exports
 
@@ -39287,6 +39474,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/evaluation-child.vue?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/evaluation-child.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./evaluation-child.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/evaluation-child.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/evaluation_form.vue?vue&type=style&index=0&lang=css&":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/evaluation_form.vue?vue&type=style&index=0&lang=css& ***!
@@ -40445,66 +40662,61 @@ var render = function() {
               [_vm._v("選手" + _vm._s(n))]
             ),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "cp_ipselect", staticStyle: { width: "300px" } },
-              [
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.selectedPlayer["player" + n],
-                        expression: "selectedPlayer['player' + n]"
-                      }
-                    ],
-                    staticClass: "cp_sl06",
-                    staticStyle: { width: "300px" },
-                    attrs: {
-                      id: "player_for_second_form",
-                      name: "playersForEvaluation[]"
-                    },
-                    on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.selectedPlayer,
-                          "player" + n,
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        )
-                      }
+            _c("div", { staticClass: "cp_ipselect select-player" }, [
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.selectedPlayer["player" + n],
+                      expression: "selectedPlayer['player' + n]"
                     }
+                  ],
+                  staticClass: "cp_sl06 select-player",
+                  attrs: {
+                    id: "player_for_second_form",
+                    name: "playersForEvaluation[]"
                   },
-                  _vm._l(_vm.players, function(player) {
-                    return _c("option", { domProps: { value: player.id } }, [
-                      _vm._v(
-                        "\n                        " +
-                          _vm._s(player.number) +
-                          " " +
-                          _vm._s(player.name) +
-                          "\n                    "
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.selectedPlayer,
+                        "player" + n,
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
                       )
-                    ])
-                  }),
-                  0
-                ),
-                _vm._v(" "),
-                _c("span", { staticClass: "cp_sl06_highlight" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "cp_sl06_selectbar" })
-              ]
-            )
+                    }
+                  }
+                },
+                _vm._l(_vm.players, function(player) {
+                  return _c("option", { domProps: { value: player.id } }, [
+                    _vm._v(
+                      "\n                        " +
+                        _vm._s(player.number) +
+                        " " +
+                        _vm._s(player.name) +
+                        "\n                    "
+                    )
+                  ])
+                }),
+                0
+              ),
+              _vm._v(" "),
+              _c("span", { staticClass: "cp_sl06_highlight" }),
+              _vm._v(" "),
+              _c("span", { staticClass: "cp_sl06_selectbar" })
+            ])
           ]),
           _vm._v(" "),
           _c(
@@ -40591,7 +40803,7 @@ var render = function() {
                   expression: "comments['comment' + n]"
                 }
               ],
-              staticStyle: { width: "370px", height: "110px" },
+              staticClass: "evaluation-form-textarea",
               attrs: { name: "comments[]" },
               domProps: { value: _vm.comments["comment" + n] },
               on: {
@@ -40898,25 +41110,17 @@ var render = function() {
           : _vm._e()
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "evaluation-form-button",
-          staticStyle: { float: "right" }
-        },
-        [
-          _c(
-            "button",
-            {
-              staticClass: "button06",
-              staticStyle: { "margin-right": "50px", "margin-top": "5px" },
-              attrs: { type: "button" },
-              on: { click: _vm.nextForm }
-            },
-            [_vm._v("\n                次へ進む\n            ")]
-          )
-        ]
-      )
+      _c("div", { staticClass: "evaluation-form-button" }, [
+        _c(
+          "button",
+          {
+            staticClass: "button06",
+            attrs: { type: "button" },
+            on: { click: _vm.nextForm }
+          },
+          [_vm._v("\n                次へ進む\n            ")]
+        )
+      ])
     ]),
     _vm._v(" "),
     _c(
@@ -54336,7 +54540,9 @@ component.options.__file = "resources/js/components/contact.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _evaluation_child_vue_vue_type_template_id_73357416___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./evaluation-child.vue?vue&type=template&id=73357416& */ "./resources/js/components/evaluation-child.vue?vue&type=template&id=73357416&");
 /* harmony import */ var _evaluation_child_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./evaluation-child.vue?vue&type=script&lang=js& */ "./resources/js/components/evaluation-child.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _evaluation_child_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./evaluation-child.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/evaluation-child.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -54344,7 +54550,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _evaluation_child_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _evaluation_child_vue_vue_type_template_id_73357416___WEBPACK_IMPORTED_MODULE_0__["render"],
   _evaluation_child_vue_vue_type_template_id_73357416___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -54373,6 +54579,22 @@ component.options.__file = "resources/js/components/evaluation-child.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_evaluation_child_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./evaluation-child.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/evaluation-child.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_evaluation_child_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/evaluation-child.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/evaluation-child.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_evaluation_child_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./evaluation-child.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/evaluation-child.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_evaluation_child_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_evaluation_child_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_evaluation_child_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_evaluation_child_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_evaluation_child_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 

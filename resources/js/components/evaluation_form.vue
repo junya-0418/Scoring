@@ -54,8 +54,8 @@
             </div>
         </div>
 
-        <div class="evaluation-form-button" style="float: right;">
-            <button class="button06" type="button"   style="margin-right: 50px; margin-top: 5px" v-on:click="nextForm">
+        <div class="evaluation-form-button">
+            <button class="button06" type="button"  v-on:click="nextForm">
                 次へ進む
             </button>
         </div>
@@ -73,39 +73,90 @@
 </template>
 
 <style>
-    .ring-1 {
-        width: 10px;
-        height: 10px;
-        margin: 0 auto;
-        padding: 10px;
-        border: 7px dashed #4b9cdb;
-        border-radius: 100%;
+    @media (min-width: 767px) {
+            .ring-1 {
+                width: 10px;
+                height: 10px;
+                margin: 0 auto;
+                padding: 10px;
+                border: 7px dashed #4b9cdb;
+                border-radius: 100%;
+            }
+
+            .load-4 .ring-1 {
+                animation: loadingD 1.5s .3s cubic-bezier(.17, .37, .43, .67) infinite;
+            }
+
+            .load-wrapp {
+                top: 120px;
+                left: 180px;
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+                border-radius: 5px;
+                text-align: center;
+                position: absolute;
+                z-index: 9999;
+            }
+
+            /*.load-wrapp p {padding: 0 0 20px;}*/
+            /*.load-wrapp:last-child {margin-right: 0;}*/
+            /* =Animate the stuff
+            ------------------------ */
+                @keyframes loadingD {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+            }
     }
 
-    .load-4 .ring-1
-    {animation: loadingD 1.5s .3s cubic-bezier(.17,.37,.43,.67) infinite;}
+    @media (max-width: 479px) {
+        .ring-1 {
+            width: 10px;
+            height: 10px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 7px dashed #4b9cdb;
+            border-radius: 100%;
+        }
 
-    .load-wrapp {
-        top: 120px;
-        left: 180px;
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
-        border-radius: 5px;
-        text-align: center;
-        position: absolute;
-        z-index: 9999;
-    }
+        .load-4 .ring-1 {
+            animation: loadingD 1.5s .3s cubic-bezier(.17, .37, .43, .67) infinite;
+        }
 
-    /*.load-wrapp p {padding: 0 0 20px;}*/
-    /*.load-wrapp:last-child {margin-right: 0;}*/
+        .load-wrapp {
+            top: 120px;
+            left: 120px;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            border-radius: 5px;
+            text-align: center;
+            position: absolute;
+            z-index: 9999;
+        }
 
-    /* =Animate the stuff
-    ------------------------ */
-    @keyframes loadingD {
-    0 {transform: rotate(0deg);}
-    50% {transform: rotate(180deg);}
-    100% {transform: rotate(360deg);}
+        /*.load-wrapp p {padding: 0 0 20px;}*/
+        /*.load-wrapp:last-child {margin-right: 0;}*/
+        /* =Animate the stuff
+        ------------------------ */
+        @keyframes loadingD {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     }
 
 </style>

@@ -23,75 +23,165 @@
 </template>
 
 <style>
+    @media (min-width: 767px) {
 
-    button.cp_btn {
-        position: relative;
-        display: block;
-        width: 160px;
-        padding: 4px;
-        text-align: center;
-        text-decoration: none;
-        color: #FFF;
-        background: #26C6DA;
-        border-bottom: 2px solid #00838F;
-        border-radius: 4px;
-        box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
-    }
-    button.cp_btn:active {
-        border-bottom: 2px solid #26C6DA;
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
-    }
+        button.cp_btn {
+            position: relative;
+            display: block;
+            width: 160px;
+            padding: 4px;
+            text-align: center;
+            text-decoration: none;
+            color: #FFF;
+            background: #26C6DA;
+            border-bottom: 2px solid #00838F;
+            border-radius: 4px;
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+        }
 
-    button.cp_btn2 {
-        position: relative;
-        display: block;
-        width: 160px;
-        padding: 4px;
-        text-align: center;
-        text-decoration: none;
-        color: black;
-        background: #CCC;
-        border-bottom: 2px solid #00838F;
-        border-radius: 4px;
-        box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
-    }
-    button.cp_btn2:active {
-        border-bottom: 2px solid #26C6DA;
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
-    }
+        button.cp_btn:active {
+            border-bottom: 2px solid #26C6DA;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+        }
 
-    .ring-1-forReview {
-        width: 10px;
-        height: 10px;
-        margin: 0 auto;
-        padding: 10px;
-        border: 7px dashed #4b9cdb;
-        border-radius: 100%;
-    }
+        button.cp_btn2 {
+            position: relative;
+            display: block;
+            width: 160px;
+            padding: 4px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            background: #CCC;
+            border-bottom: 2px solid #00838F;
+            border-radius: 4px;
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+        }
 
-    .load-4-forReview .ring-1-forReview
-    {animation: loadingD 1.5s .3s cubic-bezier(.17,.37,.43,.67) infinite;}
+        button.cp_btn2:active {
+            border-bottom: 2px solid #26C6DA;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+        }
 
-    .load-wrapp-forReview {
-        margin-left: auto;
-        margin-right: auto;
-        width: 550px;
-        height: 100px;
-        border-radius: 5px;
-        text-align: center;
-        position: absolute;
-        z-index: 9999;
-    }
+        .ring-1-forReview {
+            width: 10px;
+            height: 10px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 7px dashed #4b9cdb;
+            border-radius: 100%;
+        }
 
-    /*.load-wrapp-forReview p {padding: 0 0 20px;}*/
-    /*.load-wrapp-forReview:last-child {margin-right: 0;}*/
+        .load-4-forReview .ring-1-forReview {
+            animation: loadingD 1.5s .3s cubic-bezier(.17, .37, .43, .67) infinite;
+        }
 
-    /* =Animate the stuff
+        .load-wrapp-forReview {
+            margin-left: auto;
+            margin-right: auto;
+            width: 550px;
+            height: 100px;
+            border-radius: 5px;
+            text-align: center;
+            position: absolute;
+            z-index: 9999;
+        }
+
+        /*.load-wrapp-forReview p {padding: 0 0 20px;}*/
+        /*.load-wrapp-forReview:last-child {margin-right: 0;}*/
+        /* =Animate the stuff
     ------------------------ */
-    @keyframes loadingD {
-    0 {transform: rotate(0deg);}
-    50% {transform: rotate(180deg);}
-    100% {transform: rotate(360deg);}
+        @keyframes loadingD {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    @media (max-width: 479px) {
+        button.cp_btn {
+            position: relative;
+            display: block;
+            width: 160px;
+            padding: 4px;
+            text-align: center;
+            text-decoration: none;
+            color: #FFF;
+            background: #26C6DA;
+            border-bottom: 2px solid #00838F;
+            border-radius: 4px;
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+        }
+
+        button.cp_btn:active {
+            border-bottom: 2px solid #26C6DA;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+        }
+
+        button.cp_btn2 {
+            position: relative;
+            display: block;
+            width: 160px;
+            padding: 4px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            background: #CCC;
+            border-bottom: 2px solid #00838F;
+            border-radius: 4px;
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+        }
+
+        button.cp_btn2:active {
+            border-bottom: 2px solid #26C6DA;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+        }
+
+        .ring-1-forReview {
+            width: 10px;
+            height: 10px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 7px dashed #4b9cdb;
+            border-radius: 100%;
+        }
+
+        .load-4-forReview .ring-1-forReview {
+            animation: loadingD 1.5s .3s cubic-bezier(.17, .37, .43, .67) infinite;
+        }
+
+        .load-wrapp-forReview {
+            margin-left: auto;
+            margin-right: auto;
+            width: 350px;
+            height: 100px;
+            border-radius: 5px;
+            text-align: center;
+            position: absolute;
+            z-index: 9999;
+        }
+
+        /*.load-wrapp-forReview p {padding: 0 0 20px;}*/
+        /*.load-wrapp-forReview:last-child {margin-right: 0;}*/
+        /* =Animate the stuff
+    ------------------------ */
+        @keyframes loadingD {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     }
 
 </style>

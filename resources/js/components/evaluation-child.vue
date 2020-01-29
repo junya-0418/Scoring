@@ -3,8 +3,8 @@
     <div v-for="n in 14">
         <div class="mb-3" style="float: left">
             <label class="mr-3 cp_sl06_selectlabel" for="player_for_second_form" style="font-size: 12px">選手{{ n }}</label>
-            <div class="cp_ipselect" style="width: 300px">
-                <select class="cp_sl06" id="player_for_second_form" name="playersForEvaluation[]" v-model="selectedPlayer['player' + n]" style="width: 300px">
+            <div class="cp_ipselect select-player">
+                <select class="cp_sl06 select-player" id="player_for_second_form" name="playersForEvaluation[]" v-model="selectedPlayer['player' + n]">
                     <option v-for="player in players" v-bind:value="player.id">
                         {{ player.number }} {{ player.name }}
                     </option>
@@ -31,7 +31,7 @@
             <div>
                 <label class="mr-3 cp_sl06_selectlabel" for="evaluation" style="font-size: 12px">コメント</label>
             </div>
-            <textarea name="comments[]" style="width: 370px; height: 110px;"　v-model="comments['comment' + n]"></textarea>
+            <textarea class="evaluation-form-textarea" name="comments[]" v-model="comments['comment' + n]"></textarea>
         </div>
 
     </div>
@@ -54,9 +54,33 @@
 
 
 </div>
-
-
 </template>
+
+<style>
+    @media (min-width: 767px) {
+        .select-player {
+            width: 300px;
+        }
+
+        .evaluation-form-textarea {
+            width: 370px;
+            height: 110px;
+        }
+    }
+
+    @media (max-width: 479px) {
+        .select-player {
+            width: 200px;
+        }
+
+        .evaluation-form-textarea {
+            width: 300px;
+            height: 110px;
+        }
+    }
+
+
+</style>
 
 <script>
     export default {
@@ -119,48 +143,53 @@
         methods: {
             formCheck: function (e) {
 
-                this.errors = []
+                if (window.confirm("入力内容を送信しますか？")) {
 
-                for (var i = 1;  i < 15;  i++) {
+                    this.errors = []
 
-                    if (this.selectedPlayer['player' + i]) {
+                    for (var i = 1;  i < 15;  i++) {
 
-                        if(!this.selectedNumber['number' + i]) {
-                            this.errors.push('選手'+ i +'に未入力の項目があります');
-                        } else if(this.comments['comment' + i] === '') {
-                            this.errors.push('選手'+ i +'に未入力の項目があります');
+                        if (this.selectedPlayer['player' + i]) {
+
+                            if(!this.selectedNumber['number' + i]) {
+                                this.errors.push('選手'+ i +'に未入力の項目があります');
+                            } else if(this.comments['comment' + i] === '') {
+                                this.errors.push('選手'+ i +'に未入力の項目があります');
+                            }
                         }
+
+                        if (this.selectedNumber['number' + i]) {
+
+                            if(!this.selectedPlayer['player' + i]) {
+                                this.errors.push('選手'+ i +'に未入力の項目があります');
+                            } else if(this.comments['comment' + i] === '') {
+                                this.errors.push('選手'+ i +'に未入力の項目があります');
+                            }
+                        }
+
+                        if (this.comments['comment' + i]) {
+
+                            if(!this.selectedPlayer['player' + i]) {
+                                this.errors.push('選手'+ i +'に未入力の項目があります');
+                            } else if(this.selectedNumber['number' + i] === '') {
+                                this.errors.push('選手'+ i +'に未入力の項目があります');
+                            }
+                        }
+
                     }
 
-                    if (this.selectedNumber['number' + i]) {
+                    // エラーの重複を排除
+                    this.errors = this.errors.filter(function (x, i, self) {
+                        return self.indexOf(x) === i;
+                    });
 
-                        if(!this.selectedPlayer['player' + i]) {
-                            this.errors.push('選手'+ i +'に未入力の項目があります');
-                        } else if(this.comments['comment' + i] === '') {
-                            this.errors.push('選手'+ i +'に未入力の項目があります');
-                        }
+                    if (this.errors.length) {
+                        e.preventDefault();
                     }
 
-                    if (this.comments['comment' + i]) {
-
-                        if(!this.selectedPlayer['player' + i]) {
-                            this.errors.push('選手'+ i +'に未入力の項目があります');
-                        } else if(this.selectedNumber['number' + i] === '') {
-                            this.errors.push('選手'+ i +'に未入力の項目があります');
-                        }
-                    }
-
-                }
-
-                // エラーの重複を排除
-                this.errors = this.errors.filter(function (x, i, self) {
-                    return self.indexOf(x) === i;
-                });
-
-                if (this.errors.length) {
+                } else {
                     e.preventDefault();
                 }
-
             }
         },
     }

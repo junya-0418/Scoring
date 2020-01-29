@@ -15,7 +15,7 @@
                 </div>
             @endif
 
-            <div class="col-md-8" style="margin-left: 15rem; margin-top: 4rem" >
+            <div class="col-md-8 evaluation-form-main">
 
                 <div class="card">
 

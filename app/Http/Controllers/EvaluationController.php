@@ -39,7 +39,7 @@ class EvaluationController extends Controller
 
         $check = Post::where('match_id', $match_id)->where('user_id', $user->id)->get()->first();
 
-        if ($check !== null) {
+        if ($check) {
             return redirect('/evaluation/form')->withErrors('この試合には既に投稿済みです')->withInput();
         }
 

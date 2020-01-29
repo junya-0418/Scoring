@@ -386,7 +386,6 @@
                     this.comments = res.data
                 })
 
-                console.log(this.comments)
             },
             closeModal: function() {
                 this.showContent = false
