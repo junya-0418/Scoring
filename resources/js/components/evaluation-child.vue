@@ -76,6 +76,7 @@
         .evaluation-form-textarea {
             width: 300px;
             height: 110px;
+            font-size: 100%;
         }
     }
 

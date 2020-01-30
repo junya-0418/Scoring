@@ -132,7 +132,7 @@
 
 @media (max-width: 479px) {
     .evaluation-form-main {
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
 
     .form_one {
@@ -170,7 +170,7 @@
         background-color: transparent;
         width: 350px;
         padding: 10px 10px 10px 0;
-        font-size: 12px;
+        font-size: 100%;
         border-radius: 0;
         border: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);

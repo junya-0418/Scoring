@@ -64,11 +64,9 @@
     @media (max-width: 479px) {
         /*ウィンドウ幅が最大479pxまでの場合に適用*/
         .selectMatch{
-
             margin-bottom: 20px;
             width: 140px;
             margin-top: 15px;
-
         }
 
         .board {
@@ -76,7 +74,6 @@
             border-bottom: solid 1px #ccc;
             background-color: #fff;
             margin-bottom: 15px;
-
         }
 
         .match-card {
@@ -203,7 +200,7 @@
         display: block;
         padding: 0 22px;
         border-bottom: 1px solid #b5b5b5;
-        font-size: 18px;
+        font-size: 100%;
         font-weight: 600;
         color: #b5b5b5;
         line-height: 47px;
