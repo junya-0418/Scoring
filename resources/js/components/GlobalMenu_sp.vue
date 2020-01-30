@@ -5,7 +5,7 @@
         <li  class="list-item">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="#" @click="dropdown_show">チーム</a></li>
+                <li><a href="javascript:void(0)" @click="dropdown_show">チーム</a></li>
                 <li class="contact"><a href="/contact">お問い合わせ</a></li>
                 <ul class="display-teams" v-if="active===true">
                     <li v-for="team in teams" class="sublist-item">
@@ -111,10 +111,6 @@
             background-color: #f0f8ff;
             margin-right: 150px;
             display: grid;
-        }
-
-        .contact {
-
         }
 
         ul {

@@ -117,6 +117,7 @@
             border-bottom: 2px solid #00838F;
             border-radius: 4px;
             box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+            margin-top: 15px;
         }
 
         button.cp_btn:active {
