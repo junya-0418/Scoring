@@ -13,6 +13,7 @@
             @endif
 
             <search-component></search-component>
+
             <div class="no-display-at-sp">
                 <side-component></side-component>
             </div>

@@ -2517,10 +2517,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     dropdown_show: function dropdown_show() {
-      this.active = true;
-    },
-    dropdown_hide: function dropdown_hide() {
-      this.active = false;
+      this.active = !this.active;
     },
     go_team_page: function go_team_page(id) {
       location.href = "/teams/" + id;
@@ -40819,10 +40816,7 @@ var render = function() {
             _vm.active === true
               ? _c(
                   "ul",
-                  {
-                    staticClass: "display-teams",
-                    on: { click: _vm.dropdown_hide }
-                  },
+                  { staticClass: "display-teams" },
                   _vm._l(_vm.teams, function(team) {
                     return _c("li", { staticClass: "sublist-item" }, [
                       _c(
