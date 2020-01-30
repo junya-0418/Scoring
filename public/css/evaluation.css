@@ -131,6 +131,15 @@
 }
 
 @media (max-width: 479px) {
+
+    select {
+        font-size: 16px;
+    }
+
+    textarea {
+        font-size: 16px;
+    }
+
     .evaluation-form-main {
         margin-top: 2rem;
     }
@@ -170,7 +179,7 @@
         background-color: transparent;
         width: 350px;
         padding: 10px 10px 10px 0;
-        font-size: 100%;
+        /*font-size: 100%;*/
         border-radius: 0;
         border: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);

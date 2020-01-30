@@ -124,6 +124,7 @@
     .custom-select {
         position: relative;
         display: inline-block;
+        /*font-size: 16px!important;*/
     }
     .custom-select-trigger {
         position: relative;
