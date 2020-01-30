@@ -45,6 +45,13 @@
 }
 
 @media (min-width: 767px) {
+    .no-display-at-sp {
+        display: block;
+    }
+
+    .no-display-at-pc {
+        display: none;
+    }
 
     #overlay {
         /*　要素を重ねた時の順番　*/
@@ -133,6 +140,10 @@
 @media (max-width: 479px) {
     .no-display-at-sp {
         display: none;
+    }
+
+    .no-display-at-pc {
+        display: block;
     }
 
     #overlay {

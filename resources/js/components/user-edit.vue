@@ -8,16 +8,15 @@
 
                     <div class="card-body" style="border: 1px solid #6c757d;">
 
-
-                            <div class="form-group row" style="margin-left: 20px;">
+                            <div class="form-group" style="margin-left: 20px;">
                                 <label for="name" style="margin-right: 30px; width: 100px;">名前</label>
 
-                                <div>
+                                <div style="margin-top: 5px;">
                                     <input id="name" type="text"  name="name" v-model="username" style="padding-left: 3px;">
                                 </div>
                             </div>
 
-                            <div style="margin-left: 20px;">
+                            <div style="margin-left: 20px; margin-bottom: 20px; display: grid;">
                                 <label for="team" style="margin-right: 30px; width: 100px;">応援チーム</label>
                                 <select id="team" name="team"  style="width: 180px;" v-model="selectedTeam">
                                     <option v-for="team in teams" v-bind:value="team.id">
@@ -56,36 +55,37 @@
 </template>
 
 <style>
+    @media (min-width: 767px) {
 
-    .post-card a:hover {
-        background-color: #f0f8ff;
+        .post-card a:hover {
+            background-color: #f0f8ff;
+        }
+
+        .user-name h1 {
+            margin-bottom: 30px;
+        }
+
+        .post-card {
+            padding-left: 15px;
+            background-color: #fff;
+            border: solid 1px #ccc;
+            width: 500px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .post-card a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .match-information {
+
+            margin-top: 10px;
+            margin-bottom: 15px;
+
+        }
     }
-
-    .user-name h1 {
-        margin-bottom: 30px;
-    }
-
-    .post-card {
-        padding-left: 15px;
-        background-color: #fff;
-        border: solid 1px #ccc;
-        width: 500px;
-        border-radius: 8px;
-        margin-bottom: 15px;
-    }
-
-    .post-card a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .match-information {
-
-        margin-top: 10px;
-        margin-bottom: 15px;
-
-    }
-
 
 </style>
 

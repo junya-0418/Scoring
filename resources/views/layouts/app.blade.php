@@ -120,6 +120,9 @@
         <div class="no-display-at-sp">
             <globalmenu-component></globalmenu-component>
         </div>
+        <div class="no-display-at-pc">
+            <globalmenu-component_sp></globalmenu-component_sp>
+        </div>
 
         <main class="py-4" style="z-index: 1">
             @yield('content')
