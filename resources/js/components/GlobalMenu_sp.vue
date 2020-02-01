@@ -21,83 +21,10 @@
 </template>
 
 <style>
-    @media (min-width: 767px) {
-        .global_menu {
-            border-bottom: solid 1px #ccc;
-            height: 45px;
-            margin-bottom: 15px;
-            z-index: 9999;
-            margin-top: 10px;
-            /*background-color: #f0ffff;;*/
-        }
-
-        .display-teams {
-            border: solid 1px #ccc;
-            margin-top: 5px;
-            z-index: 1000;
-            position: relative;
-            background-color: #f0f8ff;
-            margin-right: 150px;
-        }
-
-        .contact {
-
-        }
-
-        ul {
-            padding: 0;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        a {
-            color: #333;
-            text-decoration: none;
-        }
-
-        .list {
-            padding: 0;
-            margin-left: 250px;
-        }
-
-        .list-item a {
-            position: relative;
-            padding: 8px;
-            /*border-bottom:solid 1px #ccc;*/
-            margin-right: 3px;
-        }
-
-        .list-item a {
-            display: block;
-        }
-
-        .list-item:last-of-type a {
-            border-bottom: none;
-        }
-
-        .list-item > a::after {
-            /*content:"▼";*/
-            /*position: absolute;*/
-            top: 12px;
-            right: 10px;
-            font-size: 12px;
-        }
-
-        .list-item > a.active::after {
-            /*content:"▲";*/
-        }
-
-        .sublist-item {
-            font-size: 11px;
-        }
-    }
     @media (max-width: 479px) {
         .global_menu {
             border-bottom: solid 1px #ccc;
             height: 45px;
-            margin-bottom: 15px;
             z-index: 9999;
             margin-top: 10px;
             /*background-color: #f0ffff;;*/
@@ -159,7 +86,7 @@
         }
 
         .sublist-item {
-            font-size: 11px;
+            font-size: 13px;
         }
 
     }

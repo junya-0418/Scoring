@@ -5,6 +5,7 @@
             <label class="mr-3 cp_sl06_selectlabel" for="player_for_second_form" style="font-size: 12px">選手{{ n }}</label>
             <div class="cp_ipselect select-player">
                 <select class="cp_sl06 select-player" id="player_for_second_form" name="playersForEvaluation[]" v-model="selectedPlayer['player' + n]">
+                    <option value=""></option>
                     <option v-for="player in players" v-bind:value="player.id">
                         {{ player.number }} {{ player.name }}
                     </option>
@@ -18,6 +19,7 @@
             <label class="mr-3 cp_sl06_selectlabel" for="evaluation" style="font-size: 12px">採点</label>
             <div class="cp_ipselect" style="width: 70px">
                 <select class="cp_sl06" id="evaluation" name="evaluations[]" v-model="selectedNumber['number' + n]" style="width: 70px; padding-left: 10px;">
+                    <option value=""></option>
                     <option v-for="number in numbers">
                         {{ number.toFixed(1) }}
                     </option>

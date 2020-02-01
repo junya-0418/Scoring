@@ -28,6 +28,7 @@
     <link href="{{ asset('css/evaluation.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user_index.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user_review_detail.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>

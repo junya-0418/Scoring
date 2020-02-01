@@ -15,15 +15,15 @@
 
                 <div class="team-card">
                     <div><strong>{{ $team->name }}</strong></div>
-                    <div style="margin-top: 30px; font-size: 15px;">{{ $supporters_count }} Supporters</div>
+                    <div class="supporters-count">{{ $supporters_count }} Supporters</div>
                 </div>
 
                 <div class="user-card">
                     @foreach($posts as $post)
-                    <div class="post-list" style="border-bottom: solid 1px #ccc; padding-bottom: 3px; margin: 7px 7px;">
+                    <div class="post-list">
                         <a href="{{ route('user_review', ['id' => $post->id]) }}">
-                        <span style="display: block; margin-bottom: 3px; padding-left: 15px;">{{ $post->name }}</span>
-                        <span style="font-size: 11px; padding-left: 15px;">{{ $post->match_type }} {{ $post->home_team_name }} vs {{ $post->away_team_name }}</span>
+                        <span class="post-list-username">{{ $post->name }}</span>
+                        <span class="post-list-information">{{ $post->match_type }} {{ $post->home_team_name }} vs {{ $post->away_team_name }}</span>
                         </a>
                     </div>
                     @endforeach

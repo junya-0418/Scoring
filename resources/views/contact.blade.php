@@ -4,11 +4,11 @@
 
     <form method="POST" action="/contact/send">
         {{ csrf_field() }}
-        <div class="contact-form" style="width: 600px; margin-top: 30px; margin-left: auto; margin-right: auto;">
-            <h1 style="font-size: 30px; margin-bottom: 30px;">お問い合わせ</h1>
+        <div class="contact-form">
+            <h1>お問い合わせ</h1>
 
-            <div style="margin-bottom: 15px;">
-                <div style="float: left;">
+            <div class="name-form">
+                <div class="last-name">
                     <label for="last-name">姓</label>
                     <div>
                         <input type="text" style="margin-right: 5px;" name="lastName" value="{{ old('lastName') }}">
@@ -37,10 +37,10 @@
                 </div>
             @endif
 
-            <div style="margin-bottom: 15px;">
+            <div class="mail-form">
                 <label for="address">メールアドレス</label>
                 <div>
-                    <input type="text" style="width: 300px;" name="mailAddress" value="{{ old('mailAddress') }}">
+                    <input type="text" name="mailAddress" value="{{ old('mailAddress') }}">
                 </div>
                 <div class="error_txt"></div>
             </div>
@@ -51,10 +51,10 @@
                 </div>
             @endif
 
-            <div>
+            <div class="body-form">
                 <label for="body">お問い合わせ内容</label>
                 <div>
-                    <textarea style="width: 600px; height: 200px;" name="body">{{ old('body') }}</textarea>
+                    <textarea name="body">{{ old('body') }}</textarea>
                 </div>
                 <div class="error_txt"></div>
             </div>
@@ -65,7 +65,7 @@
                 </div>
             @endif
 
-            <button class="button expanded btn btn-primary" type="submit" style="float: right; margin-top: 15px;">送信</button>
+            <button class="button expanded btn btn-primary contact-form-button" type="submit">送信</button>
 
         </div>
     </form>

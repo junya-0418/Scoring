@@ -1,0 +1,90 @@
+@media (min-width: 767px) {
+    .contact-form {
+        width: 600px;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-form h1 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .name-form {
+        margin-bottom: 15px;
+    }
+
+    .last-name {
+        float: left;
+    }
+
+    .mail-form {
+        margin-bottom: 15px;
+    }
+
+    .mail-form input {
+        width: 300px;
+    }
+
+    .body-form textarea {
+        width: 600px; height: 200px;
+    }
+
+    .contact-form-button {
+        float: right; margin-top: 15px;
+    }
+
+}
+
+@media (max-width: 479px) {
+    .contact-form {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-form h1 {
+        font-size: 25px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+
+    .name-form {
+        margin-bottom: 15px;
+        margin-left: 30px;
+    }
+
+    .last-name {
+        float: left;
+    }
+
+    .mail-form {
+        margin-bottom: 15px;
+        margin-left: 30px;
+    }
+
+    .mail-form input {
+        width: 300px;
+    }
+
+    .body-form {
+        margin-left: 30px;
+    }
+
+    .body-form textarea {
+        width: 315px;
+        height: 200px;
+    }
+
+    .contact-form-button {
+        float: right;
+        margin-top: 20px;
+        margin-right: 30px;
+    }
+}
+
+
+
+
+

@@ -2223,79 +2223,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2337,79 +2264,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2987,6 +2841,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -8659,7 +8515,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        margin-bottom: 15px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 150px;\n}\n.contact {\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 250px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n}\n.list-item a {\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 11px;\n}\n}\n@media (max-width: 479px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        margin-bottom: 15px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 150px;\n        display: grid;\n}\n.contact {\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 20px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n}\n.list-item a {\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 11px;\n}\n}\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        margin-bottom: 15px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 150px;\n}\n.contact {\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 250px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n}\n.list-item a {\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 11px;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -8678,7 +8534,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        margin-bottom: 15px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 150px;\n}\n.contact {\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 250px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n}\n.list-item a {\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 11px;\n}\n}\n@media (max-width: 479px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        margin-bottom: 15px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 150px;\n        display: grid;\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 20px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n}\n.list-item a {\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 11px;\n}\n}\n", ""]);
+exports.push([module.i, "\n@media (max-width: 479px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 150px;\n        display: grid;\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 20px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n}\n.list-item a {\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 13px;\n}\n}\n", ""]);
 
 // exports
 
@@ -41130,18 +40986,22 @@ var render = function() {
                     }
                   }
                 },
-                _vm._l(_vm.players, function(player) {
-                  return _c("option", { domProps: { value: player.id } }, [
-                    _vm._v(
-                      "\n                        " +
-                        _vm._s(player.number) +
-                        " " +
-                        _vm._s(player.name) +
-                        "\n                    "
-                    )
-                  ])
-                }),
-                0
+                [
+                  _c("option", { attrs: { value: "" } }),
+                  _vm._v(" "),
+                  _vm._l(_vm.players, function(player) {
+                    return _c("option", { domProps: { value: player.id } }, [
+                      _vm._v(
+                        "\n                        " +
+                          _vm._s(player.number) +
+                          " " +
+                          _vm._s(player.name) +
+                          "\n                    "
+                      )
+                    ])
+                  })
+                ],
+                2
               ),
               _vm._v(" "),
               _c("span", { staticClass: "cp_sl06_highlight" }),
@@ -41202,16 +41062,20 @@ var render = function() {
                         }
                       }
                     },
-                    _vm._l(_vm.numbers, function(number) {
-                      return _c("option", [
-                        _vm._v(
-                          "\n                        " +
-                            _vm._s(number.toFixed(1)) +
-                            "\n                    "
-                        )
-                      ])
-                    }),
-                    0
+                    [
+                      _c("option", { attrs: { value: "" } }),
+                      _vm._v(" "),
+                      _vm._l(_vm.numbers, function(number) {
+                        return _c("option", [
+                          _vm._v(
+                            "\n                        " +
+                              _vm._s(number.toFixed(1)) +
+                              "\n                    "
+                          )
+                        ])
+                      })
+                    ],
+                    2
                   ),
                   _vm._v(" "),
                   _c("span", { staticClass: "cp_sl06_highlight" }),
