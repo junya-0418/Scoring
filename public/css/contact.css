@@ -15,7 +15,7 @@
         margin-bottom: 15px;
     }
 
-    .last-name {
+    .name {
         float: left;
     }
 
@@ -33,6 +33,17 @@
 
     .contact-form-button {
         float: right; margin-top: 15px;
+    }
+
+    .contact-complete-text {
+        margin-left: 350px;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .go-top-page{
+        margin-left: 350px;
+        margin-top: 20px;
     }
 
 }
@@ -53,10 +64,6 @@
     .name-form {
         margin-bottom: 15px;
         margin-left: 30px;
-    }
-
-    .last-name {
-        float: left;
     }
 
     .mail-form {
@@ -81,6 +88,21 @@
         float: right;
         margin-top: 20px;
         margin-right: 30px;
+    }
+
+    .error {
+        margin-left: 30px;
+    }
+
+    .contact-complete-text {
+        margin-left: 30px;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .go-top-page{
+        margin-left: 30px;
+        margin-top: 20px;
     }
 }
 

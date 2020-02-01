@@ -18,8 +18,7 @@ class ContactController extends Controller
     public function send(ContactRequest $request) {
 
         $params = [
-          'firstName' => $request->firstName,
-          'lastName' => $request->lastName,
+          'name' => $request->name,
           'mailAddress' => $request->mailAddress,
           'body' => $request->body
         ];

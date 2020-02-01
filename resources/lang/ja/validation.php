@@ -140,8 +140,7 @@ return [
     |
     */
     'attributes' => [
-        'firstName' => '名',
-        'lastName' => '姓',
+        'name' => 'お名前',
         'mailAddress' => 'メールアドレス',
         'body' => 'お問い合わせ内容'
     ],

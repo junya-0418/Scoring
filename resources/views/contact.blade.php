@@ -8,34 +8,15 @@
             <h1>お問い合わせ</h1>
 
             <div class="name-form">
-                <div class="last-name">
-                    <label for="last-name">姓</label>
+                <div class="name">
+                    <label for="name">お名前</label>
                     <div>
-                        <input type="text" style="margin-right: 5px;" name="lastName" value="{{ old('lastName') }}">
+                        <input type="text" style="margin-right: 5px;" name="name" value="{{ old('name') }}">
                     </div>
                     <div class="error_txt"></div>
                 </div>
 
-                <div>
-                    <label for="first-name">名</label>
-                    <div>
-                        <input type="text" name="firstName" value="{{ old('firstName') }}">
-                    </div>
-                    <div class="error_txt"></div>
-                </div>
             </div>
-
-            @if($errors->has('lastName'))
-                <div class="error">
-                    <p>{{ $errors->first('lastName') }}</p>
-                </div>
-            @endif
-
-            @if($errors->has('firstName'))
-                <div class="error">
-                    <p>{{ $errors->first('firstName') }}</p>
-                </div>
-            @endif
 
             <div class="mail-form">
                 <label for="address">メールアドレス</label>
@@ -44,6 +25,12 @@
                 </div>
                 <div class="error_txt"></div>
             </div>
+
+            @if($errors->has('name'))
+                <div class="error">
+                    <p>{{ $errors->first('name') }}</p>
+                </div>
+            @endif
 
             @if($errors->has('mailAddress'))
                 <div class="error">

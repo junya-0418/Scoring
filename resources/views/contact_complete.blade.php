@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <div style="margin-left: 350px; font-size: 20px; margin-top: 30px;">送信を完了しました。</div>
-    <button style="margin-left: 350px; margin-top: 20px;"　onclick="location.href='{{ route('home') }}'">トップページへ戻る</button>
+    <div class="contact-complete-text">送信を完了しました。</div>
+    <button class="go-top-page" onclick="location.href='{{ route('home') }}'">トップページへ戻る</button>
 
 {{--    <contact></contact>--}}
 
