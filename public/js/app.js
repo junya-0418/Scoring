@@ -42129,24 +42129,27 @@ var render = function() {
           _vm._v(" "),
           _c(
             "v-app",
-            { attrs: { id: "app" } },
             [
               _c("v-content", { staticClass: "userpage-pagination" }, [
                 _c(
                   "div",
                   { staticClass: "text-center" },
                   [
-                    _c("v-pagination", {
-                      attrs: { length: _vm.length, "total-visible": 5 },
-                      on: { input: _vm.pageChange },
-                      model: {
-                        value: _vm.page,
-                        callback: function($$v) {
-                          _vm.page = $$v
-                        },
-                        expression: "page"
-                      }
-                    })
+                    _c(
+                      "v-pagination",
+                      {
+                        attrs: { length: _vm.length, "total-visible": 5 },
+                        on: { input: _vm.pageChange },
+                        model: {
+                          value: _vm.page,
+                          callback: function($$v) {
+                            _vm.page = $$v
+                          },
+                          expression: "page"
+                        }
+                      },
+                      [_vm._v("mdi-pagination")]
+                    )
                   ],
                   1
                 )

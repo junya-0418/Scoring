@@ -26,10 +26,10 @@
                 </a>
             </div>
 
-            <v-app id="app">
+            <v-app>
                 <v-content class="userpage-pagination">
                     <div class="text-center">
-                        <v-pagination v-model="page" :length="length" :total-visible="5" @input="pageChange"></v-pagination>
+                        <v-pagination v-model="page" :length="length" :total-visible="5" @input="pageChange">mdi-pagination</v-pagination>
                     </div>
                 </v-content>
             </v-app>
@@ -136,7 +136,6 @@
 </style>
 
 <script>
-
     import axios from 'axios';
     import vuetify from 'vuetify';
 
