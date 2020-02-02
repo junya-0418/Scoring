@@ -1,5 +1,4 @@
 <template>
-<v-app>
 <div>
 
     <div class="user-posts">
@@ -27,11 +26,13 @@
                 </a>
             </div>
 
-            <v-content class="userpage-pagination">
-                <div class="text-center">
-                    <v-pagination v-model="page" :length="length" :total-visible="5" @input="pageChange"></v-pagination>
-                </div>
-            </v-content>
+            <v-app id="app">
+                <v-content class="userpage-pagination">
+                    <div class="text-center">
+                        <v-pagination v-model="page" :length="length" :total-visible="5" @input="pageChange"></v-pagination>
+                    </div>
+                </v-content>
+            </v-app>
 
         </div>
 
@@ -51,7 +52,6 @@
     </div>
 
 </div>
-</v-app>
 
 </template>
 
@@ -139,8 +139,6 @@
 
     import axios from 'axios';
     import vuetify from 'vuetify';
-    import '@mdi/font/css/materialdesignicons.css'//mdi
-    import 'material-design-icons-iconfont/dist/material-design-icons.css'//md
 
     export default {
         data(){

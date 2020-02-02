@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div>
+<div id="app">
 <div class="evaluation-content">
     <div class="container">
         <div class="row justify-content-center">
