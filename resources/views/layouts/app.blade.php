@@ -33,6 +33,7 @@
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@1.5.14/dist/vuetify.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
