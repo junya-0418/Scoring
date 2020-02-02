@@ -34,13 +34,12 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@1.5.21/dist/vuetify.min.js"></script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet"> <!-- 説明 3.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/vuetify@1.5/dist/vuetify.min.css" rel="stylesheet"> <!-- 説明 3.2 -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+{{--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">--}}
+{{--    <link href="https://cdn.jsdelivr.net/npm/vuetify@1.5/dist/vuetify.min.css" rel="stylesheet">--}}
 
 </head>
 <body>
@@ -49,7 +48,7 @@
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <v-app id="app">
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -133,7 +132,7 @@
             @yield('content')
         </main>
 
-    </v-app>
+    </div>
 
 </body>
 </html>

@@ -8,6 +8,12 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import Paginate from 'vuejs-paginate';
+
+// import Vuetify from 'vuetify';
+// import 'vuetify/dist/vuetify.min.css';
+// Vue.use(Vuetify);
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -31,6 +37,7 @@ Vue.component('user-index', require('./components/user-index.vue').default);
 Vue.component('user-edit', require('./components/user-edit.vue').default);
 Vue.component('checkin', require('./components/Checkin.vue').default);
 Vue.component('contact', require('./components/contact.vue').default);
+Vue.component('paginate', Paginate);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -45,6 +52,8 @@ Vue.component('contact', require('./components/contact.vue').default);
 const app = new Vue({
     el: '#app',
 });
+
+
 
 
 

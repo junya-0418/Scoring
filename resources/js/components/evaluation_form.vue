@@ -73,6 +73,7 @@
 </template>
 
 <style>
+
     @media (min-width: 767px) {
             .ring-1 {
                 width: 10px;

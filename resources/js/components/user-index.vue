@@ -26,11 +26,18 @@
                 </a>
             </div>
 
-            <v-content class="userpage-pagination">
-                <div class="text-center">
-                    <v-pagination v-model="page" :length="length" :total-visible="5" @input="pageChange"></v-pagination>
-                </div>
-            </v-content>
+<!--            <v-app>-->
+<!--                <v-content class="userpage-pagination">-->
+<!--                    <div class="text-center">-->
+<!--                        <v-pagination v-model="page" :length="length" :total-visible="5" @input="pageChange"></v-pagination>-->
+<!--                    </div>-->
+<!--                </v-content>-->
+<!--            </v-app>-->
+
+            <div class="text-center">
+                <paginate v-model="page" :page-count="length"
+                           :total-visible="5" @input="pageChange"></paginate>
+            </div>
 
         </div>
 
@@ -135,7 +142,7 @@
 
 <script>
     import axios from 'axios';
-    import vuetify from 'vuetify';
+    // import vuetify from 'vuetify';
 
     export default {
         data(){
