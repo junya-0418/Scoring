@@ -32,7 +32,6 @@ Vue.component('user-edit', require('./components/user-edit.vue').default);
 Vue.component('checkin', require('./components/Checkin.vue').default);
 Vue.component('contact', require('./components/contact.vue').default);
 
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -47,8 +46,6 @@ const app = new Vue({
     el: '#app',
 });
 
-// new Vue({
-//     vuetify,
-// }).$mount('#app')
+
 
 

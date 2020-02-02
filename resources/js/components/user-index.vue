@@ -1,5 +1,7 @@
 <template>
+<v-app>
 <div>
+
     <div class="user-posts">
         <div>
             <a href="javascript:void(0)" @click="goPosted" class="posted-match" v-bind:style="{ borderBottom: postedLine }">投稿した試合</a>
@@ -7,7 +9,7 @@
         </div>
 
         <div v-bind:style="{ display: posted }" style="margin-top: 20px;">
-            <div class="card match-board" v-for="post in posts">
+            <div class="card match-board" v-for="post in displayLists">
                 <a class="match-card" href="javascript:void(0)" @click="goUserReview(post.posts_id)">
                     <div class="match-info">
                         <div>{{ post.match_type }}</div>
@@ -24,6 +26,13 @@
                     </div>
                 </a>
             </div>
+
+            <v-content class="userpage-pagination">
+                <div class="text-center">
+                    <v-pagination v-model="page" :length="length" :total-visible="5" @input="pageChange"></v-pagination>
+                </div>
+            </v-content>
+
         </div>
 
         <div v-bind:style="{ display: checkin }" style="margin-top: 20px;">
@@ -42,6 +51,7 @@
     </div>
 
 </div>
+</v-app>
 
 </template>
 
@@ -79,6 +89,11 @@
             margin-top: 10px;
             margin-bottom: 10px;
             padding-left: 20px;
+        }
+
+        .userpage-pagination {
+            margin-left: 50px;
+            margin-top: 30px;
         }
     }
 
@@ -123,6 +138,9 @@
 <script>
 
     import axios from 'axios';
+    import vuetify from 'vuetify';
+    import '@mdi/font/css/materialdesignicons.css'//mdi
+    import 'material-design-icons-iconfont/dist/material-design-icons.css'//md
 
     export default {
         data(){
@@ -136,7 +154,11 @@
                 posts: [],
                 UserCheckins: [],
                 showContent: false,
-                evaluations: ''
+                evaluations: '',
+                page: 1,
+                displayLists: [],
+                pageSize: 5,
+                length:0,
             }
         },
         methods: {
@@ -147,6 +169,8 @@
 
                 axios.get('/api/forUserPost/' + this.user_id).then((res)=>{
                     this.posts = res.data
+                    this.length = Math.ceil(this.posts.length/this.pageSize);
+                    this.displayLists = this.posts.slice(0,this.pageSize);
                 })
 
                 axios.get('/api/forUserCheckin/' + this.user_id).then((res)=>{
@@ -174,7 +198,11 @@
 
             goMatch(id) {
                 location.href="/match/review/" + id;
-            }
+            },
+            pageChange(pageNumber) {
+                this.displayLists = this.posts.slice(this.pageSize*(pageNumber -1), this.pageSize*(pageNumber));
+
+            },
         },
         created(){
             this.fetchUser()
