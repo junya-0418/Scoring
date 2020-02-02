@@ -49,7 +49,7 @@
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div id="app">
+    <v-app id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -133,7 +133,7 @@
             @yield('content')
         </main>
 
-    </div>
+    </v-app>
 
 </body>
 </html>

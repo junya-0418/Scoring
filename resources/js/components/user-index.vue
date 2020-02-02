@@ -26,13 +26,11 @@
                 </a>
             </div>
 
-            <v-app>
-                <v-content class="userpage-pagination">
-                    <div class="text-center">
-                        <v-pagination v-model="page" :length="length" :total-visible="5" @input="pageChange">mdi-pagination</v-pagination>
-                    </div>
-                </v-content>
-            </v-app>
+            <v-content class="userpage-pagination">
+                <div class="text-center">
+                    <v-pagination v-model="page" :length="length" :total-visible="5" @input="pageChange"></v-pagination>
+                </div>
+            </v-content>
 
         </div>
 
