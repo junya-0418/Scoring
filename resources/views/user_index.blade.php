@@ -4,16 +4,23 @@
 <div id="app">
 <div class="evaluation-content">
     <div class="container">
+            <!-- フラッシュメッセージ -->
+            @if (session('flash_message'))
+                <div class="flash_message">
+                    {{ session('flash_message') }}
+                </div>
+            @endif
+
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
+            @endif
+
         <div class="row justify-content-center">
             <div class="col-md-8 user-index-main">
 
                 <div class="card">
-
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
                     <div class="user-box">
                         <h1 class="user-name">{{ $user->name }}</h1>
@@ -28,7 +35,7 @@
                     </div>
 
                     @if ($user->support_team_id !== null)
-                    <p style="font-size: 12px; color: #6c757d">応援チーム</p>
+                    <p style="font-size: 12px; color: #6c757d">サポートチーム</p>
                     <div class="support-team">
                         <strong>{{ $user_support_team->name }}</strong>
                     </div>

@@ -38,12 +38,6 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.error {
-
-    color: #333;
-
-}
-
 @media (min-width: 767px) {
     .no-display-at-sp {
         display: block;
@@ -51,6 +45,16 @@
 
     .no-display-at-pc {
         display: none;
+    }
+
+    .flash_message {
+        margin-bottom: 20px;
+        background-color: #add8e6;
+        width: 500px;
+        padding: 5px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #overlay {
@@ -144,6 +148,16 @@
 
     .no-display-at-pc {
         display: block;
+    }
+
+    .flash_message {
+        margin-top: 20px;
+        background-color: #add8e6;
+        width: 300px;
+        padding: 5px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #overlay {

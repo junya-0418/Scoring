@@ -89,9 +89,7 @@ class UserController extends Controller
         User::where('id', $id)
             ->update($data);
 
-        return redirect(route('user_show', [
-            'id' => $id,
-        ]));
+        return redirect(route('user_show', ['id' => $id,]))->with('flash_message', 'ユーザー情報を更新しました');
 
     }
 }

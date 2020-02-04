@@ -51,6 +51,9 @@ Route::post('/user/update/{id}', 'UserController@update')->name('user_update');
 
 Route::post('/contact/send', 'ContactController@send')->name('contact_send');
 
+Route::post('/delete', 'EvaluationController@delete')->name('delete');
+
+
 
 
 

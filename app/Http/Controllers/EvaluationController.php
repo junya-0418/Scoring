@@ -11,6 +11,7 @@ use App\User;
 use App\Mvp;
 use App\Post;
 use App\Evaluation;
+use App\Comment;
 
 class EvaluationController extends Controller
 {
@@ -78,7 +79,20 @@ class EvaluationController extends Controller
 
         }
 
-        return redirect('/');
+        return redirect('/')->with('flash_message', '採点を投稿しました');
+
+    }
+
+    public function delete(Request $request) {
+
+        Comment::where('post_id', $request->id)->delete();
+        Evaluation::where('posts_id', $request->id)->delete();
+        Mvp::where('posts_id', $request->id)->delete();
+        Post::where('id', $request->id)->delete();
+
+        $user_id = Auth::user()->id;
+
+        return redirect(route('user_show', ['id' => $user_id]))->with('flash_message', '投稿を削除しました');
 
     }
 }

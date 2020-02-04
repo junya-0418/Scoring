@@ -5,6 +5,12 @@
     <div class="container">
 
          <div>
+             <!-- フラッシュメッセージ -->
+             @if (session('flash_message'))
+                 <div class="flash_message">
+                     {{ session('flash_message') }}
+                 </div>
+             @endif
 
             @if (session('status'))
                 <div class="alert alert-success" role="alert">

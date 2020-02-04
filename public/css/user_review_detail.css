@@ -55,6 +55,14 @@
         margin-top: 20px;
         border: solid 1px #ccc;
     }
+
+    .caret {
+        height: 6px;
+        width: 6px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+    }
 }
 
 @media (max-width: 479px) {
@@ -113,6 +121,14 @@
         background-color: #fff;
         margin-top: 20px;
         border: solid 1px #ccc;
+    }
+
+    .caret {
+        height: 6px;
+        width: 6px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
     }
 }
 

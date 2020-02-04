@@ -15,6 +15,34 @@
                         </div>
                     @endif
 
+                    @if(Auth::check())
+                        @if (Auth::user()->id  == $user->id)
+                            <ul class="navbar-nav ml-auto">
+                                <!-- Authentication Links -->
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        <span class="caret"></span>
+                                        <span class="caret"></span>
+                                        <span class="caret"></span>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                        <a class="dropdown-item" href="{{ route('delete',['id' => $post->id]) }}"
+                                           onclick="event.preventDefault();
+                                             document.getElementById('delete-button').submit();">
+                                            削除
+                                        </a>
+
+                                        <form id="delete-button" action="{{ route('delete',['id' => $post->id]) }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        @endif
+                    @endif
+
                     <div style="margin-bottom: 10px; font-size: 15px; margin-left: 50px;"><strong>{{ $match->match_type }}</strong></div>
                     <div class="user-detail-match-information"><strong>{{ $match->home_team_name }}</strong></div>
                     <div class="user-detail-match-information"><strong>vs</strong></div>

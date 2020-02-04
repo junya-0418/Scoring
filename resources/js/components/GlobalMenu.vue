@@ -67,9 +67,6 @@
             padding: 8px;
             /*border-bottom:solid 1px #ccc;*/
             margin-right: 3px;
-        }
-
-        .list-item a {
             display: block;
         }
 
@@ -91,6 +88,10 @@
 
         .sublist-item {
             font-size: 11px;
+        }
+
+        .sublist-item a:hover {
+            text-decoration: underline;
         }
     }
 

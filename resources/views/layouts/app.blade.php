@@ -30,6 +30,7 @@
     <link href="{{ asset('css/user_review_detail.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
 
+
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
@@ -38,8 +39,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
-{{--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">--}}
-{{--    <link href="https://cdn.jsdelivr.net/npm/vuetify@1.5/dist/vuetify.min.css" rel="stylesheet">--}}
+{{--    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.css">--}}
 
 </head>
 <body>
@@ -82,16 +82,12 @@
                                 </li>
                             @endif
                         @else
-
-
-{{--                                <button class="button05" v-on:click="showContent=true" class="mr-2">選手登録</button>--}}
-
-                                <button class="btn-flat-border"
-                                    onclick="location.href='{{ route('evaluation_form') }}'">投稿</button>
+                            <button class="btn-flat-border"
+                                onclick="location.href='{{ route('evaluation_form') }}'">投稿</button>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

@@ -2293,6 +2293,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2688,12 +2689,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       matches: [],
       selectedMatchType: 'J1 第1節',
-      matchTypes: ['J1 第1節', 'J1 第2節', 'J1 第3節', 'J1 第4節', 'J1 第5節', 'J1 第6節', 'J1 第7節', 'J1 第8節', 'J1 第9節', 'J1 第10節']
+      matchTypes: ['FUJI XEROX SUPER CUP', 'J1 第1節', 'J1 第2節', 'J1 第3節', 'J1 第4節', 'J1 第5節', 'J1 第6節', 'J1 第7節', 'J1 第8節', 'J1 第9節', 'J1 第10節']
     };
   },
   methods: {
@@ -4070,14 +4072,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
- // import vuetify from 'vuetify';
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -8700,7 +8694,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        margin-bottom: 15px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 150px;\n}\n.contact {\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 250px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n}\n.list-item a {\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 11px;\n}\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        margin-bottom: 15px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 150px;\n}\n.contact {\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 250px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 11px;\n}\n.sublist-item a:hover {\n        text-decoration: underline;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -8738,7 +8732,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.main {\n        float: left;\n}\n.selectMatch {\n\n        margin-left: 100px;\n        margin-bottom: 20px;\n        width: 140px;\n}\n.board {\n        width: 600px;\n        margin-left: 100px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.match-card {\n\n        color: black;\n        /*padding-bottom: 10px;*/\n}\n.match {\n\n        width: 600px;\n        padding: 15px 30px;\n        font-size: 12px;\n}\n}\n@media (max-width: 479px) {\n    /*ウィンドウ幅が最大479pxまでの場合に適用*/\n.selectMatch{\n        margin-bottom: 20px;\n        width: 140px;\n        margin-top: 15px;\n}\n.board {\n        width: 350px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.match-card {\n\n        color: black;\n        /*padding-bottom: 10px;*/\n}\n.match {\n\n        padding: 15px 30px;\n        font-size: 12px;\n}\n}\n.card a:hover {\n    background-color: #f0f8ff;\n}\n.btn-gradation {\n    display: inline-block;\n    text-align: left;\n    background-image: linear-gradient(#eaeaea 0%, #c6c6c6 100%);\n    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);\n    color: #a5a5a5;\n    font-size: 16px;\n    text-decoration: none;\n    font-weight: bold;\n    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);\n    padding: 6px 12px;\n    border-radius: 4px;\n    font-size: 16px;\n}\n.btn-gradation:hover {\n    opacity: 0.8;\n}\n.custom-select-wrapper {\n    position: relative;\n    display: inline-block;\n    user-select: none;\n}\n.custom-select-wrapper select {\n    display: none;\n}\n.custom-select {\n    position: relative;\n    display: inline-block;\n    /*font-size: 16px!important;*/\n}\n.custom-select-trigger {\n    position: relative;\n    display: block;\n    width: 130px;\n    padding: 0 84px 0 22px;\n    font-size: 22px;\n    font-weight: 300;\n    color: #fff;\n    line-height: 60px;\n    background: #5c9cd8;\n    border-radius: 4px;\n    cursor: pointer;\n}\n.custom-select-trigger:after {\n    position: absolute;\n    display: block;\n    content: '';\n    width: 10px; height: 10px;\n    top: 50%; right: 25px;\n    margin-top: -3px;\n    border-bottom: 1px solid #fff;\n    border-right: 1px solid #fff;\n    transform: rotate(45deg) translateY(-50%);\n    transition: all .4s ease-in-out;\n    transform-origin: 50% 0;\n}\n.custom-select.opened .custom-select-trigger:after {\n    margin-top: 3px;\n    transform: rotate(-135deg) translateY(-50%);\n}\n.custom-options {\n    position: absolute;\n    display: block;\n    top: 100%; left: 0; right: 0;\n    min-width: 100%;\n    margin: 15px 0;\n    border: 1px solid #b5b5b5;\n    border-radius: 4px;\n    box-sizing: border-box;\n    box-shadow: 0 2px 1px rgba(0,0,0,.07);\n    background: #fff;\n    transition: all .4s ease-in-out;\n\n    opacity: 0;\n    visibility: hidden;\n    pointer-events: none;\n    transform: translateY(-15px);\n}\n.custom-select.opened .custom-options {\n    opacity: 1;\n    visibility: visible;\n    pointer-events: all;\n    transform: translateY(0);\n}\n.custom-options:before {\n    position: absolute;\n    display: block;\n    content: '';\n    bottom: 100%; right: 25px;\n    width: 7px; height: 7px;\n    margin-bottom: -4px;\n    border-top: 1px solid #b5b5b5;\n    border-left: 1px solid #b5b5b5;\n    background: #fff;\n    transform: rotate(45deg);\n    transition: all .4s ease-in-out;\n}\n.option-hover:before {\n    background: #f9f9f9;\n}\n.custom-option {\n    position: relative;\n    display: block;\n    padding: 0 22px;\n    border-bottom: 1px solid #b5b5b5;\n    font-size: 100%;\n    font-weight: 600;\n    color: #b5b5b5;\n    line-height: 47px;\n    cursor: pointer;\n    transition: all .4s ease-in-out;\n}\n.custom-option:first-of-type {\n    border-radius: 4px 4px 0 0;\n}\n.custom-option:last-of-type {\n    border-bottom: 0;\n    border-radius: 0 0 4px 4px;\n}\n.custom-option:hover,\n.custom-option.selection {\n    background: #f9f9f9;\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.main {\n        float: left;\n        margin-bottom: 30px;\n}\n.selectMatch {\n\n        margin-left: 100px;\n        margin-bottom: 20px;\n        width: 140px;\n}\n.board {\n        width: 600px;\n        margin-left: 100px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.match-card {\n\n        color: black;\n        /*padding-bottom: 10px;*/\n}\n.match {\n\n        width: 600px;\n        padding: 15px 30px;\n        font-size: 12px;\n}\n}\n@media (max-width: 479px) {\n    /*ウィンドウ幅が最大479pxまでの場合に適用*/\n.selectMatch{\n        margin-bottom: 20px;\n        width: 140px;\n        margin-top: 15px;\n}\n.board {\n        width: 350px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.match-card {\n\n        color: black;\n        /*padding-bottom: 10px;*/\n}\n.match {\n\n        padding: 15px 30px;\n        font-size: 12px;\n}\n}\n.card a:hover {\n    background-color: #f0f8ff;\n}\n.btn-gradation {\n    display: inline-block;\n    text-align: left;\n    background-image: linear-gradient(#eaeaea 0%, #c6c6c6 100%);\n    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);\n    color: #a5a5a5;\n    font-size: 16px;\n    text-decoration: none;\n    font-weight: bold;\n    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);\n    padding: 6px 12px;\n    border-radius: 4px;\n    font-size: 16px;\n}\n.btn-gradation:hover {\n    opacity: 0.8;\n}\n.custom-select-wrapper {\n    position: relative;\n    display: inline-block;\n    user-select: none;\n}\n.custom-select-wrapper select {\n    display: none;\n}\n.custom-select {\n    position: relative;\n    display: inline-block;\n    /*font-size: 16px!important;*/\n}\n.custom-select-trigger {\n    position: relative;\n    display: block;\n    width: 130px;\n    padding: 0 84px 0 22px;\n    font-size: 22px;\n    font-weight: 300;\n    color: #fff;\n    line-height: 60px;\n    background: #5c9cd8;\n    border-radius: 4px;\n    cursor: pointer;\n}\n.custom-select-trigger:after {\n    position: absolute;\n    display: block;\n    content: '';\n    width: 10px; height: 10px;\n    top: 50%; right: 25px;\n    margin-top: -3px;\n    border-bottom: 1px solid #fff;\n    border-right: 1px solid #fff;\n    transform: rotate(45deg) translateY(-50%);\n    transition: all .4s ease-in-out;\n    transform-origin: 50% 0;\n}\n.custom-select.opened .custom-select-trigger:after {\n    margin-top: 3px;\n    transform: rotate(-135deg) translateY(-50%);\n}\n.custom-options {\n    position: absolute;\n    display: block;\n    top: 100%; left: 0; right: 0;\n    min-width: 100%;\n    margin: 15px 0;\n    border: 1px solid #b5b5b5;\n    border-radius: 4px;\n    box-sizing: border-box;\n    box-shadow: 0 2px 1px rgba(0,0,0,.07);\n    background: #fff;\n    transition: all .4s ease-in-out;\n\n    opacity: 0;\n    visibility: hidden;\n    pointer-events: none;\n    transform: translateY(-15px);\n}\n.custom-select.opened .custom-options {\n    opacity: 1;\n    visibility: visible;\n    pointer-events: all;\n    transform: translateY(0);\n}\n.custom-options:before {\n    position: absolute;\n    display: block;\n    content: '';\n    bottom: 100%; right: 25px;\n    width: 7px; height: 7px;\n    margin-bottom: -4px;\n    border-top: 1px solid #b5b5b5;\n    border-left: 1px solid #b5b5b5;\n    background: #fff;\n    transform: rotate(45deg);\n    transition: all .4s ease-in-out;\n}\n.option-hover:before {\n    background: #f9f9f9;\n}\n.custom-option {\n    position: relative;\n    display: block;\n    padding: 0 22px;\n    border-bottom: 1px solid #b5b5b5;\n    font-size: 100%;\n    font-weight: 600;\n    color: #b5b5b5;\n    line-height: 47px;\n    cursor: pointer;\n    transition: all .4s ease-in-out;\n}\n.custom-option:first-of-type {\n    border-radius: 4px 4px 0 0;\n}\n.custom-option:last-of-type {\n    border-bottom: 0;\n    border-radius: 0 0 4px 4px;\n}\n.custom-option:hover,\n.custom-option.selection {\n    background: #f9f9f9;\n}\n\n", ""]);
 
 // exports
 
@@ -42260,7 +42254,12 @@ var render = function() {
             { staticClass: "text-center" },
             [
               _c("paginate", {
-                attrs: { "page-count": _vm.length, "total-visible": 5 },
+                attrs: {
+                  "page-count": _vm.length,
+                  "total-visible": 5,
+                  "container-class": "pagination",
+                  "page-class": "page-item"
+                },
                 on: { input: _vm.pageChange },
                 model: {
                   value: _vm.page,
