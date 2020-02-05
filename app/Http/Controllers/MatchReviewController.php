@@ -18,7 +18,8 @@ class MatchReviewController extends Controller
     public function index($id) {
 
         $teams = Team::all();
-        $match = Match::find($id);
+
+        $match = Match::findOrFail($id);
 
         //mvp数集計
         $mvp_outputs = DB::table('mvps')

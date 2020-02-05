@@ -20,7 +20,7 @@ class UserReviewController extends Controller
 {
     public function index($id) {
 
-        $post = Post::where('id', $id)->get()->first();
+        $post = Post::findOrFail($id);
 
         $match = Match::where('id', $post->match_id)->get()->first();
 

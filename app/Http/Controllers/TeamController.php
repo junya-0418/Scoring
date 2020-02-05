@@ -25,7 +25,7 @@ class TeamController extends Controller
 
     public function index($id) {
 
-        $team = Team::where('id', $id)->get()->first();
+        $team = Team::findOrFail($id);
 
         $supporters_count = User::where('support_team_id', $id)->get()->count();
 

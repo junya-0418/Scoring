@@ -18,7 +18,7 @@ class UserController extends Controller
 
         $teams = Team::all();
 
-        $user = User::where('id', $id)->get()->first();
+        $user = User::findOrFail($id);
 
         $user_support_team = Team::where('id', $user->support_team_id)->get()->first();
 
