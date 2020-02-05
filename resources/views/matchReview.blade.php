@@ -15,7 +15,8 @@
         <div class="match-information">
             <div>{{ $match->date }}</div>
             <div>{{ $match->match_type }}</div>
-            <div style="font-size: 24px; text-align: center">
+            <div>{{ $match->stadium->name }}</div>
+            <div style="font-size: 24px; text-align: center; margin-top: 1rem;">
                 <div><strong>{{ $match->hometeam->name }}</strong></div>
                 <div> vs </div>
                 <div><strong>{{ $match->awayteam->name }}</strong></div>

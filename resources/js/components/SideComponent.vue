@@ -1,15 +1,12 @@
 <template>
-<div style="float: right">
-    <div class="card" style="margin-top: 58px; margin-right: 60px;">
-            <div style="width: 250px; margin-left: 100px; background-color: #fff;">
-                <div style="padding: 15px 30px 10px 30px;">
-                    <p style="font-size: 12px;">J1第1節 プレーヤーランキング</p>
-                    <div v-if="players.length">
-                        <div style="font-size: 14px;  border-bottom: solid 1px #ccc; margin-bottom: 15px;" v-for="n in 5">
-                            <div style="display: contents;"><strong>{{ n }}</strong>　{{ players[n - 1].name }}</div>
-                            <div style="display: flex; float: right;"><strong>{{ players[n - 1].player_evaluation_average.toFixed(1) }}</strong></div>
-                        </div>
-                    </div>
+<div class="player-ranking-main">
+    <div class="player-ranking-card">
+            <p style="font-size: 12px; margin-bottom: 0px !important;">FUJI XEROX SUPER CUP</p>
+            <p style="font-size: 12px;">プレーヤーランキング</p>
+        <div v-if="players.length">
+                <div class="player-ranking" v-for="n in 5">
+                    <div class="player-name-for-ranking"><strong>{{ n }}</strong>　{{ players[n - 1].name }}</div>
+                    <div class="player-evaluation-for-ranking"><strong>{{ players[n - 1].player_evaluation_average.toFixed(1) }}</strong></div>
                 </div>
             </div>
     </div>
@@ -17,6 +14,35 @@
 </template>
 
 <style>
+
+    .player-ranking-main {
+        float: right
+    }
+
+    .player-ranking-card {
+        margin-top: 58px;
+        margin-right: 60px;
+        width: 280px;
+        margin-left: 50px;
+        background-color: #fff;
+        padding: 15px 30px 10px 30px;
+    }
+
+    .player-ranking {
+        font-size: 14px;
+        border-bottom: solid 1px #ccc;
+        margin-bottom: 15px;
+    }
+
+    .player-name-for-ranking {
+        display: contents;
+    }
+
+    .player-evaluation-for-ranking {
+        display: flex;
+        float: right;
+    }
+
     .card a:hover {
         background-color: #f0f8ff;
     }

@@ -2690,6 +2690,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2738,6 +2739,32 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -8751,7 +8778,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.card a:hover {\n    background-color: #f0f8ff;\n}\n.btn-gradation {\n    display: inline-block;\n    text-align: left;\n    background-image: linear-gradient(#eaeaea 0%, #c6c6c6 100%);\n    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);\n    color: #a5a5a5;\n    font-size: 16px;\n    text-decoration: none;\n    font-weight: bold;\n    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);\n    padding: 6px 12px;\n    border-radius: 4px;\n    font-size: 16px;\n}\n.btn-gradation:hover {\n    opacity: 0.8;\n}\n.custom-select-wrapper {\n    position: relative;\n    display: inline-block;\n    user-select: none;\n}\n.custom-select-wrapper select {\n    display: none;\n}\n.custom-select {\n    position: relative;\n    display: inline-block;\n}\n.custom-select-trigger {\n    position: relative;\n    display: block;\n    width: 130px;\n    padding: 0 84px 0 22px;\n    font-size: 22px;\n    font-weight: 300;\n    color: #fff;\n    line-height: 60px;\n    background: #5c9cd8;\n    border-radius: 4px;\n    cursor: pointer;\n}\n.custom-select-trigger:after {\n    position: absolute;\n    display: block;\n    content: '';\n    width: 10px; height: 10px;\n    top: 50%; right: 25px;\n    margin-top: -3px;\n    border-bottom: 1px solid #fff;\n    border-right: 1px solid #fff;\n    transform: rotate(45deg) translateY(-50%);\n    transition: all .4s ease-in-out;\n    transform-origin: 50% 0;\n}\n.custom-select.opened .custom-select-trigger:after {\n    margin-top: 3px;\n    transform: rotate(-135deg) translateY(-50%);\n}\n.custom-options {\n    position: absolute;\n    display: block;\n    top: 100%; left: 0; right: 0;\n    min-width: 100%;\n    margin: 15px 0;\n    border: 1px solid #b5b5b5;\n    border-radius: 4px;\n    box-sizing: border-box;\n    box-shadow: 0 2px 1px rgba(0,0,0,.07);\n    background: #fff;\n    transition: all .4s ease-in-out;\n\n    opacity: 0;\n    visibility: hidden;\n    pointer-events: none;\n    transform: translateY(-15px);\n}\n.custom-select.opened .custom-options {\n    opacity: 1;\n    visibility: visible;\n    pointer-events: all;\n    transform: translateY(0);\n}\n.custom-options:before {\n    position: absolute;\n    display: block;\n    content: '';\n    bottom: 100%; right: 25px;\n    width: 7px; height: 7px;\n    margin-bottom: -4px;\n    border-top: 1px solid #b5b5b5;\n    border-left: 1px solid #b5b5b5;\n    background: #fff;\n    transform: rotate(45deg);\n    transition: all .4s ease-in-out;\n}\n.option-hover:before {\n    background: #f9f9f9;\n}\n.custom-option {\n    position: relative;\n    display: block;\n    padding: 0 22px;\n    border-bottom: 1px solid #b5b5b5;\n    font-size: 18px;\n    font-weight: 600;\n    color: #b5b5b5;\n    line-height: 47px;\n    cursor: pointer;\n    transition: all .4s ease-in-out;\n}\n.custom-option:first-of-type {\n    border-radius: 4px 4px 0 0;\n}\n.custom-option:last-of-type {\n    border-bottom: 0;\n    border-radius: 0 0 4px 4px;\n}\n.custom-option:hover,\n.custom-option.selection {\n    background: #f9f9f9;\n}\n\n", ""]);
+exports.push([module.i, "\n.player-ranking-main {\n    float: right\n}\n.player-ranking-card {\n    margin-top: 58px;\n    margin-right: 60px;\n    width: 280px;\n    margin-left: 50px;\n    background-color: #fff;\n    padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n    font-size: 14px;\n    border-bottom: solid 1px #ccc;\n    margin-bottom: 15px;\n}\n.player-name-for-ranking {\n    display: contents;\n}\n.player-evaluation-for-ranking {\n    display: flex;\n    float: right;\n}\n.card a:hover {\n    background-color: #f0f8ff;\n}\n.btn-gradation {\n    display: inline-block;\n    text-align: left;\n    background-image: linear-gradient(#eaeaea 0%, #c6c6c6 100%);\n    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);\n    color: #a5a5a5;\n    font-size: 16px;\n    text-decoration: none;\n    font-weight: bold;\n    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);\n    padding: 6px 12px;\n    border-radius: 4px;\n    font-size: 16px;\n}\n.btn-gradation:hover {\n    opacity: 0.8;\n}\n.custom-select-wrapper {\n    position: relative;\n    display: inline-block;\n    user-select: none;\n}\n.custom-select-wrapper select {\n    display: none;\n}\n.custom-select {\n    position: relative;\n    display: inline-block;\n}\n.custom-select-trigger {\n    position: relative;\n    display: block;\n    width: 130px;\n    padding: 0 84px 0 22px;\n    font-size: 22px;\n    font-weight: 300;\n    color: #fff;\n    line-height: 60px;\n    background: #5c9cd8;\n    border-radius: 4px;\n    cursor: pointer;\n}\n.custom-select-trigger:after {\n    position: absolute;\n    display: block;\n    content: '';\n    width: 10px; height: 10px;\n    top: 50%; right: 25px;\n    margin-top: -3px;\n    border-bottom: 1px solid #fff;\n    border-right: 1px solid #fff;\n    transform: rotate(45deg) translateY(-50%);\n    transition: all .4s ease-in-out;\n    transform-origin: 50% 0;\n}\n.custom-select.opened .custom-select-trigger:after {\n    margin-top: 3px;\n    transform: rotate(-135deg) translateY(-50%);\n}\n.custom-options {\n    position: absolute;\n    display: block;\n    top: 100%; left: 0; right: 0;\n    min-width: 100%;\n    margin: 15px 0;\n    border: 1px solid #b5b5b5;\n    border-radius: 4px;\n    box-sizing: border-box;\n    box-shadow: 0 2px 1px rgba(0,0,0,.07);\n    background: #fff;\n    transition: all .4s ease-in-out;\n\n    opacity: 0;\n    visibility: hidden;\n    pointer-events: none;\n    transform: translateY(-15px);\n}\n.custom-select.opened .custom-options {\n    opacity: 1;\n    visibility: visible;\n    pointer-events: all;\n    transform: translateY(0);\n}\n.custom-options:before {\n    position: absolute;\n    display: block;\n    content: '';\n    bottom: 100%; right: 25px;\n    width: 7px; height: 7px;\n    margin-bottom: -4px;\n    border-top: 1px solid #b5b5b5;\n    border-left: 1px solid #b5b5b5;\n    background: #fff;\n    transform: rotate(45deg);\n    transition: all .4s ease-in-out;\n}\n.option-hover:before {\n    background: #f9f9f9;\n}\n.custom-option {\n    position: relative;\n    display: block;\n    padding: 0 22px;\n    border-bottom: 1px solid #b5b5b5;\n    font-size: 18px;\n    font-weight: 600;\n    color: #b5b5b5;\n    line-height: 47px;\n    cursor: pointer;\n    transition: all .4s ease-in-out;\n}\n.custom-option:first-of-type {\n    border-radius: 4px 4px 0 0;\n}\n.custom-option:last-of-type {\n    border-bottom: 0;\n    border-radius: 0 0 4px 4px;\n}\n.custom-option:hover,\n.custom-option.selection {\n    background: #f9f9f9;\n}\n\n", ""]);
 
 // exports
 
@@ -40954,6 +40981,8 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", [_vm._v(_vm._s(match.match_type))]),
                 _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(match.name))]),
+                _vm._v(" "),
                 _c("div", { staticStyle: { "font-size": "16px" } }, [
                   _vm._v(
                     _vm._s(match.home_team_name) +
@@ -40996,76 +41025,48 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticStyle: { float: "right" } }, [
-    _c(
-      "div",
-      {
-        staticClass: "card",
-        staticStyle: { "margin-top": "58px", "margin-right": "60px" }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticStyle: {
-              width: "250px",
-              "margin-left": "100px",
-              "background-color": "#fff"
-            }
-          },
-          [
-            _c("div", { staticStyle: { padding: "15px 30px 10px 30px" } }, [
-              _c("p", { staticStyle: { "font-size": "12px" } }, [
-                _vm._v("J1第1節 プレーヤーランキング")
-              ]),
-              _vm._v(" "),
-              _vm.players.length
-                ? _c(
-                    "div",
-                    _vm._l(5, function(n) {
-                      return _c(
-                        "div",
-                        {
-                          staticStyle: {
-                            "font-size": "14px",
-                            "border-bottom": "solid 1px #ccc",
-                            "margin-bottom": "15px"
-                          }
-                        },
-                        [
-                          _c("div", { staticStyle: { display: "contents" } }, [
-                            _c("strong", [_vm._v(_vm._s(n))]),
-                            _vm._v("　" + _vm._s(_vm.players[n - 1].name))
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticStyle: { display: "flex", float: "right" }
-                            },
-                            [
-                              _c("strong", [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm.players[
-                                      n - 1
-                                    ].player_evaluation_average.toFixed(1)
-                                  )
-                                )
-                              ])
-                            ]
-                          )
-                        ]
+  return _c("div", { staticClass: "player-ranking-main" }, [
+    _c("div", { staticClass: "player-ranking-card" }, [
+      _c(
+        "p",
+        {
+          staticStyle: {
+            "font-size": "12px",
+            "margin-bottom": "0px !important"
+          }
+        },
+        [_vm._v("FUJI XEROX SUPER CUP")]
+      ),
+      _vm._v(" "),
+      _c("p", { staticStyle: { "font-size": "12px" } }, [
+        _vm._v("プレーヤーランキング")
+      ]),
+      _vm._v(" "),
+      _vm.players.length
+        ? _c(
+            "div",
+            _vm._l(5, function(n) {
+              return _c("div", { staticClass: "player-ranking" }, [
+                _c("div", { staticClass: "player-name-for-ranking" }, [
+                  _c("strong", [_vm._v(_vm._s(n))]),
+                  _vm._v("　" + _vm._s(_vm.players[n - 1].name))
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "player-evaluation-for-ranking" }, [
+                  _c("strong", [
+                    _vm._v(
+                      _vm._s(
+                        _vm.players[n - 1].player_evaluation_average.toFixed(1)
                       )
-                    }),
-                    0
-                  )
-                : _vm._e()
-            ])
-          ]
-        )
-      ]
-    )
+                    )
+                  ])
+                ])
+              ])
+            }),
+            0
+          )
+        : _vm._e()
+    ])
   ])
 }
 var staticRenderFns = []

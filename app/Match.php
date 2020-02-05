@@ -11,7 +11,8 @@ class Match extends Model
         'match_type',
         'home_team_id',
         'away_team_id',
-        'score'
+        'score',
+        'stadium'
     ];
 
     public function hometeam()
@@ -22,5 +23,9 @@ class Match extends Model
     public function awayteam()
     {
         return $this->belongsTo('App\Team', 'away_team_id');
+    }
+
+    public function stadium() {
+        return $this->belongsTo('App\Stadium', 'stadium_id');
     }
 }

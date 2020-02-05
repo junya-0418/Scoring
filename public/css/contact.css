@@ -32,7 +32,9 @@
     }
 
     .contact-form-button {
-        float: right; margin-top: 15px;
+        float: right;
+        margin-top: 15px;
+        margin-bottom: 40px;
     }
 
     .contact-complete-text {

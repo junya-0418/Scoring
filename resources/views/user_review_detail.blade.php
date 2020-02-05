@@ -44,6 +44,7 @@
                     @endif
 
                     <div style="margin-bottom: 10px; font-size: 15px; margin-left: 50px;"><strong>{{ $match->match_type }}</strong></div>
+                    <div style="margin-bottom: 10px; font-size: 15px; margin-left: 50px;"><strong>{{ $match->stadium->name }}</strong></div>
                     <div class="user-detail-match-information"><strong>{{ $match->home_team_name }}</strong></div>
                     <div class="user-detail-match-information"><strong>vs</strong></div>
                     <div class="user-detail-match-information"><strong>{{ $match->away_team_name }}</strong></div>

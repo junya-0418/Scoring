@@ -12,6 +12,7 @@
             <div class="match">
                 <div>{{ match.date }}</div>
                 <div>{{ match.match_type }}</div>
+                <div>{{ match.name }}</div>
                 <div style="font-size: 16px;">{{ match.home_team_name }} vs {{ match.away_team_name }}</div>
                 <div style="font-size: 14px;">{{ match.score }}</div>
             </div>

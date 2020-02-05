@@ -46,7 +46,10 @@ class EvaluationApiController extends Controller
 
     public function getMatchesforSearch() {
 
-        $matches = Match::all();
+        $matches = DB::table('matches')
+            ->leftjoin('stadiums', 'matches.stadium_id', '=', 'stadiums.id')
+            ->select(DB::raw('matches.id as id, date, match_type, score, home_team_id, away_team_id, home_team_name, away_team_name, name'))
+            ->get();
 
         return $matches;
 
@@ -58,9 +61,8 @@ class EvaluationApiController extends Controller
         $player_ranking = DB::table('posts')
             ->join('evaluations', 'posts.id', '=', 'evaluations.posts_id')
             ->join('players', 'evaluations.player_id', '=', 'players.id')
-//            ->join('teams', 'players.team_id', '=', 'teams.id')
             ->join('matches', 'posts.match_id', '=', 'matches.id')
-            ->where('match_type', 'J1 第1節')
+            ->where('match_type', 'FUJI XEROX SUPER CUP')
             ->select(DB::raw('players.team_id, number, name, player_id, AVG(evaluation) as player_evaluation_average'))
             ->groupBy('player_id')
             ->orderBy('player_evaluation_average', 'desc')
