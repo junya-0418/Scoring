@@ -40983,7 +40983,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", [_vm._v(_vm._s(match.name))]),
                 _vm._v(" "),
-                _c("div", { staticStyle: { "font-size": "16px" } }, [
+                _c("div", { staticStyle: { "font-size": "15px" } }, [
                   _vm._v(
                     _vm._s(match.home_team_name) +
                       " vs " +

@@ -11,6 +11,27 @@
         font-size: 18px;
         border-radius: 10px;
         display: inline-block;
+        float: left;
+    }
+
+    .players-card {
+        border: solid 1px #ccc;
+        background-color: #fff;
+        margin-top: 30px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+        width: 300px;
+        font-size: 14px;
+        border-radius: 10px;
+        float: left;
+    }
+
+    .player-text {
+        margin-left: 30px;
+        margin-right: 30px;
+        display: flex;
+        border-bottom: solid 1px #ccc;
+        padding: 2px;
     }
 
     .supporters-count {
@@ -79,6 +100,10 @@
         padding-top: 20px;
         font-size: 18px;
         border-radius: 10px;
+    }
+
+    .players-card {
+        display: none;
     }
 
     .supporters-count {

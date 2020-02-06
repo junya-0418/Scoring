@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Team;
 use App\Post;
 use App\User;
+use App\Player;
 
 class TeamController extends Controller
 {
@@ -29,6 +30,10 @@ class TeamController extends Controller
 
         $supporters_count = User::where('support_team_id', $id)->get()->count();
 
+        $players = Player::where('team_id', $team->id)
+            ->orderBy('number', 'asc')
+            ->get();
+
         $posts = DB::table('posts')
             ->join('matches', 'posts.match_id', '=', 'matches.id')
             ->join('users', 'posts.user_id', '=', 'users.id')
@@ -37,7 +42,7 @@ class TeamController extends Controller
             ->orderBy('posts_created_at', 'desc')
             ->get();
 
-        return view('team_index', compact('team', 'supporters_count', 'posts'));
+        return view('team_index', compact('team', 'supporters_count','players', 'posts'));
 
     }
 }

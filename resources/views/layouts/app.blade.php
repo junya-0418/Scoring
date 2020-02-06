@@ -52,6 +52,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
+                    <img style="max-height: 55px; margin-right: -10px; margin-left: -5px; margin-top: -5px;" src="/images/logo_web.png">
                     ALEGOAL
                 </a>
 
