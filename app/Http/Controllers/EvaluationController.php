@@ -38,7 +38,7 @@ class EvaluationController extends Controller
         $team_id = Team::where('name',$request->team)->first()->id;
         $user = Auth::user();
 
-        $check = Post::where('match_id', $match_id)->where('user_id', $user->id)->get()->first();
+        $check = Post::where('match_id', $match_id)->where('team_id', $team_id)->where('user_id', $user->id)->get()->first();
 
         if ($check) {
             return redirect('/evaluation/form')->withErrors('この試合には既に投稿済みです')->withInput();
