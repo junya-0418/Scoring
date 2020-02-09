@@ -29,7 +29,13 @@ class EvaluationApiController extends Controller
 
         $id = Team::where('name', $request->team)->first()->id;
 
-        $matches = Match::where('home_team_id', $id)->orWhere('away_team_id', $id)->get();
+        $matches = DB::table('matches')
+            ->leftjoin('teams as home_team', 'matches.home_team_id', '=', 'home_team.id')
+            ->leftjoin('teams as away_team', 'matches.away_team_id', '=', 'away_team.id')
+            ->where('home_team.id', $id)
+            ->orWhere('away_team.id', $id)
+            ->select(DB::raw('matches.id as id, match_type, home_team.name as home_team_name, away_team.name as away_team_name'))
+            ->get();
 
         return $matches;
     }
@@ -47,8 +53,10 @@ class EvaluationApiController extends Controller
     public function getMatchesforSearch() {
 
         $matches = DB::table('matches')
+            ->leftjoin('teams as home_team', 'matches.home_team_id', '=', 'home_team.id')
+            ->leftjoin('teams as away_team', 'matches.away_team_id', '=', 'away_team.id')
             ->leftjoin('stadiums', 'matches.stadium_id', '=', 'stadiums.id')
-            ->select(DB::raw('matches.id as id, date, match_type, score, home_team_id, away_team_id, home_team_name, away_team_name, name'))
+            ->select(DB::raw('matches.id as id, date, match_type, score, home_team.name as home_team_name, away_team.name as away_team_name, stadiums.name as stadium_name'))
             ->get();
 
         return $matches;

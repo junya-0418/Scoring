@@ -2294,11 +2294,67 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      teams: [],
+      teams: [{
+        name: '横浜FM',
+        id: 21
+      }, {
+        name: 'FC東京',
+        id: 22
+      }, {
+        name: '鹿島',
+        id: 23
+      }, {
+        name: '川崎',
+        id: 24
+      }, {
+        name: 'C大阪',
+        id: 25
+      }, {
+        name: '広島',
+        id: 26
+      }, {
+        name: 'G大阪',
+        id: 27
+      }, {
+        name: '神戸',
+        id: 28
+      }, {
+        name: '大分',
+        id: 29
+      }, {
+        name: '札幌',
+        id: 30
+      }, {
+        name: '仙台',
+        id: 31
+      }, {
+        name: '清水',
+        id: 32
+      }, {
+        name: '名古屋',
+        id: 33
+      }, {
+        name: '浦和',
+        id: 34
+      }, {
+        name: '鳥栖',
+        id: 35
+      }, {
+        name: '湘南',
+        id: 36
+      }, {
+        name: '柏',
+        id: 37
+      }, {
+        name: '横浜FC',
+        id: 38
+      }],
       active: false
     };
   },
@@ -2312,14 +2368,12 @@ __webpack_require__.r(__webpack_exports__);
     go_team_page: function go_team_page(id) {
       location.href = "/teams/" + id;
     }
-  },
-  mounted: function mounted() {
-    var _this = this;
+  } // mounted() {
+  //     axios.get('/api/getTeams').then((res)=>{
+  //         this.teams = res.data
+  //     })
+  // }
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/getTeams').then(function (res) {
-      _this.teams = res.data;
-    });
-  }
 });
 
 /***/ }),
@@ -2429,11 +2483,67 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      teams: [],
+      teams: [{
+        name: '横浜FM',
+        id: 21
+      }, {
+        name: 'FC東京',
+        id: 22
+      }, {
+        name: '鹿島',
+        id: 23
+      }, {
+        name: '川崎',
+        id: 24
+      }, {
+        name: 'C大阪',
+        id: 25
+      }, {
+        name: '広島',
+        id: 26
+      }, {
+        name: 'G大阪',
+        id: 27
+      }, {
+        name: '神戸',
+        id: 28
+      }, {
+        name: '大分',
+        id: 29
+      }, {
+        name: '札幌',
+        id: 30
+      }, {
+        name: '仙台',
+        id: 31
+      }, {
+        name: '清水',
+        id: 32
+      }, {
+        name: '名古屋',
+        id: 33
+      }, {
+        name: '浦和',
+        id: 34
+      }, {
+        name: '鳥栖',
+        id: 35
+      }, {
+        name: '湘南',
+        id: 36
+      }, {
+        name: '柏',
+        id: 37
+      }, {
+        name: '横浜FC',
+        id: 38
+      }],
       active: false
     };
   },
@@ -2444,14 +2554,12 @@ __webpack_require__.r(__webpack_exports__);
     go_team_page: function go_team_page(id) {
       location.href = "/teams/" + id;
     }
-  },
-  mounted: function mounted() {
-    var _this = this;
+  } // mounted() {
+  //     axios.get('/api/getTeams').then((res)=>{
+  //         this.teams = res.data
+  //     })
+  // }
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/getTeams').then(function (res) {
-      _this.teams = res.data;
-    });
-  }
 });
 
 /***/ }),
@@ -2695,7 +2803,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       matches: [],
-      selectedMatchType: 'J1 第1節',
+      selectedMatchType: 'FUJI XEROX SUPER CUP',
       matchTypes: ['FUJI XEROX SUPER CUP', 'J1 第1節', 'J1 第2節', 'J1 第3節', 'J1 第4節', 'J1 第5節', 'J1 第6節', 'J1 第7節', 'J1 第8節', 'J1 第9節', 'J1 第10節']
     };
   },
@@ -8721,7 +8829,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        margin-bottom: 15px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 150px;\n}\n.contact {\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 250px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 11px;\n}\n.sublist-item a:hover {\n        text-decoration: underline;\n}\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        margin-bottom: 15px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 150px;\n        height: 50px;\n        padding: 7px;\n}\n.contact {\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 250px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 11px;\n}\n.sublist-item a:hover {\n        text-decoration: underline;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -8740,7 +8848,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (max-width: 479px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 150px;\n        display: grid;\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 20px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n}\n.list-item a {\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 13px;\n}\n}\n", ""]);
+exports.push([module.i, "\n@media (max-width: 479px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 120px;\n        padding-left: 15px;\n        display: grid;\n        left: 60px;\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 20px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n}\n.list-item a {\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 13px;\n}\n}\n", ""]);
 
 // exports
 
@@ -40981,7 +41089,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", [_vm._v(_vm._s(match.match_type))]),
                 _vm._v(" "),
-                _c("div", [_vm._v(_vm._s(match.name))]),
+                _c("div", [_vm._v(_vm._s(match.stadium_name))]),
                 _vm._v(" "),
                 _c("div", { staticStyle: { "font-size": "15px" } }, [
                   _vm._v(

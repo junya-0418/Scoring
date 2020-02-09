@@ -38,6 +38,8 @@
             position: relative;
             background-color: #f0f8ff;
             margin-right: 150px;
+            height: 50px;
+            padding: 7px;
         }
 
         .contact {
@@ -104,7 +106,25 @@
     export default {
         data(){
             return {
-                teams:[],
+                teams: [{name: '横浜FM', id: 21},
+                        {name: 'FC東京', id: 22},
+                        {name: '鹿島', id: 23},
+                        {name: '川崎', id: 24},
+                        {name: 'C大阪', id: 25},
+                        {name: '広島', id: 26},
+                        {name: 'G大阪', id: 27},
+                        {name: '神戸', id: 28},
+                        {name: '大分', id: 29},
+                        {name: '札幌', id: 30},
+                        {name: '仙台', id: 31},
+                        {name: '清水', id: 32},
+                        {name: '名古屋', id: 33},
+                        {name: '浦和', id: 34},
+                        {name: '鳥栖', id: 35},
+                        {name: '湘南', id: 36},
+                        {name: '柏', id: 37},
+                        {name: '横浜FC', id: 38},
+                                                ],
                 active: false
             }
         },
@@ -119,11 +139,11 @@
                 location.href="/teams/" + id;
             }
         },
-        mounted() {
-            axios.get('/api/getTeams').then((res)=>{
-                this.teams = res.data
-            })
-        }
+        // mounted() {
+        //     axios.get('/api/getTeams').then((res)=>{
+        //         this.teams = res.data
+        //     })
+        // }
 
     }
 </script>

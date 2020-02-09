@@ -39,8 +39,10 @@ class UserController extends Controller
         $user = User::where('id', $id)->get()->first();
 
         $posts = DB::table('posts')
-            ->select('posts.id as posts_id', 'team_id', 'match_id', 'user_id', 'match_type', 'home_team_id', 'away_team_id', 'score', 'home_team_name', 'away_team_name', 'posts.created_at as posts_created')
-            ->join('matches', 'posts.match_id', '=', 'matches.id')
+            ->select('posts.id as posts_id', 'team_id', 'match_id', 'user_id', 'match_type', 'home_team.name as home_team_name', 'away_team.name as away_team_name', 'score', 'posts.created_at as posts_created')
+            ->leftjoin('matches', 'posts.match_id', '=', 'matches.id')
+            ->leftjoin('teams as home_team', 'matches.home_team_id', '=', 'home_team.id')
+            ->leftjoin('teams as away_team', 'matches.away_team_id', '=', 'away_team.id')
             ->where('user_id', $user->id)
             ->orderBy('posts_created','desc')
             ->get();
@@ -54,8 +56,10 @@ class UserController extends Controller
         $user = User::where('id', $id)->get()->first();
 
         $checkins = DB::table('checkins')
-            ->select('checkins.id as checkins_id', 'match_id', 'user_id', 'match_type', 'home_team_id', 'away_team_id', 'score', 'home_team_name', 'away_team_name', 'matches.created_at as match_created')
-            ->join('matches', 'checkins.match_id', '=', 'matches.id')
+            ->select('checkins.id as checkins_id', 'match_id', 'user_id', 'match_type', 'home_team.name as home_team_name', 'away_team.name as away_team_name', 'score', 'matches.created_at as match_created')
+            ->leftjoin('matches', 'checkins.match_id', '=', 'matches.id')
+            ->leftjoin('teams as home_team', 'matches.home_team_id', '=', 'home_team.id')
+            ->leftjoin('teams as away_team', 'matches.away_team_id', '=', 'away_team.id')
             ->where('user_id', $user->id)
             ->orderBy('match_created','desc')
             ->get();
