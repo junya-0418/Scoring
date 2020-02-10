@@ -172,14 +172,32 @@
                 selectedTeam: '',
                 selectedMatch: '',
                 selectedPlayer: '',
-                teams: [],
+                teams: [{name: '横浜F・マリノス', id: 21},
+                        {name: 'FC東京', id: 22},
+                        {name: '鹿島アントラーズ', id: 23},
+                        {name: '川崎フロンターレ', id: 24},
+                        {name: 'セレッソ大阪', id: 25},
+                        {name: 'サンフレッチェ広島', id: 26},
+                        {name: 'ガンバ大阪', id: 27},
+                        {name: 'ヴィッセル神戸', id: 28},
+                        {name: '大分トリニータ', id: 29},
+                        {name: '北海道コンサドーレ札幌', id: 30},
+                        {name: 'ベガルタ仙台', id: 31},
+                        {name: '清水エスパルス', id: 32},
+                        {name: '名古屋グランパス', id: 33},
+                        {name: '浦和レッズ', id: 34},
+                        {name: 'サガン鳥栖', id: 35},
+                        {name: '湘南ベルマーレ', id: 36},
+                        {name: '柏レイソル', id: 37},
+                        {name: '横浜FC', id: 38},
+                        ],
                 matches: [],
                 players: [],
                 show: 'block',
                 show2: 'none',
                 selectedPlayerForEvaluation: '',
                 selectedNumberForEvaluation: '',
-                loading: true,
+                loading: false,
             }
         },
         components: {
@@ -240,11 +258,11 @@
                 this.show2 = 'none'
             },
         },
-        mounted(){
-            axios.get('/api/get_teams').then((res)=>{
-                this.teams = res.data
-            })
-                .finally(() => this.loading = false)
-        },
+        // mounted(){
+        //     axios.get('/api/get_teams').then((res)=>{
+        //         this.teams = res.data
+        //     })
+        //         .finally(() => this.loading = false)
+        // },
     }
 </script>

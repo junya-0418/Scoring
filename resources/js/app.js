@@ -37,7 +37,9 @@ Vue.component('user-index', require('./components/user-index.vue').default);
 Vue.component('user-edit', require('./components/user-edit.vue').default);
 Vue.component('checkin', require('./components/Checkin.vue').default);
 Vue.component('contact', require('./components/contact.vue').default);
+Vue.component('footer-component', require('./components/Footer.vue').default);
 Vue.component('paginate', Paginate);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

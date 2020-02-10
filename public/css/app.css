@@ -57,6 +57,12 @@
         margin-right: auto;
     }
 
+    #wrapper {
+        display: flex;
+        flex-direction: column;
+        /*min-height: 100vh;*/
+    }
+
     #overlay {
         /*　要素を重ねた時の順番　*/
         z-index: 1;
@@ -266,6 +272,10 @@ ul li.current a{
 ul li a:hover{
     color: #343a40;
     text-decoration: none;
+}
+
+.error {
+    color: #f00;
 }
 
 

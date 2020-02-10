@@ -21,14 +21,14 @@
     <title>ALEGOAL</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/team_index.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/match_review.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/evaluation.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/user_index.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/user_review_detail.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('css/home.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('css/team_index.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('css/match_review.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('css/evaluation.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('css/user_index.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('css/user_review_detail.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('css/contact.css?v=1.0') }}" rel="stylesheet">
 
 
     <!-- Scripts -->
@@ -125,9 +125,13 @@
             <globalmenu-component_sp></globalmenu-component_sp>
         </div>
 
-        <main class="py-4" style="z-index: 1">
-            @yield('content')
-        </main>
+        <div id="wrapper">
+            <main class="py-4" style="z-index: 1">
+                @yield('content')
+            </main>
+
+            <footer-component></footer-component>
+        </div>
 
     </div>
 

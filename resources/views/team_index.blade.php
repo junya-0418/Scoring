@@ -23,7 +23,8 @@
                         <div class="post-list">
                             <a href="{{ route('user_review', ['id' => $post->id]) }}">
                                 <span class="post-list-username">{{ $post->user_name }}</span>
-                                <span class="post-list-information">{{ $post->match_type }} {{ $post->home_team_name }} vs {{ $post->away_team_name }}</span>
+                                <span class="post-list-information">{{ $post->match_type }}</span>
+                                <div class="post-list-information">{{ $post->home_team_name }} vs {{ $post->away_team_name }}</div>
                             </a>
                         </div>
                     @endforeach

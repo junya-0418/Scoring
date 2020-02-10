@@ -5,8 +5,7 @@
         <li  class="list-item">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="#" @mouseenter="dropdown_show">チーム</a></li>
-                <li class="contact"><a href="/contact">お問い合わせ</a></li>
+                <li><a href="#" @mouseenter="dropdown_show">Teams</a></li>
                 <ul class="display-teams" v-if="active===true" @mouseleave="dropdown_hide">
                     <li v-for="team in teams" class="sublist-item">
                         <a href="javascript:void(0)" @click="go_team_page(team.id)">{{team.name}}</a>

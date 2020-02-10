@@ -12,7 +12,7 @@ class Match extends Model
         'home_team_id',
         'away_team_id',
         'score',
-        'stadium'
+        'stadium_id'
     ];
 
     public function hometeam()
