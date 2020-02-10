@@ -2262,14 +2262,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -8973,7 +8965,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\nfooter {\n        margin-top: 64px;\n        background-color: #191919;\n        height: 174px;\n        bottom: 0;\n        color: #fff;\n        padding: 30px 250px;\n}\nfooter a {\n        color: #fff !important;\n        float: right;\n        margin-top: 20px;\n}\n.footer-content {\n        max-width: 800px;\n}\n.footer-title {\n        font-size: 30px;\n        display: contents;\n}\n.footer-copyright {\n        text-align: center;\n        margin-top: 50px;\n}\n}\n@media (max-width: 479px) {\nfooter {\n        margin-top: 64px;\n        background-color: #191919;\n        height: 300px;\n        bottom: 0;\n        color: #fff;\n        padding: 30px 50px;\n}\nfooter a {\n        color: #fff !important;\n        margin-top: 20px;\n}\n.footer-content {\n        max-width: 800px;\n}\n.footer-title {\n        font-size: 30px;\n        margin-bottom: 40px;\n}\n.footer-copyright {\n        text-align: center;\n        margin-top: 80px;\n}\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\nfooter {\n        margin-top: 64px;\n        background-color: #191919;\n        height: 174px;\n        bottom: 0;\n        color: #fff;\n        padding: 30px 250px;\n}\nfooter a {\n        color: #fff !important;\n        float: right;\n        margin-top: 20px;\n}\n.footer-title {\n        font-size: 30px;\n        display: contents;\n}\n.footer-copyright {\n        text-align: center;\n        margin-top: 50px;\n}\n}\n@media (max-width: 479px) {\nfooter {\n        margin-top: 64px;\n        background-color: #191919;\n        height: 300px;\n        bottom: 0;\n        color: #fff;\n        padding: 30px 50px;\n}\nfooter a {\n        color: #fff !important;\n        margin-top: 20px;\n}\n.footer-title {\n        font-size: 30px;\n        margin-bottom: 40px;\n}\n.footer-copyright {\n        text-align: center;\n        margin-top: 110px;\n}\n}\n\n", ""]);
 
 // exports
 

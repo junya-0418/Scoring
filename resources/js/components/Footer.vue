@@ -28,10 +28,6 @@
             margin-top: 20px;
         }
 
-        .footer-content {
-            max-width: 800px;
-        }
-
         .footer-title {
             font-size: 30px;
             display: contents;
@@ -58,10 +54,6 @@
             margin-top: 20px;
         }
 
-        .footer-content {
-            max-width: 800px;
-        }
-
         .footer-title {
             font-size: 30px;
             margin-bottom: 40px;
@@ -69,7 +61,7 @@
 
         .footer-copyright {
             text-align: center;
-            margin-top: 80px;
+            margin-top: 110px;
         }
     }
 
