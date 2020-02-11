@@ -229,7 +229,7 @@
         data(){
             return {
                 matches: [],
-                selectedMatchType: 'FUJI XEROX SUPER CUP',
+                selectedMatchType: 'ACL GL第1節',
                 matchTypes: ['ルヴァンカップ GL第1節', 'ACL GL第1節','FUJI XEROX SUPER CUP','J1 第1節']
             }
         },

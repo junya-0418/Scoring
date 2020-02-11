@@ -4,7 +4,7 @@
         <div class="footer-content">
             <div class="footer-title">ALEGOAL</div>
             <a href="/contact">お問い合わせ</a>
-            <div class="footer-copyright">© ALEGOAL</div>
+            <div class="footer-copyright">© 2020 ALEGOAL</div>
         </div>
     </footer>
 </div>
@@ -36,6 +36,7 @@
         .footer-copyright {
             text-align: center;
             margin-top: 50px;
+            font-size: 12px;
         }
     }
     @media (max-width: 479px) {
@@ -62,6 +63,7 @@
         .footer-copyright {
             text-align: center;
             margin-top: 110px;
+            font-size: 12px;
         }
     }
 

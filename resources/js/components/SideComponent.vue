@@ -1,26 +1,48 @@
 <template>
-<div class="player-ranking-main">
-    <div class="player-ranking-card">
-            <p style="font-size: 12px; margin-bottom: 0px !important;">FUJI XEROX SUPER CUP</p>
-            <p style="font-size: 12px;">プレーヤーランキング</p>
-        <div v-if="players.length">
-                <div class="player-ranking" v-for="n in 5">
-                    <div class="player-name-for-ranking"><strong>{{ n }}</strong>　{{ players[n - 1].name }}</div>
-                    <div class="player-evaluation-for-ranking"><strong>{{ players[n - 1].player_evaluation_average.toFixed(1) }}</strong></div>
+<div>
+    <div class="side-column-main">
+        <div class="calendar-main">
+            <v-calendar :attributes='attributes'>
+                <div
+                    slot="day-popover"
+                    slot-scope="{ attributes }">
+                    <div v-for="{key, customData} in attributes"
+                         :key="key">
+                        {{ customData.match_type }}
+                        {{ customData.home_team_name }} vs {{ customData.away_team_name }}
+                    </div>
                 </div>
-            </div>
+            </v-calendar>
+        </div>
+
+        <div class="player-ranking-card">
+                <p style="font-size: 12px; margin-bottom: 0px !important;">FUJI XEROX SUPER CUP</p>
+                <p style="font-size: 12px;">プレーヤーランキング</p>
+            <div v-if="players.length">
+                    <div class="player-ranking" v-for="n in 5">
+                        <div class="player-name-for-ranking"><strong>{{ n }}</strong>　{{ players[n - 1].name }}</div>
+                        <div class="player-evaluation-for-ranking"><strong>{{ players[n - 1].player_evaluation_average.toFixed(1) }}</strong></div>
+                    </div>
+                </div>
+        </div>
     </div>
 </div>
 </template>
 
 <style>
 
-    .player-ranking-main {
+    .side-column-main {
         float: right
     }
 
-    .player-ranking-card {
+    .calendar-main{
         margin-top: 58px;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    .player-ranking-card {
+        margin-top: 40px;
         margin-right: 60px;
         width: 280px;
         margin-left: 50px;
@@ -171,18 +193,55 @@
         background: #f9f9f9;
     }
 
+    .cell-content {
+        text-align:left;
+        width: 70px;
+        height: 50px;
+        font-size: 50%;
+        /* border: 1px solid #efefef; */
+    }
+    .cell-content-line {
+        border-bottom: 1px solid #efefef;
+    }
+
 </style>
 
 <script>
+
+    import VCalendar from 'v-calendar'
+
     export default {
         data(){
             return {
                 players: [],
+                matches: [],
             }
+        },
+        computed: {
+            attributes() {
+                return [
+                    // Attributes for matches
+                    ...this.matches.map(match => ({
+                        dates: match.date,
+                        bar: {
+                            color: 'blue',
+                            class: match.isComplete ? 'opacity-75' : '',
+                        },
+                        popover: {
+                            visibility: 'hover',
+                            hideIndicator: true,
+                        },
+                        customData: match,
+                    })),
+                ];
+            },
         },
         mounted(){
             axios.get('/api/getPlayerRanking').then((res)=>{
                 this.players = res.data
+            }),
+            axios.get('/api/forsearch').then((res)=>{
+                this.matches = res.data
             })
         },
     }
