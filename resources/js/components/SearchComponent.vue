@@ -230,7 +230,7 @@
             return {
                 matches: [],
                 selectedMatchType: 'FUJI XEROX SUPER CUP',
-                matchTypes: ['ACL GL第1節','FUJI XEROX SUPER CUP','J1 第1節','J1 第2節','J1 第3節','J1 第4節','J1 第5節','J1 第6節','J1 第7節','J1 第8節','J1 第9節','J1 第10節']
+                matchTypes: ['ルヴァンカップ GL第1節', 'ACL GL第1節','FUJI XEROX SUPER CUP','J1 第1節']
             }
         },
         methods: {
