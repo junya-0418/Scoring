@@ -36,6 +36,7 @@ Vue.component('matchreview-component', require('./components/matchReview.vue').d
 Vue.component('user-index', require('./components/user-index.vue').default);
 Vue.component('user-edit', require('./components/user-edit.vue').default);
 Vue.component('checkin', require('./components/Checkin.vue').default);
+Vue.component('forgoform', require('./components/forGoForm.vue').default);
 Vue.component('contact', require('./components/contact.vue').default);
 Vue.component('footer-component', require('./components/Footer.vue').default);
 Vue.component('paginate', Paginate);
