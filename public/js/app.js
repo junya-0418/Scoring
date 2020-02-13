@@ -2891,7 +2891,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       matches: [],
       selectedMatchType: 'ACL GL第1節',
-      matchTypes: ['ルヴァンカップ GL第1節', 'ACL GL第1節', 'FUJI XEROX SUPER CUP', 'J1 第1節']
+      matchTypes: ['FUJI XEROX SUPER CUP', 'ルヴァンカップ GL第1節', 'ルヴァンカップ GL第2節', 'ACL GL第1節', 'ACL GL第2節', 'J1 第1節', 'J1 第2節']
     };
   },
   methods: {
@@ -3349,17 +3349,17 @@ __webpack_require__.r(__webpack_exports__);
         for (var i = 1; i < 15; i++) {
           if (this.selectedPlayer['player' + i]) {
             if (!this.selectedNumber['number' + i]) {
-              this.errors.push('選手' + i + 'に未入力の項目があります');
-            } else if (this.comments['comment' + i] === '') {
-              this.errors.push('選手' + i + 'に未入力の項目があります');
+              this.errors.push('選手' + i + 'に未入力の項目があります'); // } else if(this.comments['comment' + i] === '') {
+              //     this.errors.push('選手'+ i +'に未入力の項目があります');
+              // }
             }
           }
 
           if (this.selectedNumber['number' + i]) {
             if (!this.selectedPlayer['player' + i]) {
-              this.errors.push('選手' + i + 'に未入力の項目があります');
-            } else if (this.comments['comment' + i] === '') {
-              this.errors.push('選手' + i + 'に未入力の項目があります');
+              this.errors.push('選手' + i + 'に未入力の項目があります'); // } else if(this.comments['comment' + i] === '') {
+              //     this.errors.push('選手'+ i +'に未入力の項目があります');
+              // }
             }
           }
 
@@ -41466,14 +41466,17 @@ var render = function() {
                       var customData = ref.customData
                       return _c("div", { key: key }, [
                         _vm._v(
-                          "\n                        " +
+                          "\n                        [" +
                             _vm._s(customData.match_type) +
-                            "\n                        " +
+                            "]\n                       "
+                        ),
+                        _c("div", [
+                          _vm._v(
                             _vm._s(customData.home_team_name) +
-                            " vs " +
-                            _vm._s(customData.away_team_name) +
-                            "\n                    "
-                        )
+                              " vs " +
+                              _vm._s(customData.away_team_name)
+                          )
+                        ])
                       ])
                     }),
                     0
@@ -41790,7 +41793,7 @@ var staticRenderFns = [
           staticStyle: { "font-size": "12px" },
           attrs: { for: "evaluation" }
         },
-        [_vm._v("コメント")]
+        [_vm._v("コメント(任意)")]
       )
     ])
   }

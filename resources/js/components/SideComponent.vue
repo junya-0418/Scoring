@@ -8,8 +8,8 @@
                     slot-scope="{ attributes }">
                     <div v-for="{key, customData} in attributes"
                          :key="key">
-                        {{ customData.match_type }}
-                        {{ customData.home_team_name }} vs {{ customData.away_team_name }}
+                        [{{ customData.match_type }}]
+                       <div>{{ customData.home_team_name }} vs {{ customData.away_team_name }}</div>
                     </div>
                 </div>
             </v-calendar>

@@ -29,7 +29,7 @@
 
         <div style="margin-bottom: 20px;">
             <div>
-                <label class="mr-3 cp_sl06_selectlabel" for="evaluation" style="font-size: 12px">コメント</label>
+                <label class="mr-3 cp_sl06_selectlabel" for="evaluation" style="font-size: 12px">コメント(任意)</label>
             </div>
             <textarea class="evaluation-form-textarea" name="comments[]" v-model="comments['comment' + n]"></textarea>
         </div>
@@ -153,18 +153,20 @@
                         if (this.selectedPlayer['player' + i]) {
 
                             if(!this.selectedNumber['number' + i]) {
-                                this.errors.push('選手'+ i +'に未入力の項目があります');
-                            } else if(this.comments['comment' + i] === '') {
-                                this.errors.push('選手'+ i +'に未入力の項目があります');
+                                this.errors.push('選手' + i + 'に未入力の項目があります');
+                                // } else if(this.comments['comment' + i] === '') {
+                                //     this.errors.push('選手'+ i +'に未入力の項目があります');
+                                // }
                             }
                         }
 
                         if (this.selectedNumber['number' + i]) {
 
                             if(!this.selectedPlayer['player' + i]) {
-                                this.errors.push('選手'+ i +'に未入力の項目があります');
-                            } else if(this.comments['comment' + i] === '') {
-                                this.errors.push('選手'+ i +'に未入力の項目があります');
+                                this.errors.push('選手' + i + 'に未入力の項目があります');
+                                // } else if(this.comments['comment' + i] === '') {
+                                //     this.errors.push('選手'+ i +'に未入力の項目があります');
+                                // }
                             }
                         }
 
