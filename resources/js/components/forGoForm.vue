@@ -14,8 +14,8 @@
 
         .forGoFormButtonMain {
             float: right;
-            margin-right: 100px;
             margin-top: 200px;
+            margin-right: 50px;
         }
 
         button.cp_btn3 {

@@ -21,7 +21,7 @@
     <title>ALEGOAL</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css?v=1.1') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css?v=1.2') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css?v=1.0') }}" rel="stylesheet">
     <link href="{{ asset('css/team_index.css?v=1.0') }}" rel="stylesheet">
     <link href="{{ asset('css/match_review.css?v=1.1') }}" rel="stylesheet">
@@ -73,7 +73,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
+                                <a class="nav-link" style="color: #6c757d !important;" href="{{ route('login') }}">{{ __('ログイン') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
@@ -87,7 +87,7 @@
                                 onclick="location.href='{{ route('evaluation_form') }}'">投稿</button>
 
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: #6c757d !important;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 

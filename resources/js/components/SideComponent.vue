@@ -32,7 +32,9 @@
 <style>
 
     .side-column-main {
-        float: right
+        float: right;
+        width: 290px;
+        margin-right: 50px;
     }
 
     .calendar-main{
