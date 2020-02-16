@@ -2264,6 +2264,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -2890,7 +2898,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       matches: [],
-      selectedMatchType: 'ACL GL第1節',
+      selectedMatchType: 'ルヴァンカップ GL第1節',
       matchTypes: ['FUJI XEROX SUPER CUP', 'ルヴァンカップ GL第1節', 'ルヴァンカップ GL第2節', 'ACL GL第1節', 'ACL GL第2節', 'J1 第1節', 'J1 第2節']
     };
   },
@@ -9119,7 +9127,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\nfooter {\n        margin-top: 64px;\n        background-color: #191919;\n        height: 174px;\n        bottom: 0;\n        color: #fff;\n        padding: 30px 250px;\n}\nfooter a {\n        color: #fff !important;\n        float: right;\n        margin-top: 20px;\n}\n.footer-title {\n        font-size: 30px;\n        display: contents;\n}\n.footer-copyright {\n        text-align: center;\n        margin-top: 50px;\n        font-size: 12px;\n}\n}\n@media (max-width: 479px) {\nfooter {\n        margin-top: 64px;\n        background-color: #191919;\n        height: 300px;\n        bottom: 0;\n        color: #fff;\n        padding: 30px 50px;\n}\nfooter a {\n        color: #fff !important;\n        margin-top: 20px;\n}\n.footer-title {\n        font-size: 30px;\n        margin-bottom: 40px;\n}\n.footer-copyright {\n        text-align: center;\n        margin-top: 110px;\n        font-size: 12px;\n}\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\nfooter {\n        margin-top: 64px;\n        background-color: #191919;\n        height: 174px;\n        bottom: 0;\n        color: #fff;\n        padding: 30px 250px;\n}\nfooter a {\n        color: #fff !important;\n        float: right;\n        margin-top: 20px;\n}\n.footer-title {\n        font-size: 30px;\n        display: contents;\n}\n.footer-menu {\n        float: right;\n        display: grid;\n}\n.footer-copyright {\n        text-align: center;\n        margin-top: 50px;\n        font-size: 12px;\n}\n}\n@media (max-width: 479px) {\nfooter {\n        margin-top: 64px;\n        background-color: #191919;\n        height: 300px;\n        bottom: 0;\n        color: #fff;\n        padding: 30px 50px;\n}\nfooter a {\n        color: #fff !important;\n        margin-top: 20px;\n}\n.footer-title {\n        font-size: 30px;\n        margin-bottom: 40px;\n}\n.footer-copyright {\n        text-align: center;\n        margin-top: 110px;\n        font-size: 12px;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -41292,7 +41300,9 @@ var staticRenderFns = [
         _c("div", { staticClass: "footer-content" }, [
           _c("div", { staticClass: "footer-title" }, [_vm._v("ALEGOAL")]),
           _vm._v(" "),
-          _c("a", { attrs: { href: "/contact" } }, [_vm._v("お問い合わせ")]),
+          _c("ul", { staticClass: "footer-menu" }, [
+            _c("a", { attrs: { href: "/contact" } }, [_vm._v("お問い合わせ")])
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "footer-copyright" }, [
             _vm._v("© 2020 ALEGOAL")
@@ -41634,7 +41644,7 @@ var render = function() {
               "margin-bottom": "0px !important"
             }
           },
-          [_vm._v("FUJI XEROX SUPER CUP")]
+          [_vm._v("ルヴァンカップ GL第1節")]
         ),
         _vm._v(" "),
         _c("p", { staticStyle: { "font-size": "12px" } }, [

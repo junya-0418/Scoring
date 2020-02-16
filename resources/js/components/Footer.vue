@@ -3,7 +3,10 @@
     <footer>
         <div class="footer-content">
             <div class="footer-title">ALEGOAL</div>
-            <a href="/contact">お問い合わせ</a>
+            <ul class="footer-menu">
+                <a href="/contact">お問い合わせ</a>
+<!--                <a href="/blog/lists">Blog</a>-->
+            </ul>
             <div class="footer-copyright">© 2020 ALEGOAL</div>
         </div>
     </footer>
@@ -31,6 +34,11 @@
         .footer-title {
             font-size: 30px;
             display: contents;
+        }
+
+        .footer-menu {
+            float: right;
+            display: grid;
         }
 
         .footer-copyright {

@@ -70,7 +70,7 @@ class EvaluationApiController extends Controller
             ->join('evaluations', 'posts.id', '=', 'evaluations.posts_id')
             ->join('players', 'evaluations.player_id', '=', 'players.id')
             ->join('matches', 'posts.match_id', '=', 'matches.id')
-            ->where('match_type', 'FUJI XEROX SUPER CUP')
+            ->where('match_type', 'ルヴァンカップ GL第1節')
             ->select(DB::raw('players.team_id, number, name, player_id, AVG(evaluation) as player_evaluation_average'))
             ->groupBy('player_id')
             ->orderBy('player_evaluation_average', 'desc')
