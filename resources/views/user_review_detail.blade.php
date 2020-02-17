@@ -76,6 +76,7 @@
                     @endif
 
                     <span style="margin-top: 20px;"><strong>コメント</strong></span>
+                    <span style="font-size: 10px;">(コメント投稿にはログインが必要です)</span>
                     @foreach($comments as $comment)
                     <div class="users-comment">
                         <div style="padding: 3px 10px 5px 10px; display: flex;">{{ $comment->user->name }}</div>

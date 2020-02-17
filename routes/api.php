@@ -18,11 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => 'api'], function() {
-    Route::get('/get_teams',  'EvaluationApiController@getTeams');
+    Route::get('/forsearch',  'HomeController@showMatches');
 });
 
 Route::group(['middleware' => 'api'], function() {
-    Route::get('/forsearch',  'EvaluationApiController@getMatchesforSearch');
+    Route::get('/getPlayerRanking',  'HomeController@getPlayerRanking');
 });
 
 Route::group(['middleware' => 'api'], function() {
@@ -42,11 +42,7 @@ Route::group(['middleware' => 'api'], function() {
 });
 
 Route::group(['middleware' => 'api'], function() {
-    Route::get('/getMatchReviewData/{id}',  'MatchReviewController@getMatchReviewData');
-});
-
-Route::group(['middleware' => 'api'], function() {
-    Route::get('/getPlayerRanking',  'EvaluationApiController@getPlayerRanking');
+    Route::get('/getMatchReviewData/{id}',  'MatchReviewController@showMatchReviewData');
 });
 
 Route::group(['middleware' => 'api'], function() {
@@ -54,16 +50,16 @@ Route::group(['middleware' => 'api'], function() {
 });
 
 Route::group(['middleware' => 'api'], function() {
-    Route::post('/getPlayerComments/{id}',  'MatchReviewController@getPlayerComments');
+    Route::post('/getPlayerComments/{id}',  'MatchReviewController@showPlayerComments');
 });
 
 
 Route::group(['middleware' => 'api'], function() {
-    Route::post('/get_matches',  'EvaluationApiController@getMatches');
+    Route::post('/get_matches',  'EvaluationApiController@showMatches');
 });
 
 Route::group(['middleware' => 'api'], function() {
-    Route::post('/get_players',  'EvaluationApiController@getPlayers');
+    Route::post('/get_players',  'EvaluationApiController@showPlayers');
 });
 
 Route::group(['middleware' => 'api'], function() {

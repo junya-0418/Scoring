@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Services\BlogService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('BlogService', BlogService::class);
+        //Match
+        $this->app->bind(
+            \App\Repositories\Match\MatchRepositoryInterface::class,
+            \App\Repositories\Match\MatchRepository::class
+        );
     }
 
     /**

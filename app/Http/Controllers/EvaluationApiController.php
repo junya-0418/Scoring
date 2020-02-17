@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
+use App\Repositories\Match\MatchRepositoryInterface;
+
 use App\Post;
 use App\Team;
 use App\Match;
@@ -17,6 +19,13 @@ use App\Evaluation;
 
 class EvaluationApiController extends Controller
 {
+
+    public function __construct(MatchRepositoryInterface $match_repository)
+    {
+        $this->match_repository = $match_repository;
+    }
+
+
     public function getTeams() {
 
         $teams = Team::all();
@@ -25,22 +34,16 @@ class EvaluationApiController extends Controller
 
     }
 
-    public function getMatches(Request $request) {
+    public function showMatches(Request $request) {
 
         $id = Team::where('name', $request->team)->first()->id;
 
-        $matches = DB::table('matches')
-            ->leftjoin('teams as home_team', 'matches.home_team_id', '=', 'home_team.id')
-            ->leftjoin('teams as away_team', 'matches.away_team_id', '=', 'away_team.id')
-            ->where('home_team.id', $id)
-            ->orWhere('away_team.id', $id)
-            ->select(DB::raw('matches.id as id, match_type, home_team.name as home_team_name, away_team.name as away_team_name'))
-            ->get();
+        $matches = $this->match_repository->getMatchesForEvaluationForm($id);
 
         return $matches;
     }
 
-    public function getPlayers(Request $request) {
+    public function showPlayers(Request $request) {
 
         $id = Team::where('name', $request->team)->first()->id;
 
@@ -49,37 +52,4 @@ class EvaluationApiController extends Controller
         return $players;
 
     }
-
-    public function getMatchesforSearch() {
-
-        $matches = DB::table('matches')
-            ->leftjoin('teams as home_team', 'matches.home_team_id', '=', 'home_team.id')
-            ->leftjoin('teams as away_team', 'matches.away_team_id', '=', 'away_team.id')
-            ->leftjoin('stadiums', 'matches.stadium_id', '=', 'stadiums.id')
-            ->select(DB::raw('matches.id as id, date, match_type, score, home_team.name as home_team_name, away_team.name as away_team_name, stadiums.name as stadium_name'))
-            ->get();
-
-        return $matches;
-
-    }
-
-    public function getPlayerRanking() {
-
-//        選手の評価の平均点
-        $player_ranking = DB::table('posts')
-            ->join('evaluations', 'posts.id', '=', 'evaluations.posts_id')
-            ->join('players', 'evaluations.player_id', '=', 'players.id')
-            ->join('matches', 'posts.match_id', '=', 'matches.id')
-            ->where('match_type', 'ルヴァンカップ GL第1節')
-            ->select(DB::raw('players.team_id, number, name, player_id, AVG(evaluation) as player_evaluation_average'))
-            ->groupBy('player_id')
-            ->orderBy('player_evaluation_average', 'desc')
-            ->take(5)
-            ->get();
-
-        return $player_ranking;
-
-    }
-
-
 }
