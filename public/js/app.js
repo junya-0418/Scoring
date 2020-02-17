@@ -2580,6 +2580,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2648,6 +2650,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     go_team_page: function go_team_page(id) {
       location.href = "/teams/" + id;
+    },
+    goSchedulePage: function goSchedulePage() {
+      location.href = "/schedule";
     }
   } // mounted() {
   //     axios.get('/api/getTeams').then((res)=>{
@@ -2952,99 +2957,6 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -4320,7 +4232,61 @@ __webpack_require__.r(__webpack_exports__);
       errors: [],
       user_id: location.href.split('/').pop(),
       username: '',
-      teams: [],
+      teams: [{
+        name: '横浜FM',
+        id: 21
+      }, {
+        name: 'FC東京',
+        id: 22
+      }, {
+        name: '鹿島',
+        id: 23
+      }, {
+        name: '川崎',
+        id: 24
+      }, {
+        name: 'C大阪',
+        id: 25
+      }, {
+        name: '広島',
+        id: 26
+      }, {
+        name: 'G大阪',
+        id: 27
+      }, {
+        name: '神戸',
+        id: 28
+      }, {
+        name: '大分',
+        id: 29
+      }, {
+        name: '札幌',
+        id: 30
+      }, {
+        name: '仙台',
+        id: 31
+      }, {
+        name: '清水',
+        id: 32
+      }, {
+        name: '名古屋',
+        id: 33
+      }, {
+        name: '浦和',
+        id: 34
+      }, {
+        name: '鳥栖',
+        id: 35
+      }, {
+        name: '湘南',
+        id: 36
+      }, {
+        name: '柏',
+        id: 37
+      }, {
+        name: '横浜FC',
+        id: 38
+      }],
       selectedTeam: ''
     };
   },
@@ -4348,12 +4314,9 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    var _this2 = this;
-
-    this.fetchUser();
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/get_teams').then(function (res) {
-      _this2.teams = res.data;
-    });
+    this.fetchUser(); // axios.get('/api/get_teams').then((res) => {
+    //     this.teams = res.data
+    // })
   }
 });
 
@@ -9165,7 +9128,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (max-width: 479px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 120px;\n        padding-left: 15px;\n        display: grid;\n        left: 60px;\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 20px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n}\n.list-item a {\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 13px;\n}\n}\n", ""]);
+exports.push([module.i, "\n@media (max-width: 479px) {\n.global_menu {\n        border-bottom: solid 1px #ccc;\n        height: 45px;\n        z-index: 9999;\n        margin-top: 10px;\n        /*background-color: #f0ffff;;*/\n}\n.display-teams {\n        border: solid 1px #ccc;\n        margin-top: 5px;\n        z-index: 1000;\n        position: relative;\n        background-color: #f0f8ff;\n        margin-right: 120px;\n        padding-left: 15px;\n        padding-right: 15px;\n        display: grid;\n        left: 60px;\n}\nul {\n        padding: 0;\n}\nli {\n        list-style: none;\n}\na {\n        color: #333;\n        text-decoration: none;\n}\n.list {\n        padding: 0;\n        margin-left: 20px;\n}\n.list-item a {\n        position: relative;\n        padding: 8px;\n        /*border-bottom:solid 1px #ccc;*/\n        margin-right: 3px;\n}\n.list-item a {\n        display: block;\n}\n.list-item:last-of-type a {\n        border-bottom: none;\n}\n.list-item > a::after {\n        /*content:\"▼\";*/\n        /*position: absolute;*/\n        top: 12px;\n        right: 10px;\n        font-size: 12px;\n}\n.list-item > a.active::after {\n        /*content:\"▲\";*/\n}\n.sublist-item {\n        font-size: 13px;\n}\n}\n", ""]);
 
 // exports
 
@@ -9203,7 +9166,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.side-column-main {\n    float: right;\n    width: 290px;\n    margin-right: 50px;\n}\n.calendar-main{\n    margin-top: 58px;\n    margin-right: 60px;\n    margin-left: 60px;\n}\n.player-ranking-card {\n    margin-top: 40px;\n    margin-right: 60px;\n    width: 280px;\n    margin-left: 50px;\n    background-color: #fff;\n    padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n    font-size: 14px;\n    border-bottom: solid 1px #ccc;\n    margin-bottom: 15px;\n}\n.player-name-for-ranking {\n    display: contents;\n}\n.player-evaluation-for-ranking {\n    display: flex;\n    float: right;\n}\n.card a:hover {\n    background-color: #f0f8ff;\n}\n.btn-gradation {\n    display: inline-block;\n    text-align: left;\n    background-image: linear-gradient(#eaeaea 0%, #c6c6c6 100%);\n    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);\n    color: #a5a5a5;\n    font-size: 16px;\n    text-decoration: none;\n    font-weight: bold;\n    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);\n    padding: 6px 12px;\n    border-radius: 4px;\n    font-size: 16px;\n}\n.btn-gradation:hover {\n    opacity: 0.8;\n}\n.custom-select-wrapper {\n    position: relative;\n    display: inline-block;\n    user-select: none;\n}\n.custom-select-wrapper select {\n    display: none;\n}\n.custom-select {\n    position: relative;\n    display: inline-block;\n}\n.custom-select-trigger {\n    position: relative;\n    display: block;\n    width: 130px;\n    padding: 0 84px 0 22px;\n    font-size: 22px;\n    font-weight: 300;\n    color: #fff;\n    line-height: 60px;\n    background: #5c9cd8;\n    border-radius: 4px;\n    cursor: pointer;\n}\n.custom-select-trigger:after {\n    position: absolute;\n    display: block;\n    content: '';\n    width: 10px; height: 10px;\n    top: 50%; right: 25px;\n    margin-top: -3px;\n    border-bottom: 1px solid #fff;\n    border-right: 1px solid #fff;\n    transform: rotate(45deg) translateY(-50%);\n    transition: all .4s ease-in-out;\n    transform-origin: 50% 0;\n}\n.custom-select.opened .custom-select-trigger:after {\n    margin-top: 3px;\n    transform: rotate(-135deg) translateY(-50%);\n}\n.custom-options {\n    position: absolute;\n    display: block;\n    top: 100%; left: 0; right: 0;\n    min-width: 100%;\n    margin: 15px 0;\n    border: 1px solid #b5b5b5;\n    border-radius: 4px;\n    box-sizing: border-box;\n    box-shadow: 0 2px 1px rgba(0,0,0,.07);\n    background: #fff;\n    transition: all .4s ease-in-out;\n\n    opacity: 0;\n    visibility: hidden;\n    pointer-events: none;\n    transform: translateY(-15px);\n}\n.custom-select.opened .custom-options {\n    opacity: 1;\n    visibility: visible;\n    pointer-events: all;\n    transform: translateY(0);\n}\n.custom-options:before {\n    position: absolute;\n    display: block;\n    content: '';\n    bottom: 100%; right: 25px;\n    width: 7px; height: 7px;\n    margin-bottom: -4px;\n    border-top: 1px solid #b5b5b5;\n    border-left: 1px solid #b5b5b5;\n    background: #fff;\n    transform: rotate(45deg);\n    transition: all .4s ease-in-out;\n}\n.option-hover:before {\n    background: #f9f9f9;\n}\n.custom-option {\n    position: relative;\n    display: block;\n    padding: 0 22px;\n    border-bottom: 1px solid #b5b5b5;\n    font-size: 18px;\n    font-weight: 600;\n    color: #b5b5b5;\n    line-height: 47px;\n    cursor: pointer;\n    transition: all .4s ease-in-out;\n}\n.custom-option:first-of-type {\n    border-radius: 4px 4px 0 0;\n}\n.custom-option:last-of-type {\n    border-bottom: 0;\n    border-radius: 0 0 4px 4px;\n}\n.custom-option:hover,\n.custom-option.selection {\n    background: #f9f9f9;\n}\n.cell-content {\n    text-align:left;\n    width: 70px;\n    height: 50px;\n    font-size: 50%;\n    /* border: 1px solid #efefef; */\n}\n.cell-content-line {\n    border-bottom: 1px solid #efefef;\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.side-column-main {\n        float: right;\n        width: 290px;\n        margin-right: 50px;\n}\n.calendar-main {\n        margin-top: 58px;\n        margin-right: 60px;\n        margin-left: 60px;\n}\n.player-ranking-card {\n        margin-top: 40px;\n        margin-right: 60px;\n        width: 280px;\n        margin-left: 50px;\n        background-color: #fff;\n        padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n        font-size: 14px;\n        border-bottom: solid 1px #ccc;\n        margin-bottom: 15px;\n}\n.player-name-for-ranking {\n        display: contents;\n}\n.player-evaluation-for-ranking {\n        display: flex;\n        float: right;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n}\n@media (max-width: 479px) {\n.side-column-main {\n        width: 290px;\n        margin-right: 50px;\n}\n.calendar-main {\n        margin-top: 30px;\n        margin-left: 60px;\n}\n.player-ranking-card {\n        margin-top: 40px;\n        margin-right: 60px;\n        width: 280px;\n        margin-left: 50px;\n        background-color: #fff;\n        padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n        font-size: 14px;\n        border-bottom: solid 1px #ccc;\n        margin-bottom: 15px;\n}\n.player-name-for-ranking {\n        display: contents;\n}\n.player-evaluation-for-ranking {\n        display: flex;\n        float: right;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n}\n", ""]);
 
 // exports
 
@@ -41423,7 +41386,18 @@ var render = function() {
                   attrs: { href: "javascript:void(0)" },
                   on: { click: _vm.dropdown_show }
                 },
-                [_vm._v("チーム")]
+                [_vm._v("Teams")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  attrs: { href: "javascript:void(0)" },
+                  on: { click: _vm.goSchedulePage }
+                },
+                [_vm._v("Schedule")]
               )
             ]),
             _vm._v(" "),

@@ -35,7 +35,9 @@ Route::get('/user/edit/{id}', 'UserController@edit_index')->name('user_edit_show
 
 Route::get('/contact', 'ContactController@input')->name('contact');
 
-//Route::get('/blog/lists', 'BlogController@index')->name('blog_lists');
+Route::get('/schedule',
+    function () { return view('schedule');
+});
 
 Route::post('/create/team', 'TeamController@create')->name('create');
 

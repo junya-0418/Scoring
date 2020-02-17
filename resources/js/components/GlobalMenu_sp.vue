@@ -5,7 +5,8 @@
         <li  class="list-item">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="javascript:void(0)" @click="dropdown_show">チーム</a></li>
+                <li><a href="javascript:void(0)" @click="dropdown_show">Teams</a></li>
+                <li><a href="javascript:void(0)" @click="goSchedulePage">Schedule</a></li>
                 <ul class="display-teams" v-if="active===true">
                     <li v-for="team in teams" class="sublist-item">
                         <a href="javascript:void(0)" @click="go_team_page(team.id)">{{team.name}}</a>
@@ -37,6 +38,7 @@
             background-color: #f0f8ff;
             margin-right: 120px;
             padding-left: 15px;
+            padding-right: 15px;
             display: grid;
             left: 60px;
         }
@@ -128,6 +130,9 @@
             },
             go_team_page(id) {
                 location.href="/teams/" + id;
+            },
+            goSchedulePage() {
+                location.href="/schedule";
             }
         },
         // mounted() {
