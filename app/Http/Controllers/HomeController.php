@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 use App\Repositories\Match\MatchRepositoryInterface;
 
+use App\Post;
 use App\Team;
 use App\Match;
-use App\Post;
-use App\Mvp;
 use App\Player;
+use App\User;
+use App\Mvp;
 use App\Evaluation;
 
 class HomeController extends Controller

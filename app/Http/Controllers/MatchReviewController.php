@@ -42,9 +42,9 @@ class MatchReviewController extends Controller
         //選手の評価の平均点
         $user_evaluation_outputs = $this->match_repository->getPlayerEvaluationAverage($match);
 
-        $home_team_evaluation_outputs = $user_evaluation_outputs->where('team_id', '=', $home_team_id)->sortBy('number');
+        $home_team_evaluation_outputs = $user_evaluation_outputs->where('team_id', '=', $home_team_id);
 
-        $away_team_evaluation_outputs = $user_evaluation_outputs->where('team_id', '=', $away_team_id)->sortBy('number');
+        $away_team_evaluation_outputs = $user_evaluation_outputs->where('team_id', '=', $away_team_id);
 
         //ホームチームに投稿したユーザーとアウェイチームに投稿したユーザーを取ってくる
         $users = $this->match_repository->getPostsUsers($match);
