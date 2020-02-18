@@ -5,7 +5,7 @@
     <form method="POST" action="/contact/send">
         {{ csrf_field() }}
         <div class="contact-form">
-            <h1>お問い合わせ</h1>
+            <h1><strong>お問い合わせ</strong></h1>
 
             <div class="name-form">
                 <div class="name">

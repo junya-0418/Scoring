@@ -4225,6 +4225,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -4239,49 +4253,49 @@ __webpack_require__.r(__webpack_exports__);
         name: 'FC東京',
         id: 22
       }, {
-        name: '鹿島',
+        name: '鹿島アントラーズ',
         id: 23
       }, {
-        name: '川崎',
+        name: '川崎フロンターレ',
         id: 24
       }, {
         name: 'C大阪',
         id: 25
       }, {
-        name: '広島',
+        name: 'サンフレッチェ広島',
         id: 26
       }, {
         name: 'G大阪',
         id: 27
       }, {
-        name: '神戸',
+        name: 'ヴィッセル神戸',
         id: 28
       }, {
-        name: '大分',
+        name: '大分トリニータ',
         id: 29
       }, {
-        name: '札幌',
+        name: 'コンサドーレ札幌',
         id: 30
       }, {
-        name: '仙台',
+        name: 'ベガルタ仙台',
         id: 31
       }, {
-        name: '清水',
+        name: '清水エスパルス',
         id: 32
       }, {
-        name: '名古屋',
+        name: '名古屋グランパス',
         id: 33
       }, {
-        name: '浦和',
+        name: '浦和レッズ',
         id: 34
       }, {
-        name: '鳥栖',
+        name: 'サガン鳥栖',
         id: 35
       }, {
-        name: '湘南',
+        name: '湘南ベルマーレ',
         id: 36
       }, {
-        name: '柏',
+        name: '柏レイソル',
         id: 37
       }, {
         name: '横浜FC',
@@ -4333,6 +4347,69 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -9166,7 +9243,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.side-column-main {\n        float: right;\n        width: 290px;\n        margin-right: 50px;\n}\n.calendar-main {\n        margin-top: 58px;\n        margin-right: 60px;\n        margin-left: 60px;\n}\n.player-ranking-card {\n        margin-top: 40px;\n        margin-right: 60px;\n        width: 280px;\n        margin-left: 50px;\n        background-color: #fff;\n        padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n        font-size: 14px;\n        border-bottom: solid 1px #ccc;\n        margin-bottom: 15px;\n}\n.player-name-for-ranking {\n        display: contents;\n}\n.player-evaluation-for-ranking {\n        display: flex;\n        float: right;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n}\n@media (max-width: 479px) {\n.side-column-main {\n        width: 290px;\n        margin-right: 50px;\n}\n.calendar-main {\n        margin-top: 30px;\n        margin-left: 60px;\n}\n.player-ranking-card {\n        margin-top: 40px;\n        margin-right: 60px;\n        width: 280px;\n        margin-left: 50px;\n        background-color: #fff;\n        padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n        font-size: 14px;\n        border-bottom: solid 1px #ccc;\n        margin-bottom: 15px;\n}\n.player-name-for-ranking {\n        display: contents;\n}\n.player-evaluation-for-ranking {\n        display: flex;\n        float: right;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n}\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.side-column-main {\n        float: right;\n        width: 290px;\n        margin-right: 30px;\n}\n.calendar-main {\n        margin-top: 58px;\n        margin-right: 60px;\n        margin-left: 60px;\n}\n.player-ranking-card {\n        margin-top: 40px;\n        margin-right: 60px;\n        width: 280px;\n        margin-left: 50px;\n        background-color: #fff;\n        padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n        font-size: 14px;\n        border-bottom: solid 1px #ccc;\n        margin-bottom: 15px;\n}\n.player-name-for-ranking {\n        display: contents;\n}\n.player-evaluation-for-ranking {\n        display: flex;\n        float: right;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n}\n@media (max-width: 479px) {\n.side-column-main {\n        width: 290px;\n        margin-right: 50px;\n}\n.calendar-main {\n        margin-top: 30px;\n        margin-left: 60px;\n}\n.player-ranking-card {\n        margin-top: 40px;\n        margin-right: 60px;\n        width: 280px;\n        margin-left: 50px;\n        background-color: #fff;\n        padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n        font-size: 14px;\n        border-bottom: solid 1px #ccc;\n        margin-bottom: 15px;\n}\n.player-name-for-ranking {\n        display: contents;\n}\n.player-evaluation-for-ranking {\n        display: flex;\n        float: right;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n}\n", ""]);
 
 // exports
 
@@ -9223,7 +9300,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.forGoFormButtonMain {\n        float: right;\n        margin-top: 200px;\n        margin-right: 50px;\n}\nbutton.cp_btn3 {\n        position: relative;\n        display: block;\n        width: 210px;\n        padding: 10px;\n        text-align: center;\n        text-decoration: none;\n        color: black;\n        background: #87cefa;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn3:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n}\n@media (max-width: 479px) {\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.forGoFormButtonMain {\n        float: right;\n        margin-top: 200px;\n        margin-right: 30px;\n}\nbutton.cp_btn3 {\n        position: relative;\n        display: block;\n        width: 210px;\n        padding: 10px;\n        text-align: center;\n        text-decoration: none;\n        color: black;\n        background: #87cefa;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn3:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n}\n@media (max-width: 479px) {\n}\n\n", ""]);
 
 // exports
 
@@ -9261,7 +9338,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.post-card a:hover {\n        background-color: #f0f8ff;\n}\n.user-name h1 {\n        margin-bottom: 30px;\n}\n.post-card {\n        padding-left: 15px;\n        background-color: #fff;\n        border: solid 1px #ccc;\n        width: 500px;\n        border-radius: 8px;\n        margin-bottom: 15px;\n}\n.post-card a {\n        text-decoration: none;\n        color: black;\n}\n.match-information {\n\n        margin-top: 10px;\n        margin-bottom: 15px;\n}\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.form-group input {\n        border: solid 1px #ccc;\n        border-radius: 0.25rem;\n        background-color: #f0f8ff;\n}\n.post-card a:hover {\n        background-color: #f0f8ff;\n}\n.user-name h1 {\n        margin-bottom: 30px;\n}\n.post-card a {\n        text-decoration: none;\n        color: black;\n}\n}\n@media (max-width: 479px) {\n.form-group input {\n        border: solid 1px #ccc;\n        border-radius: 0.25rem;\n        background-color: #f0f8ff;\n}\n.post-card a:hover {\n        background-color: #f0f8ff;\n}\n.user-name h1 {\n        margin-bottom: 30px;\n}\n.post-card a {\n        text-decoration: none;\n        color: black;\n}\n.support-team-select select {\n        border: solid 1px #ccc;\n        border-radius: 0.25rem;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -9280,7 +9357,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.posted-match {\n        color: #6c757d;\n        display: inline;\n        margin-right: 20px;\n}\n.checkin-match {\n        color: #6c757d;\n        display: inline;\n}\n.match-board {\n        width: 500px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n.card a {\n        text-decoration: none;\n        color: black;\n}\n.match-info {\n        margin-top: 10px;\n        margin-bottom: 10px;\n        padding-left: 20px;\n}\n.userpage-pagination {\n        margin-left: 50px;\n        margin-top: 30px;\n}\n}\n@media (max-width: 479px) {\n.posted-match {\n        color: #6c757d;\n        display: inline;\n        margin-right: 20px;\n}\n.checkin-match {\n        color: #6c757d;\n        display: inline;\n}\n.match-board {\n        width: 300px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n.card a {\n        text-decoration: none;\n        color: black;\n}\n.match-info {\n        margin-top: 10px;\n        margin-bottom: 10px;\n        padding-left: 20px;\n}\n}\n\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.user-posts {\n        width: 500px;\n}\n.posted-match {\n        color: #6c757d;\n        display: inline;\n        margin-right: 20px;\n}\n.checkin-match {\n        color: #6c757d;\n        display: inline;\n}\n.match-board {\n        width: 500px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n.card a {\n        text-decoration: none;\n        color: black;\n}\n.match-info {\n        margin-top: 10px;\n        margin-bottom: 10px;\n        padding-left: 20px;\n}\n.pagination {\n        padding-left: 0;\n        margin: 20px 0;\n        border-radius: 4px;\n        float: right;\n}\n.pagination > li:first-child > a {\n        margin-left: 0;\n        border-top-left-radius: 4px;\n        border-bottom-left-radius: 4px;\n}\n.pagination > .active > a {\n        z-index: 2;\n        color: #fff;\n        cursor: default;\n        background-color: #337ab7;\n        border-color: #337ab7;\n}\n.pagination > li > a {\n        position: relative;\n        float: left;\n        padding: 6px 12px;\n        line-height: 1.42857143;\n        color: #337ab7;\n        text-decoration: none;\n        background-color: #fff;\n        border: 1px solid #ddd;\n}\n}\n@media (max-width: 479px) {\n.posted-match {\n        color: #6c757d;\n        display: inline;\n        margin-right: 20px;\n}\n.checkin-match {\n        color: #6c757d;\n        display: inline;\n}\n.match-board {\n        width: 300px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n.card a {\n        text-decoration: none;\n        color: black;\n}\n.match-info {\n        margin-top: 10px;\n        margin-bottom: 10px;\n        padding-left: 20px;\n}\n.pagination {\n        padding-left: 0;\n        margin: 20px 0;\n        border-radius: 4px;\n        float: right;\n}\n.pagination > li:first-child > a {\n        margin-left: 0;\n        border-top-left-radius: 4px;\n        border-bottom-left-radius: 4px;\n}\n.pagination > .active > a {\n        z-index: 2;\n        color: #fff;\n        cursor: default;\n        background-color: #337ab7;\n        border-color: #337ab7;\n}\n.pagination > li > a {\n        position: relative;\n        float: left;\n        padding: 6px 12px;\n        line-height: 1.42857143;\n        color: #337ab7;\n        text-decoration: none;\n        background-color: #fff;\n        border: 1px solid #ddd;\n}\n}\n\n\n", ""]);
 
 // exports
 
@@ -42559,146 +42636,156 @@ var render = function() {
   return _c("div", [
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [_vm._v("設定")]),
+        _c(
+          "div",
+          {
+            staticStyle: {
+              width: "350px",
+              "margin-top": "50px",
+              display: "inline-grid"
+            }
+          },
+          [
+            _vm._m(0),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "card-body",
-                staticStyle: { border: "1px solid #6c757d" }
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    staticStyle: { "margin-left": "20px" }
-                  },
-                  [
-                    _c(
-                      "label",
-                      {
-                        staticStyle: { "margin-right": "30px", width: "100px" },
-                        attrs: { for: "name" }
+            _c("div", { staticClass: "card-body" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "form-group",
+                  staticStyle: { "margin-left": "20px" }
+                },
+                [
+                  _c(
+                    "label",
+                    {
+                      staticStyle: {
+                        "margin-right": "30px",
+                        width: "100px",
+                        "font-size": "12px"
                       },
-                      [_vm._v("名前")]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticStyle: { "margin-top": "5px" } }, [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.username,
-                            expression: "username"
-                          }
-                        ],
-                        staticStyle: { "padding-left": "3px" },
-                        attrs: { id: "name", type: "text", name: "name" },
-                        domProps: { value: _vm.username },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.username = $event.target.value
-                          }
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("名前")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticStyle: { "margin-top": "5px" } }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.username,
+                          expression: "username"
                         }
-                      })
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticStyle: {
-                      "margin-left": "20px",
-                      "margin-bottom": "20px",
-                      display: "grid"
-                    }
-                  },
-                  [
-                    _c(
-                      "label",
-                      {
-                        staticStyle: { "margin-right": "30px", width: "100px" },
-                        attrs: { for: "team" }
-                      },
-                      [_vm._v("応援チーム")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.selectedTeam,
-                            expression: "selectedTeam"
+                      ],
+                      staticStyle: { "padding-left": "3px" },
+                      attrs: { id: "name", type: "text", name: "name" },
+                      domProps: { value: _vm.username },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
                           }
-                        ],
-                        staticStyle: { width: "180px" },
-                        attrs: { id: "team", name: "team" },
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.selectedTeam = $event.target.multiple
-                              ? $$selectedVal
-                              : $$selectedVal[0]
-                          }
+                          _vm.username = $event.target.value
                         }
+                      }
+                    })
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "support-team-select",
+                  staticStyle: {
+                    "margin-left": "20px",
+                    "margin-bottom": "20px",
+                    display: "grid"
+                  }
+                },
+                [
+                  _c(
+                    "label",
+                    {
+                      staticStyle: {
+                        "margin-right": "30px",
+                        width: "100px",
+                        "font-size": "12px"
                       },
-                      _vm._l(_vm.teams, function(team) {
-                        return _c("option", { domProps: { value: team.id } }, [
-                          _vm._v(
-                            "\n                                        " +
-                              _vm._s(team.name) +
-                              "\n                                    "
-                          )
-                        ])
-                      }),
-                      0
-                    ),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "cp_sl06_highlight" }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "cp_sl06_selectbar" })
-                  ]
-                ),
-                _vm._v(" "),
-                _vm.errors.length
-                  ? _c(
-                      "div",
-                      _vm._l(_vm.errors, function(error) {
-                        return _c(
-                          "div",
-                          { staticStyle: { color: "#dc143c" } },
-                          [
-                            _vm._v(
-                              "\n                                    " +
-                                _vm._s(error) +
-                                "\n                                "
-                            )
-                          ]
+                      attrs: { for: "team" }
+                    },
+                    [_vm._v("応援チーム")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.selectedTeam,
+                          expression: "selectedTeam"
+                        }
+                      ],
+                      staticStyle: { width: "180px", height: "25px" },
+                      attrs: { id: "team", name: "team" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.selectedTeam = $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        }
+                      }
+                    },
+                    _vm._l(_vm.teams, function(team) {
+                      return _c("option", { domProps: { value: team.id } }, [
+                        _vm._v(
+                          "\n                                    " +
+                            _vm._s(team.name) +
+                            "\n                                "
                         )
-                      }),
-                      0
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                _c("div", { staticStyle: { float: "right" } }, [
+                      ])
+                    }),
+                    0
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "cp_sl06_highlight" }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "cp_sl06_selectbar" })
+                ]
+              ),
+              _vm._v(" "),
+              _vm.errors.length
+                ? _c(
+                    "div",
+                    _vm._l(_vm.errors, function(error) {
+                      return _c("div", { staticStyle: { color: "#dc143c" } }, [
+                        _vm._v(
+                          "\n                                " +
+                            _vm._s(error) +
+                            "\n                            "
+                        )
+                      ])
+                    }),
+                    0
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticStyle: { float: "right", "margin-top": "20px" } },
+                [
                   _c(
                     "button",
                     {
@@ -42713,7 +42800,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                                    キャンセル\n                                "
+                        "\n                                キャンセル\n                            "
                       )
                     ]
                   ),
@@ -42727,20 +42814,29 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                                    保存\n                                "
+                        "\n                                保存\n                            "
                       )
                     ]
                   )
-                ])
-              ]
-            )
-          ])
-        ])
+                ]
+              )
+            ])
+          ]
+        )
       ])
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("strong", [_vm._v("設定")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -55160,7 +55256,6 @@ Vue.component('user-index', __webpack_require__(/*! ./components/user-index.vue 
 Vue.component('user-edit', __webpack_require__(/*! ./components/user-edit.vue */ "./resources/js/components/user-edit.vue")["default"]);
 Vue.component('checkin', __webpack_require__(/*! ./components/Checkin.vue */ "./resources/js/components/Checkin.vue")["default"]);
 Vue.component('forgoform', __webpack_require__(/*! ./components/forGoForm.vue */ "./resources/js/components/forGoForm.vue")["default"]);
-Vue.component('contact', __webpack_require__(/*! ./components/contact.vue */ "./resources/js/components/contact.vue")["default"]);
 Vue.component('footer-component', __webpack_require__(/*! ./components/Footer.vue */ "./resources/js/components/Footer.vue")["default"]);
 Vue.component('paginate', vuejs_paginate__WEBPACK_IMPORTED_MODULE_0___default.a);
 /**
@@ -55811,38 +55906,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SideComponent_vue_vue_type_template_id_7d586a0b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
-
-/***/ }),
-
-/***/ "./resources/js/components/contact.vue":
-/*!*********************************************!*\
-  !*** ./resources/js/components/contact.vue ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-var render, staticRenderFns
-var script = {}
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
-  script,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-component.options.__file = "resources/js/components/contact.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 

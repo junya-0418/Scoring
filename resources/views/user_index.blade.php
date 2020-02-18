@@ -28,7 +28,7 @@
                         @if(Auth::check())
                             @if (Auth::user()->id  == $user->id)
                                 <span class="edit-button">
-                                    <button onclick="location.href='/user/edit/{{ $user->id }}'" class="btn btn-secondary" style="padding: 4px;">設定</button>
+                                    <button onclick="location.href='/user/edit/{{ $user->id }}'" class="btn btn-secondary" style="padding: 4px; width: 60px;">設定</button>
                                 </span>
                             @endif
                         @endif

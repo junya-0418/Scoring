@@ -35,7 +35,7 @@
         .side-column-main {
             float: right;
             width: 290px;
-            margin-right: 50px;
+            margin-right: 30px;
         }
 
         .calendar-main {

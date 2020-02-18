@@ -56,6 +56,10 @@
 <style>
 
     @media (min-width: 767px) {
+        .user-posts {
+            width: 500px;
+        }
+
         .posted-match {
             color: #6c757d;
             display: inline;
@@ -89,9 +93,36 @@
             padding-left: 20px;
         }
 
-        .userpage-pagination {
-            margin-left: 50px;
-            margin-top: 30px;
+        .pagination {
+            padding-left: 0;
+            margin: 20px 0;
+            border-radius: 4px;
+            float: right;
+        }
+
+        .pagination > li:first-child > a {
+            margin-left: 0;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .pagination > .active > a {
+            z-index: 2;
+            color: #fff;
+            cursor: default;
+            background-color: #337ab7;
+            border-color: #337ab7;
+        }
+
+        .pagination > li > a {
+            position: relative;
+            float: left;
+            padding: 6px 12px;
+            line-height: 1.42857143;
+            color: #337ab7;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
         }
     }
 
@@ -127,6 +158,38 @@
             margin-top: 10px;
             margin-bottom: 10px;
             padding-left: 20px;
+        }
+
+        .pagination {
+            padding-left: 0;
+            margin: 20px 0;
+            border-radius: 4px;
+            float: right;
+        }
+
+        .pagination > li:first-child > a {
+            margin-left: 0;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .pagination > .active > a {
+            z-index: 2;
+            color: #fff;
+            cursor: default;
+            background-color: #337ab7;
+            border-color: #337ab7;
+        }
+
+        .pagination > li > a {
+            position: relative;
+            float: left;
+            padding: 6px 12px;
+            line-height: 1.42857143;
+            color: #337ab7;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
         }
     }
 
