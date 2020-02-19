@@ -51,6 +51,13 @@
                     <div class="user-detail-match-information"><strong>{{ $match->score }}</strong></div>
                     <a class="username" href="/users/{{ $user->id }}">{{ $user->name }}</a>
 
+                    <label for="title" style="border-bottom: solid 1px #ccc; width: 30px;">Title</label>
+                    <div >
+                        <div id="title">
+                            <div>{{ $post->title }}</div>
+                        </div>
+                    </div>
+
                     <label for="manofthematch" style="border-bottom: solid 1px #ccc; width: 114px;">Man of the Match</label>
                     <div >
                         <div id="manofthematch">

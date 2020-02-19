@@ -39,7 +39,7 @@ class UserController extends Controller
         $user = User::where('id', $id)->get()->first();
 
         $posts = DB::table('posts')
-            ->select('posts.id as posts_id', 'team_id', 'match_id', 'user_id', 'match_type', 'home_team_id', 'away_team_id', 'home_team.name as home_team_name', 'away_team.name as away_team_name', 'score', 'posts.created_at as posts_created')
+            ->select('posts.id as posts_id', 'team_id', 'match_id', 'user_id', 'match_type', 'home_team_id', 'away_team_id', 'home_team.name as home_team_name', 'away_team.name as away_team_name','title','score', 'posts.created_at as posts_created')
             ->leftjoin('matches', 'posts.match_id', '=', 'matches.id')
             ->leftjoin('teams as home_team', 'matches.home_team_id', '=', 'home_team.id')
             ->leftjoin('teams as away_team', 'matches.away_team_id', '=', 'away_team.id')

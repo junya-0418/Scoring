@@ -40,7 +40,7 @@ class TeamController extends Controller
             ->leftjoin('teams as home_team', 'matches.home_team_id', '=', 'home_team.id')
             ->leftjoin('teams as away_team', 'matches.away_team_id', '=', 'away_team.id')
             ->where('team_id', $id)
-            ->select(DB::raw('posts.id, match_type, home_team.name as home_team_name, away_team.name as away_team_name, score, posts.created_at as posts_created_at, users.name as user_name'))
+            ->select(DB::raw('posts.id, user_id, match_type, home_team.name as home_team_name, away_team.name as away_team_name, score, title, posts.created_at as posts_created_at, users.name as user_name'))
             ->orderBy('posts_created_at', 'desc')
             ->get();
 

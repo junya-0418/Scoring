@@ -52,6 +52,7 @@ class EvaluationController extends Controller
             'team_id' => $team_id,
             'match_id' => $match_id,
             'user_id' => $user->id,
+            'title' => $request->title
         ]);
 
         $posts_id = Post::where('team_id',$team_id)->where('match_id', $match_id)->where('user_id', $user->id)->first()->id;

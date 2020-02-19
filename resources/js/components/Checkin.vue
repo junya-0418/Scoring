@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div style="margin-right: 15px; margin-right: auto; width: 160px; margin-left: auto;">
+    <div style="margin-top: 15px; margin-right: auto; width: 160px; margin-left: auto;">
         <div v-if="judge === 2">
             <button class="cp_btn" @click="loginAlert">観戦チェックイン</button>
         </div>

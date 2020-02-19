@@ -10,18 +10,20 @@
         <div v-bind:style="{ display: posted }" style="margin-top: 20px;">
             <div class="card match-board" v-for="post in displayLists">
                 <a class="match-card" href="javascript:void(0)" @click="goUserReview(post.posts_id)">
+                    <div>
+                        <div class="post-title"><strong>{{ post.title }}</strong></div>
+                    </div>
                     <div class="match-info">
                         <div>{{ post.match_type }}</div>
                         <div>{{ post.home_team_name }} vs {{ post.away_team_name }}</div>
-                    </div>
-                    <div style="display: flex; padding-left: 20px;">
-                        <div style="font-size: 12px; margin-right: 10px;">team</div>
-                        <div v-if="post.team_id === post.home_team_id" style="margin-bottom: 15px;">
-                            {{ post.home_team_name }}
-                        </div>
-                        <div v-else style="margin-bottom: 15px;">
-                            {{ post.away_team_name }}
-                        </div>
+                        <span class="post-target-team">
+                            <div class="post-targe-team-name" v-if="post.team_id === post.home_team_id">
+                                {{ post.home_team_name }}
+                            </div>
+                            <div class="post-targe-team-name" v-else>
+                                {{ post.away_team_name }}
+                            </div>
+                        </span>
                     </div>
                 </a>
             </div>
@@ -87,10 +89,31 @@
             color: black;
         }
 
+        .post-title {
+            margin: 15px;
+            float: left;
+        }
+
         .match-info {
-            margin-top: 10px;
+            margin-top: 15px;
             margin-bottom: 10px;
+            font-size: 10px;
+            float: right;
+            margin-right: 20px;
+            width: 185px;
+        }
+
+        .post-target-team {
+            display: flex;
             padding-left: 20px;
+            font-size: 10px;
+            margin-top: 3px;
+        }
+
+        .post-targe-team-name {
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 1.25rem;
+            padding: 3px;
         }
 
         .pagination {
@@ -154,10 +177,29 @@
             color: black;
         }
 
+        .post-title {
+            margin: 15px;
+            float: left;
+        }
+
         .match-info {
-            margin-top: 10px;
             margin-bottom: 10px;
+            font-size: 10px;
+            float: right;
+            width: 185px;
+        }
+
+        .post-target-team {
+            display: flex;
             padding-left: 20px;
+            font-size: 10px;
+            margin-top: 3px;
+        }
+
+        .post-targe-team-name {
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 1.25rem;
+            padding: 3px;
         }
 
         .pagination {

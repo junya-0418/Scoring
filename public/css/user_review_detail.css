@@ -29,6 +29,15 @@
         text-align: center;
     }
 
+    #title {
+        background-color: #fff;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        display: inline;
+        float: left;
+    }
+
     #manofthematch {
         background-color: #fff;
         width: 200px;
@@ -47,6 +56,8 @@
     .comment-box {
         width: 730px;
         height: 80px;
+        border: solid 1px #ccc;
+        border-radius: 0.25rem;
     }
 
     .users-comment {
@@ -67,12 +78,11 @@
 
 @media (max-width: 479px) {
     .username {
-
         text-decoration: none;
         font-size: 17px;
         margin-bottom: 20px;
         width: 100px;
-
+        margin-top: 15px;
     }
 
     .card2 {
@@ -96,6 +106,15 @@
         text-align: center;
     }
 
+    #title {
+        background-color: #fff;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        display: inline;
+        float: left;
+    }
+
     #manofthematch {
         background-color: #fff;
         width: 200px;
@@ -114,6 +133,8 @@
     .comment-box {
         width: 350px;
         height: 80px;
+        border: solid 1px #ccc;
+        border-radius: 0.25rem;
     }
 
     .users-comment {

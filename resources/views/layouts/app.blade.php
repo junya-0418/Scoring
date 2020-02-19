@@ -23,11 +23,11 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css?v=1.4') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css?v=1.0') }}" rel="stylesheet">
-    <link href="{{ asset('css/team_index.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('css/team_index.css?v=1.1') }}" rel="stylesheet">
     <link href="{{ asset('css/match_review.css?v=1.1') }}" rel="stylesheet">
-    <link href="{{ asset('css/evaluation.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('css/evaluation.css?v=1.1') }}" rel="stylesheet">
     <link href="{{ asset('css/user_index.css?v=1.0') }}" rel="stylesheet">
-    <link href="{{ asset('css/user_review_detail.css?v=1.0') }}" rel="stylesheet">
+    <link href="{{ asset('css/user_review_detail.css?v=1.1') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css?v=1.1') }}" rel="stylesheet">
 
 

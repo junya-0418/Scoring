@@ -29,6 +29,10 @@
         margin-top: 5px;
     }
 
+    .cp_title {
+        width: 500px;
+    }
+
     .cp_ipselect {
         position: relative;
         width: 500px;

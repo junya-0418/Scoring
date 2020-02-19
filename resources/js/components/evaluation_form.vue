@@ -3,6 +3,14 @@
 <div>
     <div class="input1-content" v-bind:style="{display: show}">
         <div class="mb-3">
+            <label for="team" class="cp_sl06_selectlabel">タイトル</label>
+            <div class="cp_title">
+                <input class="cp_sl06" id="title" name="title" v-model="title">
+                <span class="cp_sl06_selectbar"></span>
+            </div>
+        </div>
+
+        <div class="mb-3">
             <label for="team" class="cp_sl06_selectlabel">チーム</label>
             <div class="cp_ipselect">
                 <select class="cp_sl06" id="team" name="team" v-model="selectedTeam" @change="fetchMatchandPlayer">
@@ -172,6 +180,7 @@
                 selectedTeam: '',
                 selectedMatch: '',
                 selectedPlayer: '',
+                title: '',
                 teams: [{name: '横浜F・マリノス', id: 21},
                         {name: 'FC東京', id: 22},
                         {name: '鹿島アントラーズ', id: 23},
@@ -232,13 +241,16 @@
             },
             nextForm: function (e) {
 
-                if (this.selectedTeam && this.selectedMatch && this.selectedPlayer) {
+                if (this.title && this.selectedTeam && this.selectedMatch && this.selectedPlayer) {
                     this.show = 'none'
                     this.show2 = 'block'
                 }
 
                 this.errors = [];
 
+                if (!this.title) {
+                    this.errors.push('タイトルを入力してください');
+                }
                 if (!this.selectedTeam) {
                     this.errors.push('チームを選択してください');
                 }
