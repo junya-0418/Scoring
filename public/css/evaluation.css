@@ -136,6 +136,10 @@
 
 @media (max-width: 479px) {
 
+    .cp_title {
+        font-size: 16px;
+    }
+
     select {
         font-size: 16px;
     }

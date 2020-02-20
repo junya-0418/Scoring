@@ -47,16 +47,16 @@ class MatchReviewController extends Controller
         $away_team_evaluation_outputs = $user_evaluation_outputs->where('team_id', '=', $away_team_id);
 
         //ホームチームに投稿したユーザーとアウェイチームに投稿したユーザーを取ってくる
-        $users = $this->match_repository->getPostsUsers($match);
+        $posts = $this->match_repository->getPosts($match);
 
-        $home_team_users = $users->where('team_id', $home_team_id);
-        $away_team_users = $users->where('team_id', $away_team_id);
+        $home_team_posts = $posts->where('team_id', $home_team_id);
+        $away_team_posts = $posts->where('team_id', $away_team_id);
 
 
         return response()->json(['home_team_evaluation_outputs' => $home_team_evaluation_outputs,
                                  'away_team_evaluation_outputs' => $away_team_evaluation_outputs,
-                                 'home_team_users' => $home_team_users,
-                                 'away_team_users' => $away_team_users]);
+                                 'home_team_posts' => $home_team_posts,
+                                 'away_team_posts' => $away_team_posts]);
 
     }
 

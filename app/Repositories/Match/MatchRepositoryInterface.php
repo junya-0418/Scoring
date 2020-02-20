@@ -16,7 +16,7 @@ interface MatchRepositoryInterface
     public function getPlayerEvaluationAverage($match);
 
     //ホームチームに投稿したユーザーとアウェイチームに投稿したユーザーを取ってくる
-    public function getPostsUsers($match);
+    public function getPosts($match);
 
     //プレーヤーごとのコメントを取得する
     public function getPlayerComments($match_id, $id);

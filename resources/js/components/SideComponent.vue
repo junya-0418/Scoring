@@ -34,7 +34,7 @@
     @media (min-width: 767px) {
         .side-column-main {
             float: right;
-            width: 320px;
+            width: 300px;
         }
 
         .calendar-main {

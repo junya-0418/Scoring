@@ -8,7 +8,7 @@
         </div>
 
         <div v-bind:style="{ display: posted }" style="margin-top: 20px;">
-            <div class="card match-board" v-for="post in displayLists">
+            <div class="card match-board" v-for="post in displayListsPosts">
                 <a class="match-card" href="javascript:void(0)" @click="goUserReview(post.posts_id)">
                     <div>
                         <div class="post-title"><strong>{{ post.title }}</strong></div>
@@ -29,23 +29,29 @@
             </div>
 
             <div class="text-center">
-                <paginate v-model="page" :page-count="length"
-                           :total-visible="5" @input="pageChange" :container-class="'pagination'"
+                <paginate v-model="page" :page-count="lengthPosts"
+                           :total-visible="5" @input="pageChangePosts" :container-class="'pagination'"
                           :page-class="'page-item'"></paginate>
             </div>
 
         </div>
 
         <div v-bind:style="{ display: checkin }" style="margin-top: 20px;">
-            <div class="card match-board" v-for="usercheckin in UserCheckins">
+            <div class="card match-board" v-for="usercheckin in displayListsCheckin">
                 <a class="match-card" href="javascript:void(0)" @click="goMatch(usercheckin.match_id)">
-                    <div class="match-info">
+                    <div class="checkin-matchtype">
                         {{ usercheckin.match_type }}
                     </div>
-                    <div class="match-info">
+                    <div class="checkin-team">
                         {{ usercheckin.home_team_name }} vs {{ usercheckin.away_team_name }}
                     </div>
                 </a>
+            </div>
+
+            <div class="text-center">
+                <paginate v-model="page" :page-count="lengthCheckin"
+                          :total-visible="5" @input="pageChangeCheckin" :container-class="'pagination'"
+                          :page-class="'page-item'"></paginate>
             </div>
         </div>
 
@@ -101,6 +107,16 @@
             float: right;
             margin-right: 20px;
             width: 185px;
+        }
+
+        .checkin-matchtype {
+            font-size: 12px;
+            margin: 5px 0px 5px 10px;
+        }
+
+        .checkin-team {
+            font-size: 12px;
+            margin: 5px 0px 5px 10px;
         }
 
         .post-target-team {
@@ -189,6 +205,16 @@
             width: 185px;
         }
 
+        .checkin-matchtype {
+            font-size: 10px;
+            margin: 5px 0px 5px 10px;
+        }
+
+        .checkin-team {
+            font-size: 10px;
+            margin: 5px 0px 5px 10px;
+        }
+
         .post-target-team {
             display: flex;
             padding-left: 20px;
@@ -255,9 +281,11 @@
                 showContent: false,
                 evaluations: '',
                 page: 1,
-                displayLists: [],
+                displayListsPosts: [],
+                displayListsCheckin: [],
                 pageSize: 5,
-                length:0,
+                lengthPosts:0,
+                lengthCheckin:0,
             }
         },
         methods: {
@@ -268,12 +296,14 @@
 
                 axios.get('/api/forUserPost/' + this.user_id).then((res)=>{
                     this.posts = res.data
-                    this.length = Math.ceil(this.posts.length/this.pageSize);
-                    this.displayLists = this.posts.slice(0,this.pageSize);
+                    this.lengthPosts = Math.ceil(this.posts.length/this.pageSize);
+                    this.displayListsPosts = this.posts.slice(0,this.pageSize);
                 })
 
                 axios.get('/api/forUserCheckin/' + this.user_id).then((res)=>{
                     this.UserCheckins = res.data
+                    this.lengthCheckin = Math.ceil(this.UserCheckins.length/this.pageSize);
+                    this.displayListsCheckin = this.UserCheckins.slice(0,this.pageSize);
                 })
             },
 
@@ -298,8 +328,11 @@
             goMatch(id) {
                 location.href="/match/review/" + id;
             },
-            pageChange(pageNumber) {
-                this.displayLists = this.posts.slice(this.pageSize*(pageNumber -1), this.pageSize*(pageNumber));
+            pageChangePosts(pageNumber) {
+                this.displayListsPosts = this.posts.slice(this.pageSize*(pageNumber -1), this.pageSize*(pageNumber));
+            },
+            pageChangeCheckin(pageNumber) {
+                this.displayListsCheckin = this.UserCheckins.slice(this.pageSize*(pageNumber -1), this.pageSize*(pageNumber));
 
             },
         },

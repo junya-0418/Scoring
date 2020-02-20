@@ -4081,6 +4081,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -4088,8 +4126,8 @@ __webpack_require__.r(__webpack_exports__);
       match_id: location.href.split('/').pop(),
       home_team_evaluation_outputs: [],
       away_team_evaluation_outputs: [],
-      home_team_users: [],
-      away_team_users: [],
+      home_team_posts: [],
+      away_team_posts: [],
       comments: [],
       showContent: false
     };
@@ -4102,12 +4140,15 @@ __webpack_require__.r(__webpack_exports__);
         _this.items = res.data;
         _this.home_team_evaluation_outputs = _this.items['home_team_evaluation_outputs'];
         _this.away_team_evaluation_outputs = _this.items['away_team_evaluation_outputs'];
-        _this.home_team_users = _this.items['home_team_users'];
-        _this.away_team_users = _this.items['away_team_users'];
+        _this.home_team_posts = _this.items['home_team_posts'];
+        _this.away_team_posts = _this.items['away_team_posts'];
       });
     },
-    goNext: function goNext(id) {
+    goUserPage: function goUserPage(id) {
       location.href = "/users/" + id;
+    },
+    goReviewPage: function goReviewPage(id) {
+      location.href = "/user/match/review/" + id;
     },
     openModal: function openModal(id) {
       var _this2 = this;
@@ -4599,6 +4640,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -4614,9 +4681,11 @@ __webpack_require__.r(__webpack_exports__);
       showContent: false,
       evaluations: '',
       page: 1,
-      displayLists: [],
+      displayListsPosts: [],
+      displayListsCheckin: [],
       pageSize: 5,
-      length: 0
+      lengthPosts: 0,
+      lengthCheckin: 0
     };
   },
   methods: {
@@ -4628,11 +4697,13 @@ __webpack_require__.r(__webpack_exports__);
       });
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/forUserPost/' + this.user_id).then(function (res) {
         _this.posts = res.data;
-        _this.length = Math.ceil(_this.posts.length / _this.pageSize);
-        _this.displayLists = _this.posts.slice(0, _this.pageSize);
+        _this.lengthPosts = Math.ceil(_this.posts.length / _this.pageSize);
+        _this.displayListsPosts = _this.posts.slice(0, _this.pageSize);
       });
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/forUserCheckin/' + this.user_id).then(function (res) {
         _this.UserCheckins = res.data;
+        _this.lengthCheckin = Math.ceil(_this.UserCheckins.length / _this.pageSize);
+        _this.displayListsCheckin = _this.UserCheckins.slice(0, _this.pageSize);
       });
     },
     goPosted: function goPosted() {
@@ -4648,8 +4719,11 @@ __webpack_require__.r(__webpack_exports__);
     goMatch: function goMatch(id) {
       location.href = "/match/review/" + id;
     },
-    pageChange: function pageChange(pageNumber) {
-      this.displayLists = this.posts.slice(this.pageSize * (pageNumber - 1), this.pageSize * pageNumber);
+    pageChangePosts: function pageChangePosts(pageNumber) {
+      this.displayListsPosts = this.posts.slice(this.pageSize * (pageNumber - 1), this.pageSize * pageNumber);
+    },
+    pageChangeCheckin: function pageChangeCheckin(pageNumber) {
+      this.displayListsCheckin = this.UserCheckins.slice(this.pageSize * (pageNumber - 1), this.pageSize * pageNumber);
     }
   },
   created: function created() {
@@ -9297,7 +9371,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.side-column-main {\n        float: right;\n        width: 320px;\n}\n.calendar-main {\n        margin-top: 58px;\n        margin-right: 60px;\n        margin-left: 60px;\n}\n.player-ranking-card {\n        margin-top: 40px;\n        margin-right: 60px;\n        width: 280px;\n        margin-left: 50px;\n        background-color: #fff;\n        padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n        font-size: 14px;\n        border-bottom: solid 1px #ccc;\n        margin-bottom: 15px;\n}\n.player-name-for-ranking {\n        display: contents;\n}\n.player-evaluation-for-ranking {\n        display: flex;\n        float: right;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n}\n@media (max-width: 479px) {\n.side-column-main {\n        width: 290px;\n        margin-right: 50px;\n}\n.calendar-main {\n        margin-top: 30px;\n        margin-left: 60px;\n}\n.player-ranking-card {\n        margin-top: 40px;\n        margin-right: 60px;\n        width: 280px;\n        margin-left: 50px;\n        background-color: #fff;\n        padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n        font-size: 14px;\n        border-bottom: solid 1px #ccc;\n        margin-bottom: 15px;\n}\n.player-name-for-ranking {\n        display: contents;\n}\n.player-evaluation-for-ranking {\n        display: flex;\n        float: right;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n}\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.side-column-main {\n        float: right;\n        width: 300px;\n}\n.calendar-main {\n        margin-top: 58px;\n        margin-right: 60px;\n        margin-left: 60px;\n}\n.player-ranking-card {\n        margin-top: 40px;\n        margin-right: 60px;\n        width: 280px;\n        margin-left: 50px;\n        background-color: #fff;\n        padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n        font-size: 14px;\n        border-bottom: solid 1px #ccc;\n        margin-bottom: 15px;\n}\n.player-name-for-ranking {\n        display: contents;\n}\n.player-evaluation-for-ranking {\n        display: flex;\n        float: right;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n}\n@media (max-width: 479px) {\n.side-column-main {\n        width: 290px;\n        margin-right: 50px;\n}\n.calendar-main {\n        margin-top: 30px;\n        margin-left: 60px;\n}\n.player-ranking-card {\n        margin-top: 40px;\n        margin-right: 60px;\n        width: 280px;\n        margin-left: 50px;\n        background-color: #fff;\n        padding: 15px 30px 10px 30px;\n}\n.player-ranking {\n        font-size: 14px;\n        border-bottom: solid 1px #ccc;\n        margin-bottom: 15px;\n}\n.player-name-for-ranking {\n        display: contents;\n}\n.player-evaluation-for-ranking {\n        display: flex;\n        float: right;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n}\n", ""]);
 
 // exports
 
@@ -9373,7 +9447,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.evaluation-title {\n        margin-bottom: 10px;\n        margin-left: 5rem;\n        margin-top: 20px;\n}\n.average-score-main {\n        margin-bottom: 40px;\n        display: flex;\n}\n.team-index {\n        border-bottom: solid 1px #ccc;\n        background-color: #ccc;\n        font-size: 12px;\n        padding-left: 17px;\n}\n.player-name {\n        border-bottom: solid 1px #ccc;\n        padding-left: 7px;\n}\n.user-index{\n        margin-bottom: 10px;\n        margin-left: 5rem;\n}\n.user-main {\n        margin-bottom: 40px;\n        display: flex;\n}\n.evaluation-card-left {\n        float: left;\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        /*display: inline-block;*/\n}\n.evaluation-card-right {\n        /*float: right;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n.users-card-left {\n        /*float: left;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n}\n.users-card-right {\n        float: right;\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n#overlay {\n        /*　要素を重ねた時の順番　*/\n        z-index: 1;\n\n        /*　画面全体を覆う設定　*/\n        position: fixed;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        background-color: rgba(0, 0, 0, 0.5);\n\n        /*　画面の中央に要素を表示させる設定　*/\n        display: flex;\n        align-items: center;\n        justify-content: center;\n}\n#modal-window {\n        z-index: 2;\n        width: 50%;\n        padding: 1em;\n        background: #fff;\n}\n.player-name:hover {\n        background-color: #f0f8ff;\n        cursor: pointer;\n}\n.user_name:hover {\n        background-color: #f0f8ff;\n        cursor: pointer;\n}\nbutton.cp_btn {\n        position: relative;\n        display: block;\n        width: 160px;\n        padding: 4px;\n        text-align: center;\n        text-decoration: none;\n        color: #FFF;\n        background: #26C6DA;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n}\n@media (max-width: 479px) {\n.evaluation-title {\n        margin-bottom: 10px;\n        margin-left: 5rem;\n        margin-top: 20px;\n}\n.average-score-main {\n        margin-bottom: 40px;\n}\n.team-index {\n        border-bottom: solid 1px #ccc;\n        background-color: #ccc;\n        font-size: 12px;\n        padding-left: 17px;\n}\n.player-name {\n        border-bottom: solid 1px #ccc;\n        padding-left: 7px;\n}\n.evaluation-card-left {\n\n        margin-left: 50px;\n        margin-bottom: 20px;\n}\n.user-index{\n        margin-bottom: 10px;\n        margin-left: 5rem;\n}\n.user-main {\n        margin-bottom: 40px;\n}\n.evaluation-card-left {\n        float: left;\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        /*display: inline-block;*/\n}\n.evaluation-card-right {\n        /*float: right;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n.users-card-left {\n        /*float: left;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        margin-left: 50px;\n        margin-bottom: 20px;\n}\n.users-card-right {\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n#overlay {\n        /*　要素を重ねた時の順番　*/\n        z-index: 1;\n\n        /*　画面全体を覆う設定　*/\n        position: fixed;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        background-color: rgba(0, 0, 0, 0.5);\n\n        /*　画面の中央に要素を表示させる設定　*/\n        display: flex;\n        align-items: center;\n        justify-content: center;\n}\n#modal-window {\n        z-index: 2;\n        width: 80%;\n        padding: 1em;\n        background: #fff;\n}\n.player-name:hover {\n        background-color: #f0f8ff;\n        cursor: pointer;\n}\n.user_name:hover {\n        background-color: #f0f8ff;\n        cursor: pointer;\n}\nbutton.cp_btn {\n        position: relative;\n        display: block;\n        width: 160px;\n        padding: 4px;\n        text-align: center;\n        text-decoration: none;\n        color: #FFF;\n        background: #26C6DA;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n}\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.evaluation-title {\n        margin-bottom: 10px;\n        margin-left: 5rem;\n        margin-top: 20px;\n}\n.average-score-main {\n        margin-bottom: 40px;\n        display: flex;\n}\n.team-index {\n        border-bottom: solid 1px #ccc;\n        background-color: #ccc;\n        font-size: 12px;\n        padding-left: 17px;\n}\n.player-name {\n        border-bottom: solid 1px #ccc;\n        padding-left: 7px;\n}\n.post-index{\n        margin-bottom: 10px;\n        margin-left: 5rem;\n}\n.post-main {\n        margin-bottom: 40px;\n        display: flex;\n}\n.post-content {\n        border-bottom: solid 1px #ccc;\n        padding-left: 17px;\n        margin-top: 5px;\n        padding-bottom: 5px;\n}\n.posts-user-name {\n        font-size: 12px;\n        margin-right: 5px;\n        display: block;\n}\n.evaluation-card-left {\n        float: left;\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        /*display: inline-block;*/\n}\n.evaluation-card-right {\n        /*float: right;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n.post-card-left {\n        /*float: left;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n}\n.post-card-right {\n        float: right;\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n#overlay {\n        /*　要素を重ねた時の順番　*/\n        z-index: 1;\n\n        /*　画面全体を覆う設定　*/\n        position: fixed;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        background-color: rgba(0, 0, 0, 0.5);\n\n        /*　画面の中央に要素を表示させる設定　*/\n        display: flex;\n        align-items: center;\n        justify-content: center;\n}\n#modal-window {\n        z-index: 2;\n        width: 50%;\n        padding: 1em;\n        background: #fff;\n}\n.player-name:hover {\n        background-color: #f0f8ff;\n        cursor: pointer;\n}\n.post-name:hover {\n        text-decoration: underline;\n        cursor: pointer;\n}\n.posts-user-name:hover {\n        text-decoration: underline;\n        cursor: pointer;\n}\nbutton.cp_btn {\n        position: relative;\n        display: block;\n        width: 160px;\n        padding: 4px;\n        text-align: center;\n        text-decoration: none;\n        color: #FFF;\n        background: #26C6DA;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n}\n@media (max-width: 479px) {\n.evaluation-title {\n        margin-bottom: 10px;\n        margin-left: 5rem;\n        margin-top: 20px;\n}\n.average-score-main {\n        margin-bottom: 40px;\n}\n.team-index {\n        border-bottom: solid 1px #ccc;\n        background-color: #ccc;\n        font-size: 12px;\n        padding-left: 17px;\n}\n.player-name {\n        border-bottom: solid 1px #ccc;\n        padding-left: 7px;\n}\n.evaluation-card-left {\n\n        margin-left: 50px;\n        margin-bottom: 20px;\n}\n.post-index{\n        margin-bottom: 10px;\n        margin-left: 5rem;\n}\n.post-main {\n        margin-bottom: 40px;\n}\n.post-content {\n        border-bottom: solid 1px #ccc;\n        padding-left: 17px;\n        margin-top: 5px;\n        padding-bottom: 5px;\n}\n.posts-user-name {\n        font-size: 12px;\n        margin-right: 5px;\n        display: block;\n}\n.evaluation-card-left {\n        float: left;\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        /*display: inline-block;*/\n}\n.evaluation-card-right {\n        /*float: right;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n.post-card-left {\n        /*float: left;*/\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        margin-left: 50px;\n        margin-bottom: 20px;\n}\n.post-card-right {\n        width: 250px;\n        border: solid 1px #ccc;\n        background-color: #fff;\n        /*text-align: center;*/\n        font-size: 15px;\n        display: inline-block;\n        margin-left: 50px;\n}\n#overlay {\n        /*　要素を重ねた時の順番　*/\n        z-index: 1;\n\n        /*　画面全体を覆う設定　*/\n        position: fixed;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        background-color: rgba(0, 0, 0, 0.5);\n\n        /*　画面の中央に要素を表示させる設定　*/\n        display: flex;\n        align-items: center;\n        justify-content: center;\n}\n#modal-window {\n        z-index: 2;\n        width: 80%;\n        padding: 1em;\n        background: #fff;\n}\n.player-name:hover {\n        background-color: #f0f8ff;\n        cursor: pointer;\n}\n.post-name:hover {\n        text-decoration: black;\n        cursor: pointer;\n}\n.posts-user-name:hover {\n        text-decoration: black;\n        cursor: pointer;\n}\nbutton.cp_btn {\n        position: relative;\n        display: block;\n        width: 160px;\n        padding: 4px;\n        text-align: center;\n        text-decoration: none;\n        color: #FFF;\n        background: #26C6DA;\n        border-bottom: 2px solid #00838F;\n        border-radius: 4px;\n        box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);\n}\nbutton.cp_btn:active {\n        border-bottom: 2px solid #26C6DA;\n        box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);\n}\n}\n\n", ""]);
 
 // exports
 
@@ -9411,7 +9485,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n@media (min-width: 767px) {\n.user-posts {\n        width: 500px;\n}\n.posted-match {\n        color: #6c757d;\n        display: inline;\n        margin-right: 20px;\n}\n.checkin-match {\n        color: #6c757d;\n        display: inline;\n}\n.match-board {\n        width: 500px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n.card a {\n        text-decoration: none;\n        color: black;\n}\n.post-title {\n        margin: 15px;\n        float: left;\n}\n.match-info {\n        margin-top: 15px;\n        margin-bottom: 10px;\n        font-size: 10px;\n        float: right;\n        margin-right: 20px;\n        width: 185px;\n}\n.post-target-team {\n        display: flex;\n        padding-left: 20px;\n        font-size: 10px;\n        margin-top: 3px;\n}\n.post-targe-team-name {\n        border: 1px solid rgb(204, 204, 204);\n        border-radius: 1.25rem;\n        padding: 3px;\n}\n.pagination {\n        padding-left: 0;\n        margin: 20px 0;\n        border-radius: 4px;\n        float: right;\n}\n.pagination > li:first-child > a {\n        margin-left: 0;\n        border-top-left-radius: 4px;\n        border-bottom-left-radius: 4px;\n}\n.pagination > .active > a {\n        z-index: 2;\n        color: #fff;\n        cursor: default;\n        background-color: #337ab7;\n        border-color: #337ab7;\n}\n.pagination > li > a {\n        position: relative;\n        float: left;\n        padding: 6px 12px;\n        line-height: 1.42857143;\n        color: #337ab7;\n        text-decoration: none;\n        background-color: #fff;\n        border: 1px solid #ddd;\n}\n}\n@media (max-width: 479px) {\n.posted-match {\n        color: #6c757d;\n        display: inline;\n        margin-right: 20px;\n}\n.checkin-match {\n        color: #6c757d;\n        display: inline;\n}\n.match-board {\n        width: 300px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n.card a {\n        text-decoration: none;\n        color: black;\n}\n.post-title {\n        margin: 15px;\n        float: left;\n}\n.match-info {\n        margin-bottom: 10px;\n        font-size: 10px;\n        float: right;\n        width: 185px;\n}\n.post-target-team {\n        display: flex;\n        padding-left: 20px;\n        font-size: 10px;\n        margin-top: 3px;\n}\n.post-targe-team-name {\n        border: 1px solid rgb(204, 204, 204);\n        border-radius: 1.25rem;\n        padding: 3px;\n}\n.pagination {\n        padding-left: 0;\n        margin: 20px 0;\n        border-radius: 4px;\n        float: right;\n}\n.pagination > li:first-child > a {\n        margin-left: 0;\n        border-top-left-radius: 4px;\n        border-bottom-left-radius: 4px;\n}\n.pagination > .active > a {\n        z-index: 2;\n        color: #fff;\n        cursor: default;\n        background-color: #337ab7;\n        border-color: #337ab7;\n}\n.pagination > li > a {\n        position: relative;\n        float: left;\n        padding: 6px 12px;\n        line-height: 1.42857143;\n        color: #337ab7;\n        text-decoration: none;\n        background-color: #fff;\n        border: 1px solid #ddd;\n}\n}\n\n\n", ""]);
+exports.push([module.i, "\n@media (min-width: 767px) {\n.user-posts {\n        width: 500px;\n}\n.posted-match {\n        color: #6c757d;\n        display: inline;\n        margin-right: 20px;\n}\n.checkin-match {\n        color: #6c757d;\n        display: inline;\n}\n.match-board {\n        width: 500px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n.card a {\n        text-decoration: none;\n        color: black;\n}\n.post-title {\n        margin: 15px;\n        float: left;\n}\n.match-info {\n        margin-top: 15px;\n        margin-bottom: 10px;\n        font-size: 10px;\n        float: right;\n        margin-right: 20px;\n        width: 185px;\n}\n.checkin-matchtype {\n        font-size: 12px;\n        margin: 5px 0px 5px 10px;\n}\n.checkin-team {\n        font-size: 12px;\n        margin: 5px 0px 5px 10px;\n}\n.post-target-team {\n        display: flex;\n        padding-left: 20px;\n        font-size: 10px;\n        margin-top: 3px;\n}\n.post-targe-team-name {\n        border: 1px solid rgb(204, 204, 204);\n        border-radius: 1.25rem;\n        padding: 3px;\n}\n.pagination {\n        padding-left: 0;\n        margin: 20px 0;\n        border-radius: 4px;\n        float: right;\n}\n.pagination > li:first-child > a {\n        margin-left: 0;\n        border-top-left-radius: 4px;\n        border-bottom-left-radius: 4px;\n}\n.pagination > .active > a {\n        z-index: 2;\n        color: #fff;\n        cursor: default;\n        background-color: #337ab7;\n        border-color: #337ab7;\n}\n.pagination > li > a {\n        position: relative;\n        float: left;\n        padding: 6px 12px;\n        line-height: 1.42857143;\n        color: #337ab7;\n        text-decoration: none;\n        background-color: #fff;\n        border: 1px solid #ddd;\n}\n}\n@media (max-width: 479px) {\n.posted-match {\n        color: #6c757d;\n        display: inline;\n        margin-right: 20px;\n}\n.checkin-match {\n        color: #6c757d;\n        display: inline;\n}\n.match-board {\n        width: 300px;\n        border-bottom: solid 1px #ccc;\n        background-color: #fff;\n        margin-bottom: 15px;\n}\n.card a:hover {\n        background-color: #f0f8ff;\n}\n.card a {\n        text-decoration: none;\n        color: black;\n}\n.post-title {\n        margin: 15px;\n        float: left;\n}\n.match-info {\n        margin-bottom: 10px;\n        font-size: 10px;\n        float: right;\n        width: 185px;\n}\n.checkin-matchtype {\n        font-size: 10px;\n        margin: 5px 0px 5px 10px;\n}\n.checkin-team {\n        font-size: 10px;\n        margin: 5px 0px 5px 10px;\n}\n.post-target-team {\n        display: flex;\n        padding-left: 20px;\n        font-size: 10px;\n        margin-top: 3px;\n}\n.post-targe-team-name {\n        border: 1px solid rgb(204, 204, 204);\n        border-radius: 1.25rem;\n        padding: 3px;\n}\n.pagination {\n        padding-left: 0;\n        margin: 20px 0;\n        border-radius: 4px;\n        float: right;\n}\n.pagination > li:first-child > a {\n        margin-left: 0;\n        border-top-left-radius: 4px;\n        border-bottom-left-radius: 4px;\n}\n.pagination > .active > a {\n        z-index: 2;\n        color: #fff;\n        cursor: default;\n        background-color: #337ab7;\n        border-color: #337ab7;\n}\n.pagination > li > a {\n        position: relative;\n        float: left;\n        padding: 6px 12px;\n        line-height: 1.42857143;\n        color: #337ab7;\n        text-decoration: none;\n        background-color: #fff;\n        border: 1px solid #ddd;\n}\n}\n\n\n", ""]);
 
 // exports
 
@@ -42091,7 +42165,7 @@ var render = function() {
               }
             ],
             staticClass: "cp_sl06",
-            attrs: { id: "title", name: "title" },
+            attrs: { name: "title" },
             domProps: { value: _vm.title },
             on: {
               input: function($event) {
@@ -42592,10 +42666,10 @@ var render = function() {
     _vm._v(" "),
     _vm._m(1),
     _vm._v(" "),
-    _c("div", { staticClass: "user-main" }, [
+    _c("div", { staticClass: "post-main" }, [
       _c(
         "div",
-        { staticClass: "users-card-left" },
+        { staticClass: "post-card-left" },
         [
           _c(
             "div",
@@ -42606,32 +42680,39 @@ var render = function() {
                 "padding-left": "17px"
               }
             },
-            [_vm._v("ホームチームに投稿したユーザー")]
+            [_vm._v("ホームチームへの投稿")]
           ),
           _vm._v(" "),
-          _vm._l(_vm.home_team_users, function(home_team_user) {
-            return _c(
-              "div",
-              {
-                staticClass: "user_name",
-                staticStyle: {
-                  "border-bottom": "solid 1px #ccc",
-                  "padding-left": "17px"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.goNext(home_team_user.id)
+          _vm._l(_vm.home_team_posts, function(home_team_post) {
+            return _c("div", { staticClass: "post-content" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "post-name",
+                  attrs: { href: "javascript:void(0)" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goReviewPage(home_team_post.id)
+                    }
                   }
-                }
-              },
-              [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(home_team_user.name) +
-                    "\n            "
-                )
-              ]
-            )
+                },
+                [_c("strong", [_vm._v(_vm._s(home_team_post.title))])]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "posts-user-name",
+                  attrs: { href: "javascript:void(0)" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goUserPage(home_team_post.user_id)
+                    }
+                  }
+                },
+                [_vm._v("by " + _vm._s(home_team_post.name))]
+              )
+            ])
           })
         ],
         2
@@ -42639,7 +42720,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "users-card-right" },
+        { staticClass: "post-card-right" },
         [
           _c(
             "div",
@@ -42650,32 +42731,39 @@ var render = function() {
                 "padding-left": "17px"
               }
             },
-            [_vm._v("アウェイチームに投稿したユーザー")]
+            [_vm._v("アウェイチームへの投稿")]
           ),
           _vm._v(" "),
-          _vm._l(_vm.away_team_users, function(away_team_user) {
-            return _c(
-              "div",
-              {
-                staticClass: "user_name",
-                staticStyle: {
-                  "border-bottom": "solid 1px #ccc",
-                  "padding-left": "17px"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.goNext(away_team_user.id)
+          _vm._l(_vm.away_team_posts, function(away_team_post) {
+            return _c("div", { staticClass: "post-content" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "post-name",
+                  attrs: { href: "javascript:void(0)" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goReviewPage(_vm.home_team_post.id)
+                    }
                   }
-                }
-              },
-              [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(away_team_user.name) +
-                    "\n            "
-                )
-              ]
-            )
+                },
+                [_c("strong", [_vm._v(_vm._s(away_team_post.title))])]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "posts-user-name",
+                  attrs: { href: "javascript:void(0)" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goUserPage(away_team_post.user_id)
+                    }
+                  }
+                },
+                [_vm._v("by " + _vm._s(away_team_post.name))]
+              )
+            ])
           })
         ],
         2
@@ -42696,8 +42784,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "user-index" }, [
-      _c("strong", [_vm._v("ユーザー")])
+    return _c("div", { staticClass: "post-index" }, [
+      _c("strong", [_vm._v("投稿")])
     ])
   }
 ]
@@ -42980,7 +43068,7 @@ var render = function() {
           style: { display: _vm.posted }
         },
         [
-          _vm._l(_vm.displayLists, function(post) {
+          _vm._l(_vm.displayListsPosts, function(post) {
             return _c("div", { staticClass: "card match-board" }, [
               _c(
                 "a",
@@ -43040,12 +43128,12 @@ var render = function() {
             [
               _c("paginate", {
                 attrs: {
-                  "page-count": _vm.length,
+                  "page-count": _vm.lengthPosts,
                   "total-visible": 5,
                   "container-class": "pagination",
                   "page-class": "page-item"
                 },
-                on: { input: _vm.pageChange },
+                on: { input: _vm.pageChangePosts },
                 model: {
                   value: _vm.page,
                   callback: function($$v) {
@@ -43067,42 +43155,68 @@ var render = function() {
           staticStyle: { "margin-top": "20px" },
           style: { display: _vm.checkin }
         },
-        _vm._l(_vm.UserCheckins, function(usercheckin) {
-          return _c("div", { staticClass: "card match-board" }, [
-            _c(
-              "a",
-              {
-                staticClass: "match-card",
-                attrs: { href: "javascript:void(0)" },
-                on: {
-                  click: function($event) {
-                    return _vm.goMatch(usercheckin.match_id)
+        [
+          _vm._l(_vm.displayListsCheckin, function(usercheckin) {
+            return _c("div", { staticClass: "card match-board" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "match-card",
+                  attrs: { href: "javascript:void(0)" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goMatch(usercheckin.match_id)
+                    }
                   }
+                },
+                [
+                  _c("div", { staticClass: "checkin-matchtype" }, [
+                    _vm._v(
+                      "\n                        " +
+                        _vm._s(usercheckin.match_type) +
+                        "\n                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "checkin-team" }, [
+                    _vm._v(
+                      "\n                        " +
+                        _vm._s(usercheckin.home_team_name) +
+                        " vs " +
+                        _vm._s(usercheckin.away_team_name) +
+                        "\n                    "
+                    )
+                  ])
+                ]
+              )
+            ])
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "text-center" },
+            [
+              _c("paginate", {
+                attrs: {
+                  "page-count": _vm.lengthCheckin,
+                  "total-visible": 5,
+                  "container-class": "pagination",
+                  "page-class": "page-item"
+                },
+                on: { input: _vm.pageChangeCheckin },
+                model: {
+                  value: _vm.page,
+                  callback: function($$v) {
+                    _vm.page = $$v
+                  },
+                  expression: "page"
                 }
-              },
-              [
-                _c("div", { staticClass: "match-info" }, [
-                  _vm._v(
-                    "\n                        " +
-                      _vm._s(usercheckin.match_type) +
-                      "\n                    "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "match-info" }, [
-                  _vm._v(
-                    "\n                        " +
-                      _vm._s(usercheckin.home_team_name) +
-                      " vs " +
-                      _vm._s(usercheckin.away_team_name) +
-                      "\n                    "
-                  )
-                ])
-              ]
-            )
-          ])
-        }),
-        0
+              })
+            ],
+            1
+          )
+        ],
+        2
       )
     ])
   ])

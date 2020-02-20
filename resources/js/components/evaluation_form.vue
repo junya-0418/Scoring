@@ -5,7 +5,7 @@
         <div class="mb-3">
             <label for="team" class="cp_sl06_selectlabel">タイトル</label>
             <div class="cp_title">
-                <input class="cp_sl06" id="title" name="title" v-model="title">
+                <input class="cp_sl06" name="title" v-model="title">
                 <span class="cp_sl06_selectbar"></span>
             </div>
         </div>

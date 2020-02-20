@@ -47,18 +47,20 @@
         </div>
     </div>
 
-    <div class="user-index"><strong>ユーザー</strong></div>
-    <div class="user-main">
-        <div class="users-card-left">
-            <div style="background-color: #ccc; font-size: 12px; padding-left: 17px">ホームチームに投稿したユーザー</div>
-            <div class="user_name" v-for="home_team_user in home_team_users" @click="goNext(home_team_user.id)" style="border-bottom: solid 1px #ccc; padding-left: 17px;">
-                    {{ home_team_user.name }}
+    <div class="post-index"><strong>投稿</strong></div>
+    <div class="post-main">
+        <div class="post-card-left">
+            <div style="background-color: #ccc; font-size: 12px; padding-left: 17px">ホームチームへの投稿</div>
+            <div class="post-content" v-for="home_team_post in home_team_posts">
+                    <a class="post-name" href="javascript:void(0)" @click="goReviewPage(home_team_post.id)"><strong>{{ home_team_post.title }}</strong></a>
+                    <a class="posts-user-name" href="javascript:void(0)" @click="goUserPage(home_team_post.user_id)">by {{ home_team_post.name }}</a>
             </div>
         </div>
-        <div class="users-card-right">
-            <div style="background-color: #ccc; font-size: 12px; padding-left: 17px">アウェイチームに投稿したユーザー</div>
-            <div class="user_name" v-for="away_team_user in away_team_users" @click="goNext(away_team_user.id)" style="border-bottom: solid 1px #ccc; padding-left: 17px;">
-                    {{ away_team_user.name }}
+        <div class="post-card-right">
+            <div style="background-color: #ccc; font-size: 12px; padding-left: 17px">アウェイチームへの投稿</div>
+            <div class="post-content" v-for="away_team_post in away_team_posts">
+                    <a class="post-name" href="javascript:void(0)" @click="goReviewPage(home_team_post.id)"><strong>{{ away_team_post.title }}</strong></a>
+                    <a class="posts-user-name" href="javascript:void(0)" @click="goUserPage(away_team_post.user_id)">by {{ away_team_post.name }}</a>
             </div>
         </div>
     </div>
@@ -94,14 +96,27 @@
             padding-left: 7px;
         }
 
-        .user-index{
+        .post-index{
             margin-bottom: 10px;
             margin-left: 5rem;
         }
 
-        .user-main {
+        .post-main {
             margin-bottom: 40px;
             display: flex;
+        }
+
+        .post-content {
+            border-bottom: solid 1px #ccc;
+            padding-left: 17px;
+            margin-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .posts-user-name {
+            font-size: 12px;
+            margin-right: 5px;
+            display: block;
         }
 
         .evaluation-card-left {
@@ -126,7 +141,7 @@
             margin-left: 50px;
         }
 
-        .users-card-left {
+        .post-card-left {
             /*float: left;*/
             width: 250px;
             border: solid 1px #ccc;
@@ -136,7 +151,7 @@
         }
 
 
-        .users-card-right {
+        .post-card-right {
             float: right;
             width: 250px;
             border: solid 1px #ccc;
@@ -178,8 +193,13 @@
             cursor: pointer;
         }
 
-        .user_name:hover {
-            background-color: #f0f8ff;
+        .post-name:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .posts-user-name:hover {
+            text-decoration: underline;
             cursor: pointer;
         }
 
@@ -234,13 +254,26 @@
 
         }
 
-        .user-index{
+        .post-index{
             margin-bottom: 10px;
             margin-left: 5rem;
         }
 
-        .user-main {
+        .post-main {
             margin-bottom: 40px;
+        }
+
+        .post-content {
+            border-bottom: solid 1px #ccc;
+            padding-left: 17px;
+            margin-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .posts-user-name {
+            font-size: 12px;
+            margin-right: 5px;
+            display: block;
         }
 
         .evaluation-card-left {
@@ -265,7 +298,7 @@
             margin-left: 50px;
         }
 
-        .users-card-left {
+        .post-card-left {
             /*float: left;*/
             width: 250px;
             border: solid 1px #ccc;
@@ -277,7 +310,7 @@
         }
 
 
-        .users-card-right {
+        .post-card-right {
             width: 250px;
             border: solid 1px #ccc;
             background-color: #fff;
@@ -318,8 +351,13 @@
             cursor: pointer;
         }
 
-        .user_name:hover {
-            background-color: #f0f8ff;
+        .post-name:hover {
+            text-decoration: black;
+            cursor: pointer;
+        }
+
+        .posts-user-name:hover {
+            text-decoration: black;
             cursor: pointer;
         }
 
@@ -355,8 +393,8 @@
                 match_id: location.href.split('/').pop(),
                 home_team_evaluation_outputs: [],
                 away_team_evaluation_outputs: [],
-                home_team_users: [],
-                away_team_users: [],
+                home_team_posts: [],
+                away_team_posts: [],
                 comments: [],
                 showContent: false,
             }
@@ -367,13 +405,16 @@
                     this.items = res.data
                     this.home_team_evaluation_outputs = this.items['home_team_evaluation_outputs']
                     this.away_team_evaluation_outputs = this.items['away_team_evaluation_outputs']
-                    this.home_team_users = this.items['home_team_users']
-                    this.away_team_users = this.items['away_team_users']
+                    this.home_team_posts = this.items['home_team_posts']
+                    this.away_team_posts = this.items['away_team_posts']
                 })
             },
 
-            goNext(id) {
+            goUserPage(id) {
                 location.href="/users/" + id;
+            },
+            goReviewPage(id) {
+                location.href="/user/match/review/" + id;
             },
             openModal: function(id) {
                 this.showContent = true

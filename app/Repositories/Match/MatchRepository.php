@@ -53,10 +53,11 @@ class MatchRepository implements MatchRepositoryInterface
             ->get();
     }
 
-    //ホームチームに投稿したユーザーとアウェイチームに投稿したユーザーを取ってくる
-    public function getPostsUsers($match) {
+    //ホームチームとアウェイチームに対する投稿をとってくる
+    public function getPosts($match) {
         return DB::table('posts')
-            ->join('users', 'posts.user_id', 'users.id')
+            ->join('users', 'posts.user_id', '=', 'users.id')
+            ->select(DB::raw('posts.id as id, match_id, user_id, team_id, name, title'))
             ->where('match_id', $match->id)
             ->get();
     }
