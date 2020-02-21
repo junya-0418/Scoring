@@ -59,7 +59,7 @@
         <div class="post-card-right">
             <div style="background-color: #ccc; font-size: 12px; padding-left: 17px">アウェイチームへの投稿</div>
             <div class="post-content" v-for="away_team_post in away_team_posts">
-                    <a class="post-name" href="javascript:void(0)" @click="goReviewPage(home_team_post.id)"><strong>{{ away_team_post.title }}</strong></a>
+                    <a class="post-name" href="javascript:void(0)" @click="goReviewPage(away_team_post.id)"><strong>{{ away_team_post.title }}</strong></a>
                     <a class="posts-user-name" href="javascript:void(0)" @click="goUserPage(away_team_post.user_id)">by {{ away_team_post.name }}</a>
             </div>
         </div>
