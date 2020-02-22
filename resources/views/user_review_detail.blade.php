@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+@section('Twitter Card')
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@alegoal2020" />
+    <meta property="og:url" content="https://www.alegoal.jp/user/match/review/{{ $post->id }}" />
+    <meta property="og:title" content="ALEGOAL | {{ $post->title }}" />
+    <meta property="og:description" content="{{ $match->match_type }} | {{ $match->hometeam->name }} vs {{ $match->awayteam->name }}" />
+    <meta property="og:image" content="https://www.alegoal.jp/images/logo_web.png" />
+@endsection
+
 @section('content')
 <div id="app">
 <div class="evaluation-content">
