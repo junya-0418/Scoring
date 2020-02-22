@@ -16,7 +16,7 @@
         </div>
 
         <div class="player-ranking-card">
-                <p style="font-size: 12px; margin-bottom: 0px !important;">ルヴァンカップ GL第1節</p>
+                <p style="font-size: 12px; margin-bottom: 0px !important;">J1 第1節</p>
                 <p style="font-size: 12px;">プレーヤーランキング</p>
             <div v-if="players.length">
                     <div class="player-ranking" v-for="n in 5">
