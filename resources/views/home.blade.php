@@ -3,10 +3,10 @@
 @section('Twitter Card')
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@alegoal2020" />
-    <meta property="og:url" content="https://www.alegoal.jp" />
+    <meta property="og:url" content="https://alegoal.jp" />
     <meta property="og:title" content="ALEGOAL | TOP PAGE" />
     <meta property="og:description" content="Jリーグの選手採点サイトです。" />
-    <meta property="og:image" content="https://www.alegoal.jp/images/logo_web.png" />
+    <meta property="og:image" content="https://alegoal.jp/images/logo_web.png" />
 @endsection
 
 @section('content')
