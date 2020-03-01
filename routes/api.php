@@ -63,6 +63,10 @@ Route::group(['middleware' => 'api'], function() {
 });
 
 Route::group(['middleware' => 'api'], function() {
+    Route::post('/get_vote_players',  'EvaluationApiController@showVotePlayers');
+});
+
+Route::group(['middleware' => 'api'], function() {
     Route::post('/getCounts',  'CheckinController@getCounts');
 });
 

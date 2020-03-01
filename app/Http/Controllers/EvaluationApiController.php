@@ -15,6 +15,8 @@ use App\Player;
 use App\User;
 use App\Mvp;
 use App\Evaluation;
+use App\WorldTeam;
+use App\WorldPlayer;
 
 
 class EvaluationApiController extends Controller
@@ -48,6 +50,16 @@ class EvaluationApiController extends Controller
         $id = Team::where('name', $request->team)->first()->id;
 
         $players = Player::where('team_id', $id)->orderBy('number', 'asc')->get();
+
+        return $players;
+
+    }
+
+    public function showVotePlayers(Request $request) {
+
+        $id = WorldTeam::where('name', $request->team)->first()->id;
+
+        $players = WorldPlayer::where('world_team_id', $id)->orderBy('number', 'asc')->get();
 
         return $players;
 

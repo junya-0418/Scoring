@@ -35,6 +35,16 @@ Route::get('/user/edit/{id}', 'UserController@edit_index')->name('user_edit_show
 
 Route::get('/contact', 'ContactController@input')->name('contact');
 
+Route::get('/vote', 'VoteController@index')->name('vote');
+
+//Route::get('/blog/lists', 'BlogController@index')->name('blog_lists');
+
+//Route::group(['middleware' => 'admin_auth'], function(){
+//
+//    Route::get('/blog/form', 'BlogController@show_form')->name('blog_form');
+//
+//});
+
 Route::get('/schedule',
     function () { return view('schedule');
 });
@@ -52,6 +62,12 @@ Route::post('/user/update/{id}', 'UserController@update')->name('user_update');
 Route::post('/contact/send', 'ContactController@send')->name('contact_send');
 
 Route::post('/delete', 'EvaluationController@delete')->name('delete');
+
+Route::post('/vote_/create', 'VoteController@create')->name('vote_create');
+
+//Route::post('/create/blog', 'BlogController@create')->name('blog_create');
+
+
 
 
 

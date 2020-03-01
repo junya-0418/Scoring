@@ -32,7 +32,7 @@
     <link href="{{ asset('css/user_index.css?v=1.0') }}" rel="stylesheet">
     <link href="{{ asset('css/user_review_detail.css?v=1.1') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css?v=1.1') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/blog_lists.css?v=1.1') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>

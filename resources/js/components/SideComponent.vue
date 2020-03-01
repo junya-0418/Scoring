@@ -1,6 +1,10 @@
 <template>
 <div>
     <div class="side-column-main">
+        <div class="side-banner-main">
+            <button class="btn-flat-border02"
+                    onclick="location.href='/vote'">クラシコMVP投票</button>
+        </div>
         <div class="calendar-main">
             <v-calendar :attributes='attributes'>
                 <div
@@ -35,6 +39,31 @@
         .side-column-main {
             float: right;
             width: 300px;
+        }
+
+        .side-banner-main {
+            margin-left: 90px;
+            margin-top: 50px;
+        }
+
+
+        .btn-flat-border02 {
+            display: inline-block;
+            padding: 0.3em 1em;
+            text-decoration: none;
+            background: #67c5ff;
+            color: white;
+            border: solid 2px #67c5ff;
+            border-radius: 3px;
+            transition: .4s;
+            margin-right: 5px;
+            width: 200px;
+            height: 50px;
+        }
+
+        .btn-flat-border02:hover {
+            background: white;
+            color: #67c5ff;
         }
 
         .calendar-main {
@@ -77,6 +106,27 @@
         .side-column-main {
             width: 290px;
             margin-right: 50px;
+        }
+
+        .btn-flat-border02 {
+            display: inline-block;
+            padding: 0.3em 1em;
+            text-decoration: none;
+            background: #67c5ff;
+            color: white;
+            border: solid 2px #67c5ff;
+            border-radius: 3px;
+            transition: .4s;
+            margin-right: 5px;
+            width: 200px;
+            height: 50px;
+            margin-left: 90px;
+            margin-top: 30px;
+        }
+
+        .btn-flat-border02:hover {
+            background: white;
+            color: #67c5ff;
         }
 
         .calendar-main {
